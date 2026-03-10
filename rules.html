@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LEGIONS TCG – How to Play">
+    <title>LEGIONS – How to Play</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #111111;
+            line-height: 1.7;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            background: #ffffff;
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            font-size: 1.3rem;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #111;
+            border: 1px solid #111;
+            padding: 0.45rem 0.9rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .back-link:hover { background: #f0f0f0; }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            max-width: 860px;
+            margin: 0.6rem auto 0.6rem;
+            padding: 0.35rem 1.5rem;
+            background: #ffffff;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .nav-row {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-row.sub-row {
+            padding-left: 0;
+            padding-bottom: 0;
+            padding-top: 0;
+            border-top: 1px dashed #e0e0e0;
+            margin-top: 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+        }
+
+        .nav-row.sub-row.visible {
+            max-height: 60px;
+            opacity: 1;
+            padding-top: 0.4rem;
+            padding-bottom: 0.75rem;
+            margin-top: 0.4rem;
+        }
+
+        .nav-row.main-row {
+            padding-bottom: 0.35rem;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            border: 1px solid #111;
+            color: #111;
+            padding: 0.28rem 0.75rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.84rem;
+            letter-spacing: 0.04em;
+            transition: background 0.15s, color 0.15s;
+            cursor: pointer;
+            background: transparent;
+        }
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: #111;
+            color: #ffffff;
+        }
+
+        .nav-btn.sub {
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-color: #666;
+            color: #444;
+            padding: 0.22rem 0.62rem;
+        }
+        .nav-btn.sub:hover,
+        .nav-btn.sub.active {
+            background: #444;
+            color: #ffffff;
+            border-color: #444;
+        }
+
+        .sub-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            color: #888;
+            font-weight: 700;
+            align-self: center;
+            text-transform: uppercase;
+        }
+
+        .typhon-local-nav {
+            display: flex;
+            gap: 0.45rem;
+            flex-wrap: wrap;
+            margin: 0.4rem 0 1rem;
+        }
+
+        .page-title {
+            max-width: 860px;
+            margin: 2rem auto 0;
+            padding: 0 1.5rem;
+        }
+
+        .page-title h1 {
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .page-title p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .rules-section {
+            max-width: 860px;
+            margin: 3rem auto 0;
+            padding: 0 1.5rem;
+            scroll-margin-top: 120px;
+        }
+
+        .rules-section.sub-section {
+            scroll-margin-top: 130px;
+            margin-top: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid #111;
+        }
+
+        .section-header h2 {
+            font-size: 1.7rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
+        .sub-section .section-header {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .sub-section .section-header h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.4rem 1.6rem;
+            margin-bottom: 1.2rem;
+            background: #fafafa;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        ul { padding-left: 1.2rem; }
+        li { margin-bottom: 0.35rem; }
+
+        .rarity-row { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+
+        .rarity-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .rarity-legion  { background: #fff8e1; border-left: 4px solid #f9a825; }
+        .rarity-elite   { background: #e8f4fd; border-left: 4px solid #2196f3; }
+        .rarity-recruit { background: #fce4ec; border-left: 4px solid #e91e63; }
+        .rarity-icon { font-size: 1.4rem; }
+        .rarity-count { color: #777; font-weight: 400; font-size: 0.9rem; margin-left: auto; }
+
+        .sides-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.8rem;
+            margin-top: 0.6rem;
+        }
+        .side-card { border-radius: 10px; padding: 0.9rem; text-align: center; }
+        .side-card .set-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: #777; margin-bottom: 0.5rem; }
+        .side-card .player-row { font-size: 0.9rem; margin: 0.2rem 0; }
+        .side-card.set1, .side-card.set3 { background: #f3faf3; border: 1px solid #c8e6c9; }
+        .side-card.set2 { background: #fdf3f3; border: 1px solid #ffcdd2; }
+        .earthlings { color: #2e7d32; font-weight: 700; }
+        .synthbots  { color: #b71c1c; font-weight: 700; }
+
+        .step { display: flex; gap: 0.9rem; align-items: flex-start; margin-bottom: 0.6rem; }
+        .step-num {
+            background: #111; color: #fff;
+            border-radius: 50%; width: 1.6rem; height: 1.6rem;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem; font-weight: 700; flex-shrink: 0; margin-top: 0.1rem;
+        }
+
+        .highlight-box {
+            background: #f5f5f5;
+            border-left: 4px solid #111;
+            padding: 0.7rem 1rem;
+            border-radius: 4px;
+            margin-top: 0.7rem;
+            font-size: 0.95rem;
+        }
+
+        .section-divider {
+            max-width: 860px;
+            margin: 3rem auto 0;
+            padding: 0 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer {
+            text-align: center;
+            color: #aaa;
+            font-size: 0.8rem;
+            margin: 5rem auto 0;
+            max-width: 860px;
+            padding: 1rem 1.5rem 2rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="topbar">
+    <div class="brand">LEGIONS</div>
+    <a class="back-link" href="index.html">← Back to Home</a>
+</div>
+
+<div class="page-title">
+    <h1>🎴 How to Play</h1>
+    <p>LEGIONS TCG — choose your battle</p>
+</div>
+
+<nav class="sticky-nav">
+    <div class="nav-row main-row">
+        <a class="nav-btn" href="#skirmish">⚔️ Skirmish</a>
+        <a class="nav-btn" href="#siege">🏰 Siege</a>
+        <a class="nav-btn" href="#typhon">☢️ Typhon</a>
+    </div>
+    <div class="nav-row sub-row">
+        <span class="sub-label">Typhon →</span>
+        <a class="nav-btn sub" href="#outpost">Outpost</a>
+        <a class="nav-btn sub" href="#frontline">Frontline</a>
+        <a class="nav-btn sub" href="#last-stand">Last Stand</a>
+    </div>
+</nav>
+
+<section class="rules-section" id="skirmish">
+    <div class="section-header">
+        <h2>⚔️ Skirmish</h2>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🃏 Deck</div>
+        <p>Each player uses a deck of <strong>7 cards</strong>:</p>
+        <div class="rarity-row">
+            <div class="rarity-item rarity-legion"><span class="rarity-icon">⭐</span><strong>Legion</strong><span>value <strong>3</strong></span><span class="rarity-count">×1</span></div>
+            <div class="rarity-item rarity-elite"><span class="rarity-icon">💎</span><strong>Elite</strong><span>value <strong>2</strong></span><span class="rarity-count">×2</span></div>
+            <div class="rarity-item rarity-recruit"><span class="rarity-icon">🔷</span><strong>Recruit</strong><span>value <strong>1</strong></span><span class="rarity-count">×4</span></div>
+        </div>
+    </div>
+
+    <div class="card"><div class="card-title">⚔️ Match</div><p>First to win <strong>2 sets</strong> wins the match <em>(Best of 3)</em>.</p></div>
+    <div class="card">
+        <div class="card-title">🃏 Set — 7 duels</div>
+        <div class="step"><div class="step-num">1</div><div>Each player <strong>secretly orders</strong> their 7 cards in a row.</div></div>
+        <div class="step"><div class="step-num">2</div><div>Both players <strong>reveal simultaneously</strong>.</div></div>
+        <div class="step"><div class="step-num">3</div><div>Cards are compared <strong>position by position</strong> (left to right).</div></div>
+    </div>
+    <div class="card"><div class="card-title">🥊 Duel</div><ul><li>Higher card value <strong>wins the duel → 1 point</strong>.</li><li>🤝 Tie = <strong>0 points</strong> for both.</li></ul></div>
+    <div class="card"><div class="card-title">🏆 Set Result</div><ul><li>More points → <strong>wins the set</strong>.</li><li>🤝 Set tie goes to <strong>Earthlings</strong>.</li></ul></div>
+    <div class="card"><div class="card-title">⏱️ Overtime</div><div class="highlight-box">Both players draw 1 card at random and reveal simultaneously.<br>Higher value wins the set. If equal → draw again.<br>If all cards are used and still tied → <strong>Earthlings win the set</strong>.</div></div>
+    <div class="card">
+        <div class="card-title">🌍 Sides</div>
+        <p>Sides alternate between sets:</p>
+        <div class="sides-grid">
+            <div class="side-card set1"><div class="set-label">SET 1</div><div class="player-row">Player A = <span class="earthlings">🌍 Earthlings</span></div><div class="player-row">Player B = <span class="synthbots">🤖 Synthbots</span></div></div>
+            <div class="side-card set2"><div class="set-label">SET 2</div><div class="player-row">Player A = <span class="synthbots">🤖 Synthbots</span></div><div class="player-row">Player B = <span class="earthlings">🌍 Earthlings</span></div></div>
+            <div class="side-card set3"><div class="set-label">SET 3</div><div class="player-row">same as Set 1</div></div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+<section class="rules-section" id="siege">
+    <div class="section-header"><h2>🏰 Siege</h2></div>
+    <div class="card"><div class="card-title">🃏 Deck</div><p>Each player uses a deck of <strong>7 cards</strong>:</p>
+        <div class="rarity-row">
+            <div class="rarity-item rarity-legion"><span class="rarity-icon">⭐</span><strong>Legion</strong><span>value <strong>3</strong></span><span class="rarity-count">×1</span></div>
+            <div class="rarity-item rarity-elite"><span class="rarity-icon">💎</span><strong>Elite</strong><span>value <strong>2</strong></span><span class="rarity-count">×2</span></div>
+            <div class="rarity-item rarity-recruit"><span class="rarity-icon">🔷</span><strong>Recruit</strong><span>value <strong>1</strong></span><span class="rarity-count">×4</span></div>
+        </div>
+    </div>
+    <div class="card"><div class="card-title">⚔️ Match</div><p>First to win <strong>2 sets</strong> wins the match <em>(Best of 3)</em>.</p></div>
+    <div class="card"><div class="card-title">🧱 Siege Pressure</div><ul><li>If a player wins <strong>2 duels in a row</strong>, they gain <strong>+1 bonus point</strong>.</li><li>This bonus can trigger multiple times during a set.</li><li>🤝 A tied duel breaks the streak for both players.</li></ul></div>
+    <div class="card"><div class="card-title">🃏 Set — 7 duels</div>
+        <div class="step"><div class="step-num">1</div><div>Each player <strong>secretly orders</strong> their 7 cards.</div></div>
+        <div class="step"><div class="step-num">2</div><div>Both players <strong>reveal simultaneously</strong>.</div></div>
+        <div class="step"><div class="step-num">3</div><div>Cards are compared <strong>position by position</strong> (left to right).</div></div>
+    </div>
+    <div class="card"><div class="card-title">🥊 Duel</div><ul><li>Higher card value <strong>wins the duel → 1 point</strong>.</li><li>🤝 Tie = <strong>0 points</strong> for both.</li></ul></div>
+    <div class="card"><div class="card-title">🏆 Set Result</div><ul><li>Player with more points (including Siege bonus points) <strong>wins the set</strong>.</li><li>If still tied after all duels, use <strong>Overtime</strong>.</li></ul></div>
+    <div class="card"><div class="card-title">⏱️ Overtime</div><div class="highlight-box">Both players draw 1 card at random and reveal simultaneously.<br>Higher value wins the set. If equal → draw again.<br>If all cards are used and still tied → <strong>Earthlings win the set</strong>.</div></div>
+    <div class="card"><div class="card-title">🌍 Sides</div><p>Sides alternate between sets, same as Skirmish.</p></div>
+</section>
+
+<div class="section-divider"></div>
+<section class="rules-section" id="typhon">
+    <div class="section-header"><h2>☢️ Protocol Typhon</h2></div>
+    <p style="color:#555; margin-bottom: 1.5rem;">Protocol Typhon is the full hardcore experience. Choose your variant below:</p>
+    <div class="typhon-local-nav">
+        <a class="nav-btn sub" href="#outpost">Outpost</a>
+        <a class="nav-btn sub" href="#frontline">Frontline</a>
+        <a class="nav-btn sub" href="#last-stand">Last Stand</a>
+    </div>
+    <div class="card"><div class="card-title">🧬 Typhon Core</div><ul><li><strong>Protocol Typhon</strong> is the hardcore ruleset with higher tactical pressure and stricter decisions.</li><li>The three variants below share the same lore layer, but differ in pacing and complexity.</li><li>Use this as working structure; exact values/details can be locked in next revision.</li></ul></div>
+
+    <div class="rules-section sub-section" id="outpost" style="max-width:100%; padding:0; margin-top:1.5rem;">
+        <div class="section-header"><h2>🏕️ Outpost</h2></div>
+        <div class="typhon-local-nav"><a class="nav-btn sub" href="#outpost">Outpost</a><a class="nav-btn sub" href="#frontline">Frontline</a><a class="nav-btn sub" href="#last-stand">Last Stand</a></div>
+        <div class="card"><div class="card-title">⚡ Mode Identity</div><p>The fastest Typhon variant. Designed for quick sessions with hardcore flavor.</p></div>
+        <div class="card"><div class="card-title">🎯 Focus</div><ul><li>Shorter decision loop, less bookkeeping.</li><li>Core Typhon tension stays, but with streamlined execution.</li><li>Best entry point before moving to Frontline / Last Stand.</li></ul></div>
+        <div class="card"><div class="card-title">📝 Status</div><p>Working draft. Exact mechanical limits will be finalized in the next pass.</p></div>
+    </div>
+
+    <div class="rules-section sub-section" id="frontline" style="max-width:100%; padding:0; margin-top:1.5rem;">
+        <div class="section-header"><h2>⚔️ Frontline</h2></div>
+        <div class="typhon-local-nav"><a class="nav-btn sub" href="#outpost">Outpost</a><a class="nav-btn sub" href="#frontline">Frontline</a><a class="nav-btn sub" href="#last-stand">Last Stand</a></div>
+        <div class="card"><div class="card-title">🪖 Mode Identity</div><p>The balanced Typhon variant. Full tactical rhythm without the heaviest overhead.</p></div>
+        <div class="card"><div class="card-title">⚙️ Focus</div><ul><li>Standard hardcore pacing.</li><li>Recommended baseline for competitive internal testing.</li><li>Bridge between Outpost speed and Last Stand depth.</li></ul></div>
+        <div class="card"><div class="card-title">📝 Status</div><p>Working draft. Additional details can be expanded once you lock the final values.</p></div>
+    </div>
+
+    <div class="rules-section sub-section" id="last-stand" style="max-width:100%; padding:0; margin-top:1.5rem;">
+        <div class="section-header"><h2>💀 Last Stand</h2></div>
+        <div class="typhon-local-nav"><a class="nav-btn sub" href="#outpost">Outpost</a><a class="nav-btn sub" href="#frontline">Frontline</a><a class="nav-btn sub" href="#last-stand">Last Stand</a></div>
+        <div class="card"><div class="card-title">💀 Mode Identity</div><p>The complete Typhon experience. Highest complexity and maximum pressure.</p></div>
+        <div class="card"><div class="card-title">🧠 Focus</div><ul><li>No shortcuts: all intended hardcore interactions stay active.</li><li>Designed for advanced play and full strategic expression.</li><li>Reference mode for final balancing and lore-accurate competitive play.</li></ul></div>
+        <div class="card"><div class="card-title">📝 Status</div><p>Working draft. Any missing edge-cases will be added after next playtest batch.</p></div>
+    </div>
+</section>
+
+<footer><sup>TM&amp;©</sup> 2026 LEGIONS</footer>
+
+<script>
+    const sectionIds = ['skirmish', 'siege', 'typhon', 'outpost', 'frontline', 'last-stand'];
+    const typhonIds  = ['typhon', 'outpost', 'frontline', 'last-stand'];
+    const subRow     = document.querySelector('.sub-row');
+
+    const buttons = {};
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+        const href = btn.getAttribute('href').replace('#', '');
+        if (!buttons[href]) buttons[href] = [];
+        buttons[href].push(btn);
+    });
+
+    function updateActive() {
+        let current = 'skirmish';
+        sectionIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el && window.scrollY >= el.offsetTop - 160) current = id;
+        });
+
+        Object.keys(buttons).forEach(k => buttons[k].forEach(btn => btn.classList.remove('active')));
+        if (buttons[current]) buttons[current].forEach(btn => btn.classList.add('active'));
+        if (typhonIds.includes(current) && buttons['typhon']) {
+            buttons['typhon'].forEach(btn => btn.classList.add('active'));
+        }
+
+        if (typhonIds.includes(current)) {
+            subRow.classList.add('visible');
+        } else {
+            subRow.classList.remove('visible');
+        }
+    }
+
+    window.addEventListener('scroll', updateActive);
+    updateActive();
+</script>
+
+</body>
+</html>

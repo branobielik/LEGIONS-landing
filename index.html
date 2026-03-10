@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="LEGIONS">
+    <meta name="theme-color" content="#ffffff">
+    <title>LEGIONS</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span>LEGIONS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">The LEGIONS Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-overlay"></div>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>LEGIONS</h1>
+                <p>The Future of Trading Card Games</p>
+                <div class="reagan-quote">
+                    <p>"And yet, I ask you, is not an alien force already among us?"</p>
+                    <p class="quote-attribution">(Ronald Reagan, UN speech 1987)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2>The LEGIONS Project</h2>
+                <p>Earth is under attack. Are you up for the challenge?<br>Collect. Strategize. Defend.<br><em>...or win as the enemy.</em></p>
+                <div class="card-and-links">
+                    <div class="card-container">
+                        <div class="rotating-card">
+                            <div class="card-face card-front">
+                                <img src="images/exa front.jpg" alt="Card Front" onerror="this.onerror=null;this.src='images/card front.jpg';">
+                            </div>
+                            <div class="card-face card-back">
+                                <img src="images/exa back.jpg" alt="Card Back" onerror="this.onerror=null;this.src='images/card back.jpg';">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-content">
+                        <div class="coming-soon-text">
+                            <span class="legions-text">LEGIONS</span>
+                            <span class="coming-text">coming to you in 2026!</span>
+                        </div>
+                        <div class="pitch-links">
+                            <a href="rules.html" class="pitch-link">How to play &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <audio id="background-audio" preload="auto">
+                <source src="images/longer version no loop qm.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <a href="mailto:legionsproject@gmail.com" class="contact-email">
+                        <i class="fas fa-envelope"></i> legionsproject@gmail.com
+                    </a>
+                    <a href="tel:+421907586768" class="contact-phone">
+                        <i class="fas fa-phone"></i> +421 907 586 768
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><sup>TM&amp;&copy;</sup> 2026 LEGIONS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,97 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="LEGIONS">
-    <meta name="theme-color" content="#ffffff">
-    <title>LEGIONS</title>
-    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="LEGIONS© — revolutionary sci-fi trading card game">
+    <meta name="theme-color" content="#05070b">
+    <title>LEGIONS© — Official Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles-v4.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <span>LEGIONS</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">The LEGIONS Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <main class="landing-shell" id="home">
+        <svg class="gold-frame" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <linearGradient id="page-frame-gold" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#8e4d08"/>
+                    <stop offset=".22" stop-color="#ffd55f"/>
+                    <stop offset=".43" stop-color="#92500a"/>
+                    <stop offset=".62" stop-color="#ffe687"/>
+                    <stop offset=".82" stop-color="#9b570b"/>
+                    <stop offset="1" stop-color="#ffc13b"/>
+                </linearGradient>
+            </defs>
+            <path d="M15 0 H985 L1000 28 V972 L985 1000 H15 L0 972 V28 Z"
+                  fill="none"
+                  stroke="url(#page-frame-gold)"
+                  stroke-width="4"
+                  vector-effect="non-scaling-stroke"/>
+        </svg>
+        <div class="atmosphere" aria-hidden="true"></div>
 
-    <main>
-        <div class="page-overlay"></div>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>LEGIONS</h1>
-                <p>The Future of Trading Card Games</p>
-                <div class="reagan-quote">
-                    <p>"And yet, I ask you, is not an alien force already among us?"</p>
-                    <p class="quote-attribution">(Ronald Reagan, UN speech 1987)</p>
-                </div>
+        <header class="topbar">
+            <a class="top-wordmark wordmark-lockup" href="#home" aria-label="LEGIONS copyright home">
+                <img src="images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup class="wordmark-copyright" aria-hidden="true">©</sup>
+            </a>
+            <div class="top-actions">
+                <p class="header-announcement">Revolutionary TCG <span>•</span> Coming to you soon!</p>
+
+                <button class="music-toggle" id="music-toggle" type="button" aria-label="Play music" aria-pressed="false">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+            </div>
+        </header>
+
+        <section class="hero-core" aria-label="LEGIONS copyright introduction">
+            <div class="hero-mark">
+                <img class="hero-sigil" src="images/v4-assets/legions-sigil-web.png" alt="">
+                <span class="hero-wordmark-lockup wordmark-lockup">
+                    <img class="hero-wordmark" src="images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                    <sup class="wordmark-copyright" aria-hidden="true">©</sup>
+                </span>
+            </div>
+
+            <div class="hero-tagline">
+                <p>Earth is under attack. Are you up for the challenge?</p>
+                <strong>Collect. Strategize. Defend. Conquer.</strong>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <div class="about-content">
-                <h2>The LEGIONS Project</h2>
-                <p>Earth is under attack. Are you up for the challenge?<br>Collect. Strategize. Defend.<br><em>...or win as the enemy.</em></p>
-                <div class="card-and-links">
-                    <div class="card-container">
-                        <div class="rotating-card">
-                            <div class="card-face card-front">
-                                <img src="images/exa front.jpg" alt="Card Front" onerror="this.onerror=null;this.src='images/card front.jpg';">
-                            </div>
-                            <div class="card-face card-back">
-                                <img src="images/exa back.jpg" alt="Card Back" onerror="this.onerror=null;this.src='images/card back.jpg';">
-                            </div>
+        <section class="action-panels" aria-label="LEGIONS gameplay pillars">
+            <article class="action-panel action-collect">
+                <img class="action-icon" src="images/v4-assets/icon-collect.png" alt="">
+                <div>
+                    <strong>Collect</strong>
+                    <span>Powerful cards. Unique Legions.</span>
+                </div>
+            </article>
+
+            <article class="action-panel action-strategize">
+                <img class="action-icon" src="images/v4-assets/icon-strategize.png" alt="">
+                <div>
+                    <strong>Strategize</strong>
+                    <span>Build your deck. Master the battle.</span>
+                </div>
+            </article>
+
+            <article class="action-panel action-defend">
+                <svg class="action-icon action-shield" viewBox="0 0 64 72" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="shield-gold" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#fff1a2"/>
+                            <stop offset=".45" stop-color="#e9ad32"/>
+                            <stop offset="1" stop-color="#8f4606"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M32 4 56 13v19c0 17-10 29-24 36C18 61 8 49 8 32V13L32 4Z" fill="none" stroke="url(#shield-gold)" stroke-width="4"/>
+                    <path d="M32 13v44c9-6 15-14 15-25V19l-15-6Z" fill="url(#shield-gold)" opacity=".9"/>
+                </svg>
+                <div>
+                    <strong>Defend</strong>
+                    <span>Protect Earth. Hold the line.</span>
+                </div>
+            </article>
+
+            <article class="action-panel action-conquer">
+                <img class="action-icon" src="images/v4-assets/icon-conquer.png" alt="">
+                <div>
+                    <strong>Conquer</strong>
+                    <span>Dominate battles. Rise as legend.</span>
+                </div>
+            </article>
+        </section>
+
+        <div class="hero-robots" aria-hidden="true">
+            <img class="hero-robot robot-bad" src="images/v4-assets/robot-bad-full.webp" alt="">
+            <img class="hero-robot robot-good" src="images/v4-assets/robot-good-full.webp" alt="">
+        </div>
+
+        <div class="hero-actions">
+            <a class="gold-button discover-button" href="https://www.legions.quest/rules.html">
+                <span>Discover THE LEGIONS</span>
+            </a>
+            <a class="gold-button trailer-button" href="https://youtu.be/_fz6XY6RR7c" target="_blank" rel="noopener">
+                <i class="fa-solid fa-play"></i>
+                <span>Watch Trailer</span>
+            </a>
+        </div>
+
+        <section class="card-zone evil-zone" aria-label="Blue enemy cards">
+            <div class="card-line">
+                <article class="flip-card" data-pair="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-face flip-front">
+                            <img src="images/v4-assets/final-b1.jpg" alt="Blue-side alien card">
+                        </div>
+                        <div class="flip-face flip-back">
+                            <img src="images/exa back.jpg" alt="LEGIONS card back">
                         </div>
                     </div>
-                    <div class="right-content">
-                        <div class="coming-soon-text">
-                            <span class="legions-text">LEGIONS</span>
-                            <span class="coming-text">coming to you in 2026!</span>
+                </article>
+
+                <article class="flip-card" data-pair="1">
+                    <div class="flip-card-inner">
+                        <div class="flip-face flip-front">
+                            <img src="images/v4-assets/final-b2.jpg" alt="Blue-side monster card">
                         </div>
-                        <div class="pitch-links">
-                            <a href="rules.html" class="pitch-link">How to play &rarr;</a>
+                        <div class="flip-face flip-back">
+                            <img src="images/exa back.jpg" alt="LEGIONS card back">
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="flip-card" data-pair="2">
+                    <div class="flip-card-inner">
+                        <div class="flip-face flip-front">
+                            <img src="images/v4-assets/final-b3.jpg" alt="Blue-side necromancer card">
+                        </div>
+                        <div class="flip-face flip-back">
+                            <img src="images/exa back.jpg" alt="LEGIONS card back">
+                        </div>
+                    </div>
+                </article>
             </div>
-            <audio id="background-audio" preload="auto">
-                <source src="images/longer version no loop qm.mp3" type="audio/mpeg">
-            </audio>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="card-fan contact-fan" aria-hidden="true">
-                <div class="card-fan-item card-fan-left"><img src="images/image1.jpg" alt="" onerror="this.src='images/image1.png';this.onerror=null;"></div>
-                <div class="card-fan-item card-fan-mid"><img src="images/image2.jpg" alt="" onerror="this.src='images/image2.png';this.onerror=null;"></div>
-                <div class="card-fan-item card-fan-right"><img src="images/image3.jpg" alt="" onerror="this.src='images/image3.png';this.onerror=null;"></div>
-            </div>
-            <div class="contact-content contact-align-right">
-                <h2>Contact Us</h2>
-                <div class="contact-info">
-                    <a href="mailto:legionsproject@gmail.com" class="contact-email">
-                        <i class="fas fa-envelope"></i> legionsproject@gmail.com
-                    </a>
-                    <a href="tel:+421907586768" class="contact-phone">
-                        <i class="fas fa-phone"></i> +421 907 586 768
-                    </a>
-                </div>
+        <section class="card-zone good-zone" aria-label="Red defender cards">
+            <div class="card-line">
+                <article class="flip-card" data-pair="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-face flip-front">
+                            <img src="images/v4-assets/final-g1-small.jpg" alt="Good-side angel card">
+                        </div>
+                        <div class="flip-face flip-back">
+                            <img src="images/exa back.jpg" alt="LEGIONS card back">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="flip-card" data-pair="1">
+                    <div class="flip-card-inner">
+                        <div class="flip-face flip-front">
+                            <img src="images/v4-assets/final-g2-small.jpg" alt="Good-side knight card">
+                        </div>
+                        <div class="flip-face flip-back">
+                            <img src="images/exa back.jpg" alt="LEGIONS card back">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="flip-card" data-pair="2">
+                    <div class="flip-card-inner">
+                        <div class="flip-face flip-front">
+                            <img src="images/v4-assets/final-g3-small.jpg" alt="Good-side protector card">
+                        </div>
+                        <div class="flip-face flip-back">
+                            <img src="images/exa back.jpg" alt="LEGIONS card back">
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
+
+        <section class="footer-hub" id="project">
+            <div class="join-panel" aria-label="Join the LEGIONS">
+                <div class="join-copy">
+                    <span class="panel-label">Join the LEGIONS</span>
+                    <p>Get project news, card reveals and early access updates.</p>
+                </div>
+                <form class="join-form" id="join-form">
+                    <label class="sr-only" for="join-email">Email address</label>
+                    <input id="join-email" type="email" autocomplete="email" placeholder="Enter your email">
+                    <button class="gold-button" type="submit">Join the LEGIONS</button>
+                </form>
+            </div>
+
+            <address class="contact-panel" id="contact">
+                <span class="panel-label">Contact Us</span>
+                <div class="contact-links">
+                    <a href="mailto:legionsproject@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>legionsproject@gmail.com</span>
+                    </a>
+                    <a href="tel:+421907586768">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+421 907 586 768</span>
+                    </a>
+                </div>
+            </address>
+        </section>
+
+        <footer class="landing-footer">
+            <p class="copyright">&copy; 2026 LEGIONS. All rights reserved.</p>
+
+            <div class="social-links" aria-label="Social media placeholders">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <blockquote class="reagan-quote">
+                <p>“And yet, I ask you, is not an alien force already among us?”</p>
+                <cite>Ronald Reagan, UN speech 1987</cite>
+            </blockquote>
+        </footer>
+
+        <audio id="background-audio" preload="metadata">
+            <source src="images/longer version no loop qm.mp3" type="audio/mpeg">
+        </audio>
     </main>
 
-    <footer>
-        <p><sup>TM&amp;&copy;</sup> 2026 LEGIONS</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="./script-v4.js"></script>
 </body>
 </html>

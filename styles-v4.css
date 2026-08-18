@@ -541,13 +541,13 @@ input {
 }
 
 .robot-bad {
-    top: 17.55vh;
+    top: calc(86.85vh - min(69.3vh, 39vw));
     left: 13.66vw;
     height: min(69.3vh, 39vw);
 }
 
 .robot-good {
-    top: 13.95vh;
+    top: calc(90.28vh - min(76.33vh, 42.92vw));
     right: 13.57vw;
     height: min(76.33vh, 42.92vw);
     transform: scaleX(-1);
@@ -920,13 +920,13 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
     }
 
     .robot-bad {
-        top: 17.55vh;
+        top: calc(86.85vh - min(69.3vh, 39vw));
         left: 13.66vw;
         height: min(69.3vh, 39vw);
     }
 
     .robot-good {
-        top: 13.95vh;
+        top: calc(90.28vh - min(76.33vh, 42.92vw));
         right: 13.57vw;
         height: min(76.33vh, 42.92vw);
     }
@@ -1052,11 +1052,13 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
     }
 
     .robot-bad {
+        top: calc(32.8vh - 33vw);
         left: 4vw;
         height: 33vw;
     }
 
     .robot-good {
+        top: calc(30.8vh - 36.3vw);
         right: 4vw;
         height: 36.3vw;
     }

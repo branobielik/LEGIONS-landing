@@ -76,9 +76,9 @@ input {
 .atmosphere {
     position: absolute;
     z-index: 6;
-    top: 70vh;
+    top: auto;
     left: 50%;
-    bottom: auto;
+    bottom: 0;
     width: 76vw;
     height: 41vh;
     transform: translateX(-50%);
@@ -639,6 +639,12 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
     animation: ceremonial-flip 9s cubic-bezier(.42, 0, .58, 1) both;
 }
 
+html[data-active-pair="0"] .flip-card[data-pair="0"],
+html[data-active-pair="1"] .flip-card[data-pair="1"],
+html[data-active-pair="2"] .flip-card[data-pair="2"] {
+    z-index: 8;
+}
+
 .flip-card:hover .flip-card-inner {
     animation: hover-flip 2.2s linear infinite;
 }
@@ -959,7 +965,7 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) and (orientation: portrait) {
     .landing-shell {
         min-height: 100svh;
         height: auto;
@@ -967,60 +973,89 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
         overflow-y: auto;
         grid-template-rows: repeat(8, auto);
         padding-bottom: 0;
+        background-color: #030508;
         background-position: center top;
+        background-size: auto 100svh;
+        background-repeat: no-repeat;
+        scroll-snap-type: y proximity;
     }
 
     .topbar {
-        padding: 14px 24px;
-        flex-wrap: wrap;
+        padding: 14px 18px 10px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 8px 14px;
     }
 
-    .header-announcement {
-        order: 3;
-        width: 100%;
-        margin: 3px 0 0;
-        text-align: center;
-        white-space: normal;
+    .top-wordmark {
+        grid-column: 1;
+        grid-row: 1;
+        width: 154px;
+        margin: 0;
+        align-self: center;
     }
 
     .top-actions {
-        gap: 12px;
+        display: contents;
     }
 
-    .main-nav {
-        gap: 15px;
+    .music-toggle {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
     }
 
-    .nav-link {
-        font-size: .72rem;
+    .header-announcement {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        white-space: normal;
     }
 
     .hero-core {
         grid-row: 2;
         width: 90%;
         min-width: 0;
-        margin: 8px auto 18px;
+        min-height: calc(100svh - 255px);
+        margin: 0 auto;
         transform: none;
+        justify-content: center;
     }
 
     .hero-sigil {
         width: 125px;
-        height: 300px;
+        height: clamp(200px, 29svh, 250px);
+    }
+
+    .hero-wordmark-lockup {
+        margin-top: 24px;
     }
 
     .hero-wordmark {
         width: min(78vw, 390px);
     }
 
+    .hero-tagline {
+        margin-top: 19px;
+    }
+
+    .hero-tagline strong {
+        display: none;
+    }
+
     .action-panels {
         position: relative;
         inset: auto;
-        grid-row: 3;
+        grid-row: 6;
         width: calc(100% - 36px);
-        margin: 4px auto 14px;
+        margin: 20px auto 30px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 9px;
+        scroll-snap-align: start;
     }
 
     .action-panel,
@@ -1038,29 +1073,35 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
 
     .hero-actions {
         position: relative;
-        grid-row: 4;
+        grid-row: 3;
         top: auto;
         left: auto;
         bottom: auto;
         transform: none;
-        margin: 4px auto 18px;
-        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto 34px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    .hero-actions .discover-button {
+        width: min(88vw, 390px);
+        min-height: 58px;
+        font-size: 1rem;
+    }
+
+    .hero-actions .trailer-button {
+        width: min(76vw, 330px);
+        min-height: 48px;
     }
 
     .hero-robots {
-        display: block;
+        display: none;
     }
 
-    .robot-bad {
-        top: calc(32.8vh - 33vw);
-        left: 4vw;
-        height: 33vw;
-    }
-
-    .robot-good {
-        top: calc(30.8vh - 36.3vw);
-        right: 4vw;
-        height: 36.3vw;
+    .atmosphere {
+        display: none;
     }
 
     .card-zone {
@@ -1069,15 +1110,17 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
         right: auto;
         bottom: auto;
         width: 94%;
-        margin: 6px auto;
+        margin: 10px auto;
     }
 
     .evil-zone {
-        grid-row: 5;
+        grid-row: 4;
+        margin-top: 44px;
+        scroll-snap-align: start;
     }
 
     .good-zone {
-        grid-row: 6;
+        grid-row: 5;
     }
 
     .card-line {
@@ -1087,15 +1130,16 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
     .flip-card,
     .flip-card:nth-child(1),
     .flip-card:nth-child(3) {
-        width: min(25vw, 132px);
+        width: min(29vw, 132px);
     }
 
     .footer-hub {
         grid-row: 7;
         width: calc(100% - 42px);
-        margin: 22px auto 12px;
+        margin: 32px auto 12px;
         grid-template-columns: 1fr;
         gap: 13px;
+        scroll-snap-align: start;
     }
 
     .join-panel {
@@ -1123,27 +1167,13 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] .flip-card-inner {
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 620px) and (orientation: portrait) {
     .topbar {
-        justify-content: center;
+        justify-content: stretch;
     }
 
     .top-wordmark {
         width: 142px;
-        margin-right: auto;
-    }
-
-    .top-actions {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .main-nav {
-        gap: 12px;
-    }
-
-    .nav-link {
-        font-size: .68rem;
     }
 
     .landing-footer {

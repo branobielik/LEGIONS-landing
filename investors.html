@@ -50,6 +50,23 @@
         .back-button:hover {
             background: rgba(41, 128, 185, 0.95);
         }
+        .direct-pdf-button {
+            position: fixed;
+            top: 15px;
+            right: 120px;
+            padding: 10px 18px;
+            background: rgba(52, 152, 219, 0.9);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            z-index: 1001;
+            transition: background-color 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        .direct-pdf-button:hover {
+            background: rgba(41, 128, 185, 0.95);
+        }
         .orientation-message {
             display: none;
             position: fixed;
@@ -119,44 +136,28 @@
                 height: 35px;
                 font-size: 16px;
             }
-            @media (orientation: portrait) {
-                .orientation-message {
-                    display: flex;
-                }
-                .viewer-container {
-                    opacity: 0.1;
-                }
-            }
-            @media (orientation: landscape) {
-                .orientation-message {
-                    display: none;
-                }
-                .viewer-container {
-                    opacity: 1;
-                }
+            .direct-pdf-button {
+                top: 10px;
+                right: 100px;
+                padding: 8px 12px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
     <a href="./" class="back-button">← Back to LEGIONS</a>
-    
-    <div class="orientation-message">
-        <div>
-            <span class="icon">📱</span>
-            <p>Please rotate your device to landscape mode<br>for the best viewing experience</p>
-        </div>
-    </div>
+    <a href="pitch deck/pitch-deck.pdf" class="direct-pdf-button" target="_blank" rel="noopener">Open PDF</a>
 
     <button class="fullscreen-button" onclick="toggleFullscreen()">⛶</button>
 
     <div class="viewer-container">
-        <object class="pdf-viewer" 
-                data="pitch deck/pitch-deck.pdf#view=Fit" 
-                type="application/pdf">
-            <p>It appears you don't have a PDF plugin for this browser. 
-               <a href="pitch deck/pitch-deck.pdf">Click here to download the PDF file.</a></p>
-        </object>
+        <iframe
+            class="pdf-viewer"
+            title="LEGIONS Investor Presentation"
+            src="https://drive.google.com/viewerng/viewer?embedded=true&amp;url=https%3A%2F%2Fwww.legions.quest%2Fpitch%2520deck%2Fpitch-deck.pdf"
+            allowfullscreen>
+        </iframe>
     </div>
 
     <script>

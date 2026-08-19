@@ -62,7 +62,9 @@ input {
 .landing-shell {
     position: relative;
     isolation: isolate;
-    min-height: calc(100svh + 90px);
+    width: 100%;
+    height: 100svh;
+    min-height: 100svh;
     overflow: hidden;
     display: grid;
     grid-template-rows: auto minmax(240px, 1fr) auto auto;
@@ -79,18 +81,21 @@ input {
     top: auto;
     left: 50%;
     bottom: 0;
-    width: 76vw;
-    height: 41vh;
+    width: 84vw;
+    height: 46vh;
     transform: translateX(-50%);
     border-radius: 50%;
     pointer-events: none;
     background: radial-gradient(
         ellipse at center,
-        rgba(0, 0, 0, .82) 0%,
-        rgba(0, 0, 0, .71) 43%,
-        rgba(0, 0, 0, .36) 69%,
+        rgba(0, 0, 0, .8) 0%,
+        rgba(0, 0, 0, .66) 34%,
+        rgba(0, 0, 0, .42) 56%,
+        rgba(0, 0, 0, .2) 73%,
+        rgba(0, 0, 0, .07) 88%,
         rgba(0, 0, 0, 0) 100%
     );
+    filter: blur(18px);
 }
 
 .gold-frame {
@@ -246,7 +251,7 @@ input {
 .hero-core {
     position: relative;
     z-index: 8;
-    transform: translateY(76px);
+    transform: translateY(clamp(36px, 7vh, 76px));
     align-self: start;
     justify-self: center;
     width: min(44vw, 650px);
@@ -267,7 +272,7 @@ input {
 
 .hero-sigil {
     width: clamp(132px, 13vw, 220px);
-    height: clamp(360px, 54vh, 620px);
+    height: clamp(320px, 46vh, 520px);
     object-fit: contain;
     opacity: 1;
     filter:
@@ -378,9 +383,9 @@ input {
 .hero-actions {
     position: absolute;
     z-index: 12;
-    top: calc(347px + clamp(360px, 54vh, 620px));
+    top: auto;
     left: 50%;
-    bottom: auto;
+    bottom: clamp(155px, 17vh, 190px);
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -876,6 +881,47 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] {
     font-size: .9em;
 }
 
+@media (orientation: landscape) and (max-height: 850px) {
+    .hero-core {
+        transform: translateY(26px);
+    }
+
+    .hero-sigil {
+        height: 33vh;
+    }
+
+    .hero-wordmark-lockup {
+        margin-top: 18px;
+    }
+
+    .hero-wordmark {
+        width: clamp(300px, 28vw, 400px);
+    }
+
+    .hero-tagline {
+        margin-top: 14px;
+    }
+
+    .hero-actions {
+        bottom: 180px;
+    }
+
+    .flip-card {
+        width: min(13vw, 20vh);
+    }
+
+    .flip-card:nth-child(1),
+    .flip-card:nth-child(3) {
+        width: min(12vw, 18.5vh);
+    }
+
+    .footer-hub {
+        min-height: 76px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
 @media (max-width: 1050px) {
     .hero-core {
         width: 38vw;
@@ -981,11 +1027,12 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] {
     }
 
     .topbar {
-        padding: 14px 18px 10px;
+        min-height: 86px;
+        padding: 14px 18px 34px;
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-rows: auto auto;
-        gap: 8px 14px;
+        grid-template-rows: auto;
+        gap: 14px;
     }
 
     .top-wordmark {
@@ -997,19 +1044,24 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] {
     }
 
     .top-actions {
-        display: contents;
+        grid-column: 2;
+        grid-row: 1;
+        display: block;
     }
 
     .music-toggle {
-        grid-column: 2;
-        grid-row: 1;
-        align-self: center;
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        z-index: 1;
     }
 
     .header-announcement {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        width: 100%;
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 9px;
+        width: auto;
         margin: 0;
         text-align: center;
         white-space: normal;
@@ -1035,7 +1087,7 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] {
     }
 
     .hero-wordmark {
-        width: min(78vw, 390px);
+        width: min(64vw, 320px);
     }
 
     .hero-tagline {
@@ -1097,7 +1149,22 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] {
     }
 
     .hero-robots {
-        display: none;
+        display: block;
+        inset: 0 0 auto;
+        height: 100svh;
+        clip-path: inset(0);
+    }
+
+    .robot-bad {
+        top: calc(88svh - 58vw);
+        left: -6vw;
+        height: 58vw;
+    }
+
+    .robot-good {
+        top: calc(90svh - 64vw);
+        right: -6vw;
+        height: 64vw;
     }
 
     .atmosphere {

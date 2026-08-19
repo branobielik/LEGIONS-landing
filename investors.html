@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="LEGIONS Investor Presentation">
+    <meta name="theme-color" content="#080d13">
+    <title>LEGIONS Investor Presentation</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #080d13;
+        }
+        .viewer-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #080d13;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+            max-width: 1920px; /* Match the width of The LEGIONS project section */
+            margin: 0 auto;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(52, 152, 219, 0.9);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        .back-button:hover {
+            background: rgba(41, 128, 185, 0.95);
+        }
+        .orientation-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(8, 13, 19, 0.95);
+            color: white;
+            font-family: Arial, sans-serif;
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .orientation-message p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .orientation-message .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+            transform: rotate(90deg);
+        }
+        .close-pitch:hover {
+            background: #2980b9;
+        }
+
+        .fullscreen-button {
+            position: absolute;
+            top: 15px;
+            right: 65px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #3498db;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+            z-index: 1001;
+        }
+
+        .fullscreen-button:hover {
+            background: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .back-button {
+                top: 10px;
+                left: 10px;
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+            .fullscreen-button {
+                top: 10px;
+                right: 55px;
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+            @media (orientation: portrait) {
+                .orientation-message {
+                    display: flex;
+                }
+                .viewer-container {
+                    opacity: 0.1;
+                }
+            }
+            @media (orientation: landscape) {
+                .orientation-message {
+                    display: none;
+                }
+                .viewer-container {
+                    opacity: 1;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="./" class="back-button">← Back to LEGIONS</a>
+    
+    <div class="orientation-message">
+        <div>
+            <span class="icon">📱</span>
+            <p>Please rotate your device to landscape mode<br>for the best viewing experience</p>
+        </div>
+    </div>
+
+    <button class="fullscreen-button" onclick="toggleFullscreen()">⛶</button>
+
+    <div class="viewer-container">
+        <object class="pdf-viewer" 
+                data="pitch deck/pitch-deck.pdf#view=Fit" 
+                type="application/pdf">
+            <p>It appears you don't have a PDF plugin for this browser. 
+               <a href="pitch deck/pitch-deck.pdf">Click here to download the PDF file.</a></p>
+        </object>
+    </div>
+
+    <script>
+        // Prevent scrolling on mobile except for the PDF viewer
+        document.addEventListener('touchmove', function(e) {
+            if (e.target.classList.contains('pdf-viewer')) return;
+            e.preventDefault();
+        }, { passive: false });
+
+        // Handle orientation changes
+        window.addEventListener('orientationchange', function() {
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+            }, 200);
+        });
+
+        // Fullscreen functionality
+        function toggleFullscreen() {
+            const viewerContainer = document.querySelector('.viewer-container');
+            if (!document.fullscreenElement) {
+                if (viewerContainer.requestFullscreen) {
+                    viewerContainer.requestFullscreen();
+                } else if (viewerContainer.webkitRequestFullscreen) {
+                    viewerContainer.webkitRequestFullscreen();
+                } else if (viewerContainer.msRequestFullscreen) {
+                    viewerContainer.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+</body>
+</html> 

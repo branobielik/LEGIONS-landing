@@ -638,16 +638,17 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] {
 }
 
 .robot-bad {
-    left: 7vw;
+    left: 0;
     bottom: 0;
-    height: min(58vh, 40vw);
+    height: min(74vh, 900px);
+    transform: translateY(5.4%);
 }
 
 .robot-good {
-    right: 7vw;
+    right: 0;
     bottom: 0;
-    height: min(64vh, 44vw);
-    transform: scaleX(-1);
+    height: min(78vh, 940px);
+    transform: translateY(7.3%) scaleX(-1);
 }
 
 .footer-hub {
@@ -933,17 +934,16 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] {
 
     .hero-robots {
         height: min(760px, 100svh);
-        opacity: .38;
     }
 
     .robot-bad {
-        left: -3vw;
-        height: min(55vh, 46vw);
+        left: -12vw;
+        height: min(72svh, 720px);
     }
 
     .robot-good {
-        right: -3vw;
-        height: min(60vh, 50vw);
+        right: -12vw;
+        height: min(76svh, 760px);
     }
 
     .hero-core {
@@ -1042,19 +1042,18 @@ html[data-active-pair="2"] .flip-card[data-pair="2"] {
 
     .hero-robots {
         height: min(720px, 94svh);
-        opacity: .5;
     }
 
     .robot-bad {
-        left: -18vw;
-        bottom: 20%;
-        height: 56vw;
+        left: -38vw;
+        bottom: 0;
+        height: 72svh;
     }
 
     .robot-good {
-        right: -18vw;
-        bottom: 18%;
-        height: 62vw;
+        right: -38vw;
+        bottom: 0;
+        height: 76svh;
     }
 
     .hero-sigil {

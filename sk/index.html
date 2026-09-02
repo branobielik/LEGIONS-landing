@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="LEGIONS© — unikátna slovenská strategická trading card game pre deti, tínedžerov aj dospelých.">
+    <meta name="theme-color" content="#05070b">
+    <title>LEGIONS© — Slovenská strategická TCG hra</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="landing-shell" id="domov">
+        <svg class="gold-frame" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <linearGradient id="sk-page-frame-gold" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#8e4d08"/>
+                    <stop offset=".22" stop-color="#ffd55f"/>
+                    <stop offset=".43" stop-color="#92500a"/>
+                    <stop offset=".62" stop-color="#ffe687"/>
+                    <stop offset=".82" stop-color="#9b570b"/>
+                    <stop offset="1" stop-color="#ffc13b"/>
+                </linearGradient>
+            </defs>
+            <path d="M15 0 H985 L1000 28 V972 L985 1000 H15 L0 972 V28 Z"
+                  fill="none"
+                  stroke="url(#sk-page-frame-gold)"
+                  stroke-width="4"
+                  vector-effect="non-scaling-stroke"/>
+        </svg>
+
+        <header class="topbar">
+            <a class="top-wordmark wordmark-lockup" href="#domov" aria-label="LEGIONS© domov">
+                <img src="../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup class="wordmark-copyright" aria-hidden="true">©</sup>
+            </a>
+
+            <div class="national-message">
+                <img class="slovak-emblem" src="./clker-free-vector-images-red-40491.svg" alt="Slovenský znak">
+                <p>
+                    <strong>Unikátna slovenská TCG hra</strong>
+                    <span aria-hidden="true">•</span>
+                    <strong>Rozvíja strategické myslenie, plánovanie a rozhodovanie</strong>
+                </p>
+            </div>
+
+            <div class="top-actions">
+                <a class="language-link" href="../" lang="en" hreflang="en" aria-label="English version">EN</a>
+                <button class="music-toggle" id="music-toggle" type="button" aria-label="Prehrať hudbu" aria-pressed="false">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+            </div>
+        </header>
+
+        <section class="hero-stage" aria-label="Predstavenie LEGIONS©">
+            <div class="atmosphere" aria-hidden="true"></div>
+
+            <div class="hero-robots" aria-hidden="true">
+                <img class="hero-robot robot-bad" src="../images/v4-assets/robot-bad-full.webp" alt="">
+                <img class="hero-robot robot-good" src="../images/v4-assets/robot-good-full.webp" alt="">
+            </div>
+
+            <section class="hero-core">
+                <div class="hero-mark">
+                    <img class="hero-sigil" src="./assets/legions-sigil-optimized.png" alt="">
+                    <span class="hero-wordmark-lockup wordmark-lockup">
+                        <img class="hero-wordmark" src="../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                        <sup class="wordmark-copyright" aria-hidden="true">©</sup>
+                    </span>
+                </div>
+
+                <div class="hero-tagline">
+                    <p>Naša Zem potrebuje hrdinu.</p>
+                    <strong>Budeš to práve TY?</strong>
+                </div>
+
+                <p class="age-message">
+                    <i class="fa-solid fa-users"></i>
+                    Pre všetky vekové kategórie
+                </p>
+
+                <div class="hero-actions">
+                    <a class="gold-button discover-button" href="../rules.html">
+                        <span>Objav LEGIONS<sup class="inline-copyright">©</sup></span>
+                    </a>
+                    <a class="gold-button trailer-button" href="https://youtu.be/_fz6XY6RR7c" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-play"></i>
+                        <span>Pozrieť trailer</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="action-panels" aria-label="Štyri piliere hry LEGIONS©">
+                <article class="action-panel action-think">
+                    <img class="action-icon" src="../images/v4-assets/icon-strategize.png" alt="">
+                    <div>
+                        <strong>Mysli</strong>
+                        <span>Vyhodnocuj možnosti a schopnosti.</span>
+                    </div>
+                </article>
+
+                <article class="action-panel action-plan">
+                    <svg class="action-icon action-compass" viewBox="0 0 72 72" aria-hidden="true">
+                        <circle cx="36" cy="36" r="28"/>
+                        <path d="m44 28-5 11-11 5 5-11 11-5Z"/>
+                        <circle cx="36" cy="36" r="4"/>
+                    </svg>
+                    <div>
+                        <strong>Plánuj</strong>
+                        <span>Vytvor stratégiu pre každý súboj.</span>
+                    </div>
+                </article>
+
+                <article class="action-panel action-decide">
+                    <svg class="action-icon action-path" viewBox="0 0 72 72" aria-hidden="true">
+                        <path d="M13 58c0-17 23-13 23-29V14"/>
+                        <path d="m27 23 9-10 9 10"/>
+                        <path d="M36 31c4 10 23 8 23 27"/>
+                        <path d="m50 49 9 10 9-10"/>
+                    </svg>
+                    <div>
+                        <strong>Rozhoduj</strong>
+                        <span>Každá voľba mení priebeh hry.</span>
+                    </div>
+                </article>
+
+                <article class="action-panel action-discover">
+                    <img class="action-icon" src="../images/v4-assets/icon-collect.png" alt="">
+                    <div>
+                        <strong>Objav</strong>
+                        <span>Spoznávaj hrdinov a ich svet.</span>
+                    </div>
+                </article>
+            </section>
+
+            <div class="card-showcase" aria-label="Ukážky kariet LEGIONS©">
+                <section class="card-zone evil-zone" aria-label="Modré útočné karty">
+                    <div class="card-line">
+                        <article class="flip-card" data-pair="0">
+                            <div class="flip-card-inner">
+                                <div class="flip-face flip-front"><img src="../images/v4-assets/final-b1.jpg" alt="Ukážka modrej karty"></div>
+                                <div class="flip-face flip-back"><img src="../images/exa%20back.jpg" alt="Zadná strana karty LEGIONS"></div>
+                            </div>
+                        </article>
+                        <article class="flip-card" data-pair="1">
+                            <div class="flip-card-inner">
+                                <div class="flip-face flip-front"><img src="../images/v4-assets/final-b2.jpg" alt="Ukážka modrej karty"></div>
+                                <div class="flip-face flip-back"><img src="../images/exa%20back.jpg" alt="Zadná strana karty LEGIONS"></div>
+                            </div>
+                        </article>
+                        <article class="flip-card" data-pair="2">
+                            <div class="flip-card-inner">
+                                <div class="flip-face flip-front"><img src="../images/v4-assets/final-b3.jpg" alt="Ukážka modrej karty"></div>
+                                <div class="flip-face flip-back"><img src="../images/exa%20back.jpg" alt="Zadná strana karty LEGIONS"></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="card-zone good-zone" aria-label="Červené obranné karty">
+                    <div class="card-line">
+                        <article class="flip-card" data-pair="0">
+                            <div class="flip-card-inner">
+                                <div class="flip-face flip-front"><img src="../images/v4-assets/final-g1-small.jpg" alt="Ukážka červenej karty"></div>
+                                <div class="flip-face flip-back"><img src="../images/exa%20back.jpg" alt="Zadná strana karty LEGIONS"></div>
+                            </div>
+                        </article>
+                        <article class="flip-card" data-pair="1">
+                            <div class="flip-card-inner">
+                                <div class="flip-face flip-front"><img src="../images/v4-assets/final-g2-small.jpg" alt="Ukážka červenej karty"></div>
+                                <div class="flip-face flip-back"><img src="../images/exa%20back.jpg" alt="Zadná strana karty LEGIONS"></div>
+                            </div>
+                        </article>
+                        <article class="flip-card" data-pair="2">
+                            <div class="flip-card-inner">
+                                <div class="flip-face flip-front"><img src="../images/v4-assets/final-g3-small.jpg" alt="Ukážka červenej karty"></div>
+                                <div class="flip-face flip-back"><img src="../images/exa%20back.jpg" alt="Zadná strana karty LEGIONS"></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="footer-hub" id="projekt">
+            <div class="join-panel" aria-label="Pridaj sa k LEGIONS©">
+                <div class="join-copy">
+                    <span class="panel-label">Pridaj sa k LEGIONS©</span>
+                    <p>Novinky z projektu, odhalenia kariet a prednostný prístup.</p>
+                </div>
+                <form class="join-form" id="join-form">
+                    <label class="sr-only" for="join-email">E-mailová adresa</label>
+                    <input id="join-email" type="email" autocomplete="email" placeholder="Tvoj e-mail">
+                    <button class="gold-button" type="submit">Pridať sa</button>
+                </form>
+            </div>
+
+            <address class="contact-panel" id="kontakt">
+                <span class="panel-label">Kontakt</span>
+                <div class="contact-links">
+                    <a href="mailto:info@legions.quest">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@legions.quest</span>
+                    </a>
+                    <a href="tel:+421907586768">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+421 907 586 768</span>
+                    </a>
+                </div>
+            </address>
+        </section>
+
+        <footer class="landing-footer">
+            <p class="copyright">&copy; 2026 LEGIONS©. Všetky práva vyhradené.</p>
+
+            <div class="social-links" aria-label="Sociálne siete">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <blockquote class="reagan-quote">
+                <p>„A predsa sa vás pýtam: nie je už medzi nami mimozemská sila?“</p>
+                <cite>Ronald Reagan, prejav v OSN, 1987</cite>
+            </blockquote>
+        </footer>
+
+        <audio id="background-audio" preload="metadata">
+            <source src="../images/longer%20version%20no%20loop%20qm.mp3" type="audio/mpeg">
+        </audio>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

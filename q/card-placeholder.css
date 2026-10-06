@@ -4,6 +4,18 @@
     --ink: #030508;
     --paper: #ede7dc;
     --muted: #aaa7a2;
+    --side: #e9ad32;
+    --side-glow: rgba(233, 173, 50, 0.16);
+}
+
+.side-earth1 {
+    --side: #d8432f;
+    --side-glow: rgba(216, 67, 47, 0.18);
+}
+
+.side-earth2 {
+    --side: #2f8fe0;
+    --side-glow: rgba(47, 143, 224, 0.18);
 }
 
 * {
@@ -40,7 +52,9 @@ a {
     margin: 0 auto;
     padding: clamp(20px, 4vw, 42px);
     display: grid;
-    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    align-content: center;
     place-items: center;
     gap: clamp(18px, 3vh, 32px);
     isolation: isolate;
@@ -87,7 +101,21 @@ a {
     font: 600 0.72rem/1 "Rajdhani", Arial, sans-serif;
 }
 
-.robot-art {
+.profile-visuals {
+    width: min(100%, 900px);
+    min-width: 0;
+    display: grid;
+    place-items: center;
+}
+
+.profile-visuals.has-blueprint {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(16px, 3vw, 30px);
+}
+
+.robot-art,
+.blueprint-art {
     width: min(100%, 520px);
     min-height: 0;
     margin: 0;
@@ -96,7 +124,8 @@ a {
     gap: 14px;
 }
 
-.robot-art > img {
+.robot-art > img,
+.blueprint-art > img {
     display: block;
     width: auto;
     max-width: 100%;
@@ -107,6 +136,20 @@ a {
     box-shadow:
         0 28px 70px rgba(0, 0, 0, 0.72),
         0 0 34px rgba(32, 169, 255, 0.12);
+}
+
+.blueprint-art > img {
+    background: #d8c294;
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.72),
+        0 0 34px var(--side-glow);
+}
+
+.blueprint-art figcaption {
+    color: var(--muted);
+    font: 600 clamp(0.72rem, 1.7vw, 0.86rem)/1.3 "Rajdhani", Arial, sans-serif;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
 }
 
 figcaption {
@@ -125,10 +168,25 @@ figcaption h1 {
 
 figcaption p {
     margin: 0.35rem 0 0;
-    color: var(--muted);
+    color: var(--side);
     font: 600 clamp(0.78rem, 2vw, 0.95rem)/1.3 "Rajdhani", Arial, sans-serif;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+}
+
+.lore {
+    width: min(100%, 620px);
+    padding: clamp(16px, 3vw, 24px) clamp(18px, 4vw, 30px);
+    border-top: 1px solid var(--side);
+    border-bottom: 1px solid rgba(233, 173, 50, 0.28);
+    background: linear-gradient(180deg, var(--side-glow), transparent 85%);
+}
+
+.lore p {
+    margin: 0;
+    color: var(--paper);
+    font: 400 clamp(1rem, 2.4vw, 1.12rem)/1.65 Georgia, "Times New Roman", serif;
+    text-align: center;
 }
 
 .home-link {
@@ -150,29 +208,19 @@ figcaption p {
 }
 
 @media (max-height: 680px) and (orientation: landscape) {
-    .card-page {
-        grid-template-columns: auto minmax(0, 1fr) auto;
-        grid-template-rows: 1fr;
-        width: min(100%, 1180px);
-    }
-
     .brand img {
         width: clamp(125px, 18vw, 210px);
-    }
-
-    .robot-art {
-        grid-template-columns: minmax(0, 1fr) auto;
-        width: min(100%, 700px);
     }
 
     .robot-art > img {
         max-height: calc(100vh - 48px);
         max-height: calc(100svh - 48px);
     }
+}
 
-    figcaption {
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
+@media (max-width: 720px) {
+    .profile-visuals.has-blueprint {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 

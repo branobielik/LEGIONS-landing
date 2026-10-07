@@ -13,24 +13,50 @@
     <link rel="stylesheet" href="../card-placeholder.css">
     <title>Qor — LEGIONS</title>
 </head>
-<body class="side-earth2">
+<body class="side-earth2 has-blueprint">
     <main class="card-page">
         <a class="brand" href="../../" aria-label="LEGIONS home">
             <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             <sup>©</sup>
         </a>
-        <div class="profile-visuals">
+        <header class="identity">
+            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+            <h1>Qor</h1>
+            <p class="subname">Optic Gunner</p>
+            <div class="identity-meta" aria-label="Card identity">
+                <span>Mortis Syndicate</span>
+                <span>Recruit</span>
+            </div>
+        </header>
+        <div class="profile-visuals has-blueprint">
             <figure class="robot-art">
                 <img src="../assets/RYJ9A3YK.webp" alt="Qor" width="1050" height="1400">
-                <figcaption>
-                    <h1>Qor</h1>
-                    <p>Mortis Syndicate · Recruit</p>
-                </figcaption>
+                <figcaption>Field capture</figcaption>
+            </figure>
+            <figure class="blueprint-art">
+                <img src="../blueprints/RYJ9A3YK.webp" alt="Qor suit blueprint">
+                <figcaption>Archive blueprint</figcaption>
             </figure>
         </div>
-        <section class="lore" aria-label="Lore">
+        <section class="lore dossier-panel" aria-labelledby="lore-heading">
+            <p class="section-label" id="lore-heading">Archive record</p>
             <p>Qor&#x27;s optics were salvaged from a fallen Synthbot, as the Syndicate&#x27;s Ledger requires: nothing that falls is wasted. The Thermal Ray sweeps the flanks with heat that lingers, and burns twice as hot when only one enemy remains. Qor&#x27;s pilot claims the old optics still show things that are not there.</p>
         </section>
+        <section class="systems dossier-panel" aria-labelledby="systems-heading">
+            <div class="systems-heading">
+                <div>
+                    <p class="section-label" id="systems-heading">Combat signature</p>
+                    <h2>Thermal Ray</h2>
+                </div>
+                <div class="energy-grid" aria-label="Card energy values">
+                    <span><b>200</b> Cosmara</span>
+                    <span><b>120</b> Animus</span>
+                    <span><b>200</b> Vitalis</span>
+                </div>
+            </div>
+            <p class="special-rules">Discharges concentrated heat beam: Deals 30 damage to enemies on the edges for 2 rounds. If only 1 enemy is left the damage is doubled.</p>
+        </section>
+        <p class="card-code">Genezys 04:02 ™&amp;©2026LEGIONS</p>
         <a class="home-link" href="../../">Return to LEGIONS</a>
     </main>
 </body>

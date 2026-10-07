@@ -13,24 +13,50 @@
     <link rel="stylesheet" href="../card-placeholder.css">
     <title>Mir — LEGIONS</title>
 </head>
-<body class="side-earth2">
+<body class="side-earth2 has-blueprint">
     <main class="card-page">
         <a class="brand" href="../../" aria-label="LEGIONS home">
             <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             <sup>©</sup>
         </a>
-        <div class="profile-visuals">
+        <header class="identity">
+            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+            <h1>Mir</h1>
+            <p class="subname">Hive Director</p>
+            <div class="identity-meta" aria-label="Card identity">
+                <span>Mortis Syndicate</span>
+                <span>Elite</span>
+            </div>
+        </header>
+        <div class="profile-visuals has-blueprint">
             <figure class="robot-art">
                 <img src="../assets/U38VHNQ5.webp" alt="Mir" width="1050" height="1400">
-                <figcaption>
-                    <h1>Mir</h1>
-                    <p>Mortis Syndicate · Elite</p>
-                </figcaption>
+                <figcaption>Field capture</figcaption>
+            </figure>
+            <figure class="blueprint-art">
+                <img src="../blueprints/U38VHNQ5.webp" alt="Mir suit blueprint">
+                <figcaption>Archive blueprint</figcaption>
             </figure>
         </div>
-        <section class="lore" aria-label="Lore">
+        <section class="lore dossier-panel" aria-labelledby="lore-heading">
+            <p class="section-label" id="lore-heading">Archive record</p>
             <p>Mir commands a cloud of microscopic machines that think as one. The Nano Swarm smothers one enemy&#x27;s energy completely while a second target takes the sting. The Syndicate recovers every particle Mir loses, and rebuilds the swarm overnight.</p>
         </section>
+        <section class="systems dossier-panel" aria-labelledby="systems-heading">
+            <div class="systems-heading">
+                <div>
+                    <p class="section-label" id="systems-heading">Combat signature</p>
+                    <h2>Nano Swarm</h2>
+                </div>
+                <div class="energy-grid" aria-label="Card energy values">
+                    <span><b>160</b> Cosmara</span>
+                    <span><b>250</b> Animus</span>
+                    <span><b>250</b> Vitalis</span>
+                </div>
+            </div>
+            <p class="special-rules">Releases cloud of microscopic particles: Sets the target&#x27;s Cosmara to 0 for 1 round. Deals 100 pierce damage to a different enemy.</p>
+        </section>
+        <p class="card-code">Genezys 04:06 ™&amp;©2026LEGIONS</p>
         <a class="home-link" href="../../">Return to LEGIONS</a>
     </main>
 </body>

@@ -13,24 +13,50 @@
     <link rel="stylesheet" href="../card-placeholder.css">
     <title>Gudial — LEGIONS</title>
 </head>
-<body class="side-earth2">
+<body class="side-earth2 has-blueprint">
     <main class="card-page">
         <a class="brand" href="../../" aria-label="LEGIONS home">
             <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             <sup>©</sup>
         </a>
-        <div class="profile-visuals">
+        <header class="identity">
+            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+            <h1>Gudial</h1>
+            <p class="subname">Shimmer Vessel</p>
+            <div class="identity-meta" aria-label="Card identity">
+                <span>Mortis Syndicate</span>
+                <span>Legion</span>
+            </div>
+        </header>
+        <div class="profile-visuals has-blueprint">
             <figure class="robot-art">
                 <img src="../assets/W3QDNHSG.webp" alt="Gudial" width="1050" height="1400">
-                <figcaption>
-                    <h1>Gudial</h1>
-                    <p>Mortis Syndicate · Legion</p>
-                </figcaption>
+                <figcaption>Field capture</figcaption>
+            </figure>
+            <figure class="blueprint-art">
+                <img src="../blueprints/W3QDNHSG.webp" alt="Gudial suit blueprint">
+                <figcaption>Archive blueprint</figcaption>
             </figure>
         </div>
-        <section class="lore" aria-label="Lore">
+        <section class="lore dossier-panel" aria-labelledby="lore-heading">
+            <p class="section-label" id="lore-heading">Archive record</p>
             <p>Gudial is the Syndicate&#x27;s most guarded secret: a Synthbot that can read and rewrite living code. The DNA Match strips an enemy&#x27;s energy to nothing, and hits even harder against those who hide behind a shield. What the Syndicate intends to do with the DNA of Earth 1, nobody on our side knows yet.</p>
         </section>
+        <section class="systems dossier-panel" aria-labelledby="systems-heading">
+            <div class="systems-heading">
+                <div>
+                    <p class="section-label" id="systems-heading">Combat signature</p>
+                    <h2>DNA Match</h2>
+                </div>
+                <div class="energy-grid" aria-label="Card energy values">
+                    <span><b>100</b> Cosmara</span>
+                    <span><b>350</b> Animus</span>
+                    <span><b>330</b> Vitalis</span>
+                </div>
+            </div>
+            <p class="special-rules">Rewrites genetic code on contact: Sets the target&#x27;s Cosmara to 0 and deals 100 damage. If the shield was activated deals 150 damage instead.</p>
+        </section>
+        <p class="card-code">Genezys 04:09 ™&amp;©2026LEGIONS</p>
         <a class="home-link" href="../../">Return to LEGIONS</a>
     </main>
 </body>

@@ -13,24 +13,50 @@
     <link rel="stylesheet" href="../card-placeholder.css">
     <title>Kerek — LEGIONS</title>
 </head>
-<body class="side-earth2">
+<body class="side-earth2 has-blueprint">
     <main class="card-page">
         <a class="brand" href="../../" aria-label="LEGIONS home">
             <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             <sup>©</sup>
         </a>
-        <div class="profile-visuals">
+        <header class="identity">
+            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+            <h1>Kerek</h1>
+            <p class="subname">Bulwark Engine</p>
+            <div class="identity-meta" aria-label="Card identity">
+                <span>Mortis Syndicate</span>
+                <span>Elite</span>
+            </div>
+        </header>
+        <div class="profile-visuals has-blueprint">
             <figure class="robot-art">
                 <img src="../assets/H57A59KA.webp" alt="Kerek" width="1050" height="1400">
-                <figcaption>
-                    <h1>Kerek</h1>
-                    <p>Mortis Syndicate · Elite</p>
-                </figcaption>
+                <figcaption>Field capture</figcaption>
+            </figure>
+            <figure class="blueprint-art">
+                <img src="../blueprints/H57A59KA.webp" alt="Kerek suit blueprint">
+                <figcaption>Archive blueprint</figcaption>
             </figure>
         </div>
-        <section class="lore" aria-label="Lore">
+        <section class="lore dossier-panel" aria-labelledby="lore-heading">
+            <p class="section-label" id="lore-heading">Archive record</p>
             <p>Kerek was built to carry the load that breaks other machines. The Fortified Burst vents everything poisoning the Syndicate&#x27;s ranks and channels it into a single crushing beam. Kerek&#x27;s pilot treats every battle as a stress test, and so far Kerek has never failed one.</p>
         </section>
+        <section class="systems dossier-panel" aria-labelledby="systems-heading">
+            <div class="systems-heading">
+                <div>
+                    <p class="section-label" id="systems-heading">Combat signature</p>
+                    <h2>Fortified Burst</h2>
+                </div>
+                <div class="energy-grid" aria-label="Card energy values">
+                    <span><b>160</b> Cosmara</span>
+                    <span><b>240</b> Animus</span>
+                    <span><b>240</b> Vitalis</span>
+                </div>
+            </div>
+            <p class="special-rules">Vents beam under load: Clears all DoT from all allies. Deals 170 damage to 1 enemy.</p>
+        </section>
+        <p class="card-code">Genezys 04:05 ™&amp;©2026LEGIONS</p>
         <a class="home-link" href="../../">Return to LEGIONS</a>
     </main>
 </body>

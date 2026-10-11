@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Jyntrak — LEGIONS</title>
 </head>
-<body class="side-earth2 has-blueprint">
+<body class="side-earth2">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Jyntrak · Grim Corsair</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
-            <h1>Jyntrak</h1>
-            <p class="subname">Sorrow Imbiber</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Grim Corsair</span>
-                <span>Legion</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <h1>Jyntrak</h1>
+                <p class="archive-subname">Sorrow Imbiber</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Grim Corsair · Legion</span>
+                <span>Genezys 06:08</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/EMTCT9QX.webp" alt="Jyntrak" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Jyntrak feeds on despair, and every raid on Earth 1 leaves plenty behind. The Energy Spike silences an enemy&#x27;s special and pierces them in one violent surge. Some Corsairs swear that Jyntrak&#x27;s pilot no longer sleeps at all.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Energy Spike</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>110</b> Cosmara</span>
-                    <span><b>370</b> Animus</span>
-                    <span><b>310</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Drains consciousness in violent surge: Freezes 1 enemy&#x27;s special for 1 round and deals 150 pierce damage.</p>
-        </section>
-        <p class="card-code">Genezys 06:08 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Jyntrak archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/EMTCT9QX.webp" alt="Jyntrak identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Jyntrak feeds on despair, and every raid on Earth 1 leaves plenty behind. The Energy Spike silences an enemy&#x27;s special and pierces them in one violent surge. Some Corsairs swear that Jyntrak&#x27;s pilot no longer sleeps at all.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Energy Spike</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>110</b> Cosmara</span>
+                                    <span><b>370</b> Animus</span>
+                                    <span><b>310</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Drains consciousness in violent surge: Freezes 1 enemy&#x27;s special for 1 round and deals 150 pierce damage.</p>
+                            <p class="card-code">Genezys 06:08 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/EMTCT9QX.webp"
+                            alt="Jyntrak field capture at Forested upland stream" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Forested upland stream
+                                <span>Grim Corsair perimeter · recovered field record 06:08</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/EMTCT9QX.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/EMTCT9QX.webp" alt="Jyntrak suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/EMTCT9QX.webp" alt="Bright green reflection extending through the shallow rocky stream directly below Jyntrak."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 73.26%"></span>
+                        <figcaption>EVIDENCE 06:08-A · Emerald Stream Reflection</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 06:08-A</h2>
+                        <p class="field-log-meta">Forested upland stream · Status: Containment Pending</p>
+                        <p class="field-log-copy">TOP SECRET: Jyntrak advanced through a shallow forest stream while an emerald reflection stretched downstream from the shell&#x27;s core. The color remains confined between two stones despite the moving water and does not appear in the surrounding vegetation. Energy Spike telemetry shows repeated suppression pulses entering the channel, followed by an abrupt loss of local sensor response. Jyntrak has designated the larger boundary stone as a trophy, possibly because it retains the trapped energy pattern. Corsair code authorizes stripping the fallen, but removing this stone before isolation could release the accumulated despair signature.</p>
+                        <p class="field-log-footer">Cross-reference: 06:08 — Energy Spike; persistent despair signature</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">06:08</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

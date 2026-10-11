@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Vorzek — LEGIONS</title>
 </head>
-<body class="side-earth1 has-blueprint">
+<body class="side-earth1">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Vorzek · North Marauder</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
-            <h1>Vorzek</h1>
-            <p class="subname">Veil Carver</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>North Marauder</span>
-                <span>Recruit</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <h1>Vorzek</h1>
+                <p class="archive-subname">Veil Carver</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>North Marauder · Recruit</span>
+                <span>Genezys 09:02</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/HU7A26XS.webp" alt="Vorzek" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Vorzek hunts the thin places of the north, where the fabric between worlds is weakest. The Plane Cut severs that fabric, piercing the center and striking the flanks. The Marauders say no rift goes unwatched while Vorzek is awake.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Plane Cut</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>210</b> Cosmara</span>
-                    <span><b>160</b> Animus</span>
-                    <span><b>170</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Severs dimensional fabric: Deals 50 pierce damage to the enemy in the middle and 40 damage to enemies on the edges.</p>
-        </section>
-        <p class="card-code">Genezys 09:02 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Vorzek archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/HU7A26XS.webp" alt="Vorzek identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Vorzek hunts the thin places of the north, where the fabric between worlds is weakest. The Plane Cut severs that fabric, piercing the center and striking the flanks. The Marauders say no rift goes unwatched while Vorzek is awake.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Plane Cut</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>210</b> Cosmara</span>
+                                    <span><b>160</b> Animus</span>
+                                    <span><b>170</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Severs dimensional fabric: Deals 50 pierce damage to the enemy in the middle and 40 damage to enemies on the edges.</p>
+                            <p class="card-code">Genezys 09:02 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/HU7A26XS.webp"
+                            alt="Vorzek field capture at Storm-cut canyon rim" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Storm-cut canyon rim
+                                <span>North Marauder perimeter · recovered field record 09:02</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/HU7A26XS.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/HU7A26XS.webp" alt="Vorzek suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/HU7A26XS.webp" alt="A bright branching lightning channel descending from the storm above the canyon."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 16.00%"></span>
+                        <figcaption>EVIDENCE 09:02-A · Forked Lightning Descent</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 09:02-A</h2>
+                        <p class="field-log-meta">Storm-cut canyon rim · Status: Containment Pending</p>
+                        <p class="field-log-copy">TOP SECRET // NORTH MARAUDER FIELD LOG. A branching lightning channel descends from the storm directly beyond Vorzek&#x27;s right shoulder, ending above the canyon floor without a visible ground contact. The illuminated branch remains sharply defined while neighboring clouds move across it. Vorzek reports that Plane Cut produced no matching seam, although suit sensors registered pressure from two directions at once. Storm-call observers recommend Containment Pending until the Longhouse horn is sounded under identical cloud conditions and the suspended channel either answers or disperses.</p>
+                        <p class="field-log-footer">Cross-reference: CARD_LORE_v1 09:02 — Plane Cut; LORE_BIBLE_v1 §4.09 — thin places and storm-call assembly</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">09:02</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

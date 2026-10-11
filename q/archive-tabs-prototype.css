@@ -340,8 +340,7 @@ body {
     background: #05090c;
 }
 
-.classified-evidence::after {
-    content: "EVIDENCE 07:08-A";
+.classified-evidence figcaption {
     position: absolute;
     inset: auto 14px 14px auto;
     padding: 0.45rem 0.55rem;
@@ -352,12 +351,59 @@ body {
     letter-spacing: 0.13em;
 }
 
+.top-secret-stamp {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 2;
+    padding: 0.5rem 0.65rem;
+    border: 2px solid rgba(207, 61, 42, 0.9);
+    color: #ff725f;
+    background: rgba(4, 7, 10, 0.72);
+    font: 700 0.72rem/1 "Rajdhani", Arial, sans-serif;
+    letter-spacing: 0.18em;
+    transform: rotate(-4deg);
+}
+
+.evidence-marker {
+    position: absolute;
+    top: var(--marker-y, 50%);
+    left: var(--marker-x, 50%);
+    width: clamp(68px, 22%, 118px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 77, 55, 0.9);
+    transform: translate(-50%, -50%);
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.65),
+        0 0 22px rgba(207, 61, 42, 0.18);
+}
+
+.evidence-marker::before,
+.evidence-marker::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 77, 55, 0.92);
+}
+
+.evidence-marker::before {
+    top: 50%;
+    left: -14px;
+    width: calc(100% + 28px);
+    height: 1px;
+}
+
+.evidence-marker::after {
+    top: -14px;
+    left: 50%;
+    width: 1px;
+    height: calc(100% + 28px);
+}
+
 .classified-evidence img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 7% 50%;
     filter: saturate(0.72) contrast(1.08);
 }
 
@@ -375,19 +421,6 @@ body {
             transparent 4px
         ),
         rgba(9, 10, 12, 0.88);
-}
-
-.classified-file::before {
-    content: "TOP SECRET";
-    position: absolute;
-    top: 20px;
-    right: 22px;
-    padding: 0.5rem 0.65rem;
-    border: 2px solid rgba(207, 61, 42, 0.82);
-    color: #ff725f;
-    font: 700 0.72rem/1 "Rajdhani", Arial, sans-serif;
-    letter-spacing: 0.18em;
-    transform: rotate(-4deg);
 }
 
 .classification {
@@ -660,19 +693,13 @@ body {
 
     .archive-tabs {
         margin-inline: 10px;
-        overflow-x: auto;
-        grid-template-columns: repeat(5, minmax(92px, 1fr));
-        scrollbar-width: none;
-    }
-
-    .archive-tabs::-webkit-scrollbar {
-        display: none;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 
     .archive-tab {
-        padding: 0.68rem 0.45rem;
-        font-size: 0.55rem;
-        letter-spacing: 0.1em;
+        padding: 0.68rem 0.12rem;
+        font-size: 0.48rem;
+        letter-spacing: 0.045em;
     }
 
     .archive-panel {
@@ -848,17 +875,13 @@ body {
         min-height: 0;
     }
 
-    .classified-evidence img {
-        object-position: 7% 52%;
-    }
-
     .classified-file {
         height: 100%;
         overflow: hidden;
         padding: 18px 16px;
     }
 
-    .classified-file::before {
+    .top-secret-stamp {
         top: 14px;
         right: 14px;
         padding: 0.38rem 0.46rem;

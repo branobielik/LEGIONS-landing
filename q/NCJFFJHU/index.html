@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Grapi — LEGIONS</title>
 </head>
-<body class="side-earth1 has-blueprint">
+<body class="side-earth1">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Grapi · Exalted Order</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
-            <h1>Grapi</h1>
-            <p class="subname">Aeon Controller</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Exalted Order</span>
-                <span>Legion</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <h1>Grapi</h1>
+                <p class="archive-subname">Aeon Controller</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Exalted Order · Legion</span>
+                <span>Genezys 03:07</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/NCJFFJHU.webp" alt="Grapi" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Grapi is one of the few Legions of the Exalted Order who can stop time, if only for a heartbeat. The Epoch Cascade freezes a single enemy and lands one devastating blow before the moment ends. Grapi swore the Still Hour long ago and has spent every year since preparing to hold it.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Epoch Cascade</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>120</b> Cosmara</span>
-                    <span><b>340</b> Animus</span>
-                    <span><b>290</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Rips sequence from the moment: Stuns 1 enemy for 1 round and deals 220 damage.</p>
-        </section>
-        <p class="card-code">Genezys 03:07 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Grapi archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/NCJFFJHU.webp" alt="Grapi identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Grapi is one of the few Legions of the Exalted Order who can stop time, if only for a heartbeat. The Epoch Cascade freezes a single enemy and lands one devastating blow before the moment ends. Grapi swore the Still Hour long ago and has spent every year since preparing to hold it.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Epoch Cascade</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>120</b> Cosmara</span>
+                                    <span><b>340</b> Animus</span>
+                                    <span><b>290</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Rips sequence from the moment: Stuns 1 enemy for 1 round and deals 220 damage.</p>
+                            <p class="card-code">Genezys 03:07 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/NCJFFJHU.webp"
+                            alt="Grapi field capture at Reflective Exalted Order containment chamber" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Reflective Exalted Order containment chamber
+                                <span>Exalted Order perimeter · recovered field record 03:07</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/NCJFFJHU.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/NCJFFJHU.webp" alt="Grapi suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/NCJFFJHU.webp" alt="A circular illuminated aperture centered in the chamber ceiling above Grapi."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 14.00%"></span>
+                        <figcaption>EVIDENCE 03:07-A · Fixed Ceiling Aperture</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 03:07-A</h2>
+                        <p class="field-log-meta">Reflective Exalted Order containment chamber · Status: Containment Pending</p>
+                        <p class="field-log-copy">TOP SECRET — The circular ceiling aperture above Grapi releases a fixed column of white light while the chamber&#x27;s blue panels pulse independently. Grapi stood beneath the opening through several pulse sequences, and the floor reflection ceased changing for a single heartbeat each time the panels aligned. Observers classify the event as possible Epoch Cascade resonance, limited to one narrow zone and one brief interval. No mechanical shutter is visible within the aperture, and surrounding reflections continue normally. Containment remains pending because a true Still Hour cannot be distinguished from a controlled chamber test without risking interruption of the moment Grapi has sworn to hold.</p>
+                        <p class="field-log-footer">Cross-reference: Card 03:07 · Epoch Cascade · Still Hour containment</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">03:07</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Tharven — LEGIONS</title>
 </head>
-<body class="side-earth1 has-blueprint">
+<body class="side-earth1">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Tharven · Eternal Custodian</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
-            <h1>Tharven</h1>
-            <p class="subname">Paradox Watcher</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Eternal Custodian</span>
-                <span>Elite</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <h1>Tharven</h1>
+                <p class="archive-subname">Paradox Watcher</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Eternal Custodian · Elite</span>
+                <span>Genezys 07:05</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/S2SSSTXM.webp" alt="Tharven" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Tharven watches for paradoxes the way sailors watch for storms. The Chronal Snare bends the moments between frames and wears down every enemy at once. The Custodians say Tharven once saw the same Synthbot arrive twice. Tharven refuses to talk about it.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Chronal Snare</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>160</b> Cosmara</span>
-                    <span><b>220</b> Animus</span>
-                    <span><b>250</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Bends equations between frames: Deals 20 pierce damage to all and reduces 10 cosmara to all for 2 rounds.</p>
-        </section>
-        <p class="card-code">Genezys 07:05 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Tharven archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/S2SSSTXM.webp" alt="Tharven identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Tharven watches for paradoxes the way sailors watch for storms. The Chronal Snare bends the moments between frames and wears down every enemy at once. The Custodians say Tharven once saw the same Synthbot arrive twice. Tharven refuses to talk about it.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Chronal Snare</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>160</b> Cosmara</span>
+                                    <span><b>220</b> Animus</span>
+                                    <span><b>250</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Bends equations between frames: Deals 20 pierce damage to all and reduces 10 cosmara to all for 2 rounds.</p>
+                            <p class="card-code">Genezys 07:05 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/S2SSSTXM.webp"
+                            alt="Tharven field capture at Threshold Desert Watch" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Threshold Desert Watch
+                                <span>Eternal Custodian perimeter · recovered field record 07:05</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/S2SSSTXM.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/S2SSSTXM.webp" alt="Tharven suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/S2SSSTXM.webp" alt="Narrow dust column rising beside the left escarpment against the prevailing storm"
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 44.66%"></span>
+                        <figcaption>EVIDENCE 07:05-A · Repeating Dust Column</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 07:05-A</h2>
+                        <p class="field-log-meta">Threshold Desert Watch · Status: CHRONAL LOOP MONITORED</p>
+                        <p class="field-log-copy">TOP SECRET — Tharven recorded the narrow dust column rising beside the left escarpment while the broader storm moved in the opposite direction. Grains sampled at its base repeatedly settled, lifted, and returned to the same impressions without accumulating. Chronal Snare stabilized one cycle long enough to show two identical shadows crossing the sand several steps apart. Custodian analysis marks the column as a local Threshold loop, unrelated to the distant arch until evidence proves otherwise. Every door has a keeper, and Tharven will count this one only once, however many times it appears.</p>
+                        <p class="field-log-footer">Cross-reference: CARD_LORE_v1 07:05; Chronal Snare; Duplicate-Arrival Protocol</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">07:05</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

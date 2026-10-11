@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Ukon — LEGIONS</title>
 </head>
-<body class="side-earth2 has-blueprint">
+<body class="side-earth2">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Ukon · Abyssal Accord</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
-            <h1>Ukon</h1>
-            <p class="subname">Silk Caster</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Abyssal Accord</span>
-                <span>Legion</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <h1>Ukon</h1>
+                <p class="archive-subname">Silk Caster</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Abyssal Accord · Legion</span>
+                <span>Genezys 02:07</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/RCS2RV2W.webp" alt="Ukon" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Ukon spins threads no eye can see. Once the Cosmos Spiral settles over a battlefield, wounds refuse to close and energy bleeds away, round after round. Of all who signed the Accord, only Ukon&#x27;s pilot seems patient. The web does the rest.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Cosmos Spiral</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>110</b> Cosmara</span>
-                    <span><b>360</b> Animus</span>
-                    <span><b>310</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Spins threads through universal fabric: Enemies cannot be healed for 3 rounds and lose 40 Cosmara each round for 3 rounds.</p>
-        </section>
-        <p class="card-code">Genezys 02:07 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Ukon archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/RCS2RV2W.webp" alt="Ukon identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Ukon spins threads no eye can see. Once the Cosmos Spiral settles over a battlefield, wounds refuse to close and energy bleeds away, round after round. Of all who signed the Accord, only Ukon&#x27;s pilot seems patient. The web does the rest.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Cosmos Spiral</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>110</b> Cosmara</span>
+                                    <span><b>360</b> Animus</span>
+                                    <span><b>310</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Spins threads through universal fabric: Enemies cannot be healed for 3 rounds and lose 40 Cosmara each round for 3 rounds.</p>
+                            <p class="card-code">Genezys 02:07 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/RCS2RV2W.webp"
+                            alt="Ukon field capture at Flooded urban interchange" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Flooded urban interchange
+                                <span>Abyssal Accord perimeter · recovered field record 02:07</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/RCS2RV2W.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/RCS2RV2W.webp" alt="Ukon suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/RCS2RV2W.webp" alt="An orange reflection below Ukon stretches into narrow looping bands across the foreground puddle."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 86.00%"></span>
+                        <figcaption>EVIDENCE 02:07-A · Elongated Orange Reflection</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 02:07-A</h2>
+                        <p class="field-log-meta">Flooded urban interchange · Status: Containment Pending</p>
+                        <p class="field-log-copy">TOP SECRET: The puddle directly below Ukon holds an elongated orange reflection that extends far beyond the shell&#x27;s visible chest lights. Burning debris behind the Synthbot cannot fully account for the symmetry, because the reflected bands narrow into threadlike loops near the frame edge. This may be the only visible residue of Cosmos Spiral, whose patient drain is otherwise described as a web no observer can see. The Accord signature remains present after the surface is disturbed, then re-forms around new ripples. Seal the flooded roadway and review any recurring loop as containment failure, not simple reflected fire.</p>
+                        <p class="field-log-footer">Cross-reference: CARD 02:07 // Cosmos Spiral // Persistent drain</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">02:07</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

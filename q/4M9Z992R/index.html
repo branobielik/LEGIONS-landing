@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Krizar — LEGIONS</title>
 </head>
-<body class="side-earth1 has-blueprint">
+<body class="side-earth1">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Krizar · Luminary Vanguard</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
-            <h1>Krizar</h1>
-            <p class="subname">Supernova Emissary</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Luminary Vanguard</span>
-                <span>Legion</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <h1>Krizar</h1>
+                <p class="archive-subname">Supernova Emissary</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Luminary Vanguard · Legion</span>
+                <span>Genezys 01:09</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/4M9Z992R.webp" alt="Krizar" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Krizar is the closest thing the Luminary Vanguard has to a living star. The Corona Burst heals allies and scorches enemies in a single eruption, a gift and a warning at once. An old Vanguard saying claims that if the Beacon ever fails, a Supernova Emissary will become the light. Krizar hopes never to find out.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Corona Burst</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>80</b> Cosmara</span>
-                    <span><b>350</b> Animus</span>
-                    <span><b>290</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Erupts with stellar energy: Heals all allies for 60 and restores 40 Cosmara to all allies. Deals 100 damage to all enemies.</p>
-        </section>
-        <p class="card-code">Genezys 01:09 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Krizar archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/4M9Z992R.webp" alt="Krizar identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Krizar is the closest thing the Luminary Vanguard has to a living star. The Corona Burst heals allies and scorches enemies in a single eruption, a gift and a warning at once. An old Vanguard saying claims that if the Beacon ever fails, a Supernova Emissary will become the light. Krizar hopes never to find out.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Corona Burst</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>80</b> Cosmara</span>
+                                    <span><b>350</b> Animus</span>
+                                    <span><b>290</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Erupts with stellar energy: Heals all allies for 60 and restores 40 Cosmara to all allies. Deals 100 damage to all enemies.</p>
+                            <p class="card-code">Genezys 01:09 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/4M9Z992R.webp"
+                            alt="Krizar field capture at Blackwater Corona Flats" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Blackwater Corona Flats
+                                <span>Luminary Vanguard perimeter · recovered field record 01:09</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/4M9Z992R.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/4M9Z992R.webp" alt="Krizar suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/4M9Z992R.webp" alt="Amber embers suspended above reflective basalt pools beneath storm clouds."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 49.65%"></span>
+                        <figcaption>EVIDENCE 01:09-A · Storm-Suspended Embers</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 01:09-A</h2>
+                        <p class="field-log-meta">Blackwater Corona Flats · Status: Restricted</p>
+                        <p class="field-log-copy">TOP SECRET field log access is restricted to Vanguard command. Across the flooded basalt plain, isolated amber embers hang beneath the storm ceiling and remain visible in the mirror pools without falling. Their spacing expands around Krizar like a second corona, while nearby black water briefly clears wherever the reflected points overlap. Medical telemetry records a matching recovery surge among observers, consistent with Corona Burst, but no equivalent source appears in the sky. If the Beacon ever fails, this field may be attempting to answer Krizar first; that hypothesis remains restricted pending repeat observation.</p>
+                        <p class="field-log-footer">Cross-reference: LV-09 / Corona Field</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">01:09</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Ulinx — LEGIONS</title>
 </head>
-<body class="side-earth1 has-blueprint">
+<body class="side-earth1">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Ulinx · Eternal Custodian</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
-            <h1>Ulinx</h1>
-            <p class="subname">Landslide Flinger</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Eternal Custodian</span>
-                <span>Legion</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <h1>Ulinx</h1>
+                <p class="archive-subname">Landslide Flinger</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Eternal Custodian · Legion</span>
+                <span>Genezys 07:08</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/PSSU33P7.webp" alt="Ulinx" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Ulinx learned long ago that the best weapon is the one the enemy brings. The Chaos Twist copies a Synthbot&#x27;s own special and turns it back on them. The Custodians call it borrowing. Ulinx never returns anything.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Chaos Twist</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>120</b> Cosmara</span>
-                    <span><b>380</b> Animus</span>
-                    <span><b>290</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Collapses probability into destructive spiral: Copies 1 enemy&#x27;s special and deals 140 damage to all enemies if the special doesn&#x27;t do damage.</p>
-        </section>
-        <p class="card-code">Genezys 07:08 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Ulinx archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/PSSU33P7.webp" alt="Ulinx identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Ulinx learned long ago that the best weapon is the one the enemy brings. The Chaos Twist copies a Synthbot&#x27;s own special and turns it back on them. The Custodians call it borrowing. Ulinx never returns anything.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Chaos Twist</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>120</b> Cosmara</span>
+                                    <span><b>380</b> Animus</span>
+                                    <span><b>290</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Collapses probability into destructive spiral: Copies 1 enemy&#x27;s special and deals 140 damage to all enemies if the special doesn&#x27;t do damage.</p>
+                            <p class="card-code">Genezys 07:08 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/PSSU33P7.webp"
+                            alt="Ulinx field capture at Custodian Salvage Field" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Custodian Salvage Field
+                                <span>Eternal Custodian perimeter · recovered field record 07:08</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/PSSU33P7.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/PSSU33P7.webp" alt="Ulinx suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/PSSU33P7.webp" alt="Broken turquoise capsule at left with peeled plating and exposed black fibrous material"
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 45.90%; --marker-y: 50.00%"></span>
+                        <figcaption>EVIDENCE 07:08-A · Vault Seven Capsule</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 07:08-A</h2>
+                        <p class="field-log-meta">Custodian Salvage Field · Status: TRANSFERRED TO VAULT SEVEN</p>
+                        <p class="field-log-copy">TOP SECRET — Ulinx recovered the broken capsule visible at the left edge of the salvage field and reassigned its record to Vault Seven. Beneath the peeled turquoise shell, black fibrous material bends reflections toward the rupture and resists every Custodian classification. Chaos Twist produced no copied pattern; instead, the capsule’s faded service timestamp rewrote itself as “THRESHOLD WATCH +03:17” after each scan. Ulinx suspects the anomalous material is borrowing the record of whoever observes it, then returning an altered version. Every door has a keeper, and Vault Seven now has an object that may be keeping its own door.</p>
+                        <p class="field-log-footer">Cross-reference: CARD_LORE_v1 07:08; Chaos Twist; Vault Seven Anomalous-Material File</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">07:08</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Troth — LEGIONS</title>
 </head>
-<body class="side-earth2 has-blueprint">
+<body class="side-earth2">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Troth · Abyssal Accord</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
-            <h1>Troth</h1>
-            <p class="subname">Cataclysm Marshal</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Abyssal Accord</span>
-                <span>Legion</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <h1>Troth</h1>
+                <p class="archive-subname">Cataclysm Marshal</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Abyssal Accord · Legion</span>
+                <span>Genezys 02:08</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/HF55ZUW6.webp" alt="Troth" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Troth commands the Accord&#x27;s assaults the way a storm commands the sea. The Tempest Fury mends allied Synthbots and tears through every enemy in one howling front. On Earth 2, the Marshal&#x27;s pilot is said to be the one who wrote the Accord. The Legionnaires would very much like to know why.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Tempest Fury</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>80</b> Cosmara</span>
-                    <span><b>320</b> Animus</span>
-                    <span><b>300</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Whips up catastrophic hurricane: Heals all allies for 50 and restores 50 Cosmara to all allies. Deals 70 pierce damage to all.</p>
-        </section>
-        <p class="card-code">Genezys 02:08 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Troth archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/HF55ZUW6.webp" alt="Troth identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Troth commands the Accord&#x27;s assaults the way a storm commands the sea. The Tempest Fury mends allied Synthbots and tears through every enemy in one howling front. On Earth 2, the Marshal&#x27;s pilot is said to be the one who wrote the Accord. The Legionnaires would very much like to know why.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Tempest Fury</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>80</b> Cosmara</span>
+                                    <span><b>320</b> Animus</span>
+                                    <span><b>300</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Whips up catastrophic hurricane: Heals all allies for 50 and restores 50 Cosmara to all allies. Deals 70 pierce damage to all.</p>
+                            <p class="card-code">Genezys 02:08 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/HF55ZUW6.webp"
+                            alt="Troth field capture at Isolated mountain threshold" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Isolated mountain threshold
+                                <span>Abyssal Accord perimeter · recovered field record 02:08</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/HF55ZUW6.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/HF55ZUW6.webp" alt="Troth suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/HF55ZUW6.webp" alt="A segmented stone ring behind Troth carries a continuous orange inner band."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 29.00%"></span>
+                        <figcaption>EVIDENCE 02:08-A · Unbroken Orange Ring</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 02:08-A</h2>
+                        <p class="field-log-meta">Isolated mountain threshold · Status: Restricted</p>
+                        <p class="field-log-copy">TOP SECRET: The segmented ring behind Troth carries an unbroken orange band except where the shell interrupts its centerline. Moss and flowers grow against the lower segments, indicating prolonged exposure, but the light shows no weathering or unstable pulse. Tempest Fury telemetry rose across allied signatures when Troth entered the circle, then normalized without any command sequence attributable to the Accord. The structure is not classified as transit apparatus, and its function must remain unresolved until independent activation is observed. Containment teams may monitor the ring remotely but must not complete, rotate, or mark its circumference.</p>
+                        <p class="field-log-footer">Cross-reference: CARD 02:08 // Tempest Fury // Allied restoration signature</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">02:08</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

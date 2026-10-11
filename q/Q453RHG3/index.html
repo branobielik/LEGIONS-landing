@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Belek — LEGIONS</title>
 </head>
-<body class="side-earth1 has-blueprint">
+<body class="side-earth1">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Belek · Eternal Custodian</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
-            <h1>Belek</h1>
-            <p class="subname">Continuum Designer</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Eternal Custodian</span>
-                <span>Legion</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <h1>Belek</h1>
+                <p class="archive-subname">Continuum Designer</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Eternal Custodian · Legion</span>
+                <span>Genezys 07:07</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/Q453RHG3.webp" alt="Belek" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Belek designed the watch the Eternal Custodian keeps over the Threshold. The Dimensional Warp bends space around the whole field, emptying every enemy&#x27;s energy and striking all of them. If the portal ever opens fully, Belek is the one the Custodians expect to close it.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Dimensional Warp</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>90</b> Cosmara</span>
-                    <span><b>420</b> Animus</span>
-                    <span><b>330</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Bends spacetime around the field: Reduces all enemies&#x27; Cosmara to 0 for 1 turn and deals 100 damage to all.</p>
-        </section>
-        <p class="card-code">Genezys 07:07 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Belek archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/Q453RHG3.webp" alt="Belek identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Belek designed the watch the Eternal Custodian keeps over the Threshold. The Dimensional Warp bends space around the whole field, emptying every enemy&#x27;s energy and striking all of them. If the portal ever opens fully, Belek is the one the Custodians expect to close it.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Dimensional Warp</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>90</b> Cosmara</span>
+                                    <span><b>420</b> Animus</span>
+                                    <span><b>330</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Bends spacetime around the field: Reduces all enemies&#x27; Cosmara to 0 for 1 turn and deals 100 damage to all.</p>
+                            <p class="card-code">Genezys 07:07 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/Q453RHG3.webp"
+                            alt="Belek field capture at Custodian Industrial Annex" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Custodian Industrial Annex
+                                <span>Eternal Custodian perimeter · recovered field record 07:07</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/Q453RHG3.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/Q453RHG3.webp" alt="Belek suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/Q453RHG3.webp" alt="Blue-lit sealed crate beneath Belek amid wet refinery decking"
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 69.74%"></span>
+                        <figcaption>EVIDENCE 07:07-A · Blue Containment Crate</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 07:07-A</h2>
+                        <p class="field-log-meta">Custodian Industrial Annex · Status: SEALED FOR ANALYSIS</p>
+                        <p class="field-log-copy">TOP SECRET — Belek remained seated over the blue-lit containment crate while the refinery towers continued venting behind the platform. The crate’s lower seams pulsed in a sequence matching the Custodian watch cadence, although no local conduit entered its casing. A brief Dimensional Warp reading emptied every nearby gauge, then returned each value in reverse order. Belek classified the crate as a portable Threshold index, not a power source, and ordered the surrounding floor markings preserved. Every door has a keeper; this possible map will stay closed until Belek can prove what it remembers.</p>
+                        <p class="field-log-footer">Cross-reference: CARD_LORE_v1 07:07; Dimensional Warp; Custodian Watch Architecture</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">07:07</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

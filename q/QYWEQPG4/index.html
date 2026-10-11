@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Herko — LEGIONS</title>
 </head>
-<body class="side-earth1 has-blueprint">
+<body class="side-earth1">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Herko · Honor Warden</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
-            <h1>Herko</h1>
-            <p class="subname">Mineral Cultivator</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Honor Warden</span>
-                <span>Elite</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <h1>Herko</h1>
+                <p class="archive-subname">Mineral Cultivator</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Honor Warden · Elite</span>
+                <span>Genezys 05:05</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/QYWEQPG4.webp" alt="Herko" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Herko spent a decade growing a forest of stalactites, and can bring it down in a single moment. The Stalactite Bloom strikes every enemy on the field at once. The Honor Warden teaches that strength grown slowly cannot be broken quickly.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Stalactite Bloom</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>140</b> Cosmara</span>
-                    <span><b>240</b> Animus</span>
-                    <span><b>280</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Aligns power for a finishing thrust of stalactite: Deals 80 damage to all.</p>
-        </section>
-        <p class="card-code">Genezys 05:05 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Herko archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/QYWEQPG4.webp" alt="Herko identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Herko spent a decade growing a forest of stalactites, and can bring it down in a single moment. The Stalactite Bloom strikes every enemy on the field at once. The Honor Warden teaches that strength grown slowly cannot be broken quickly.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Stalactite Bloom</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>140</b> Cosmara</span>
+                                    <span><b>240</b> Animus</span>
+                                    <span><b>280</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Aligns power for a finishing thrust of stalactite: Deals 80 damage to all.</p>
+                            <p class="card-code">Genezys 05:05 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/QYWEQPG4.webp"
+                            alt="Herko field capture at Rain-soaked urban district" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Rain-soaked urban district
+                                <span>Honor Warden perimeter · recovered field record 05:05</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/QYWEQPG4.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/QYWEQPG4.webp" alt="Herko suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/QYWEQPG4.webp" alt="Low steam plume rising beside the left curb on a neon-reflective street."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 58.13%"></span>
+                        <figcaption>EVIDENCE 05:05-A · Branching curbside vapor</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 05:05-A</h2>
+                        <p class="field-log-meta">Rain-soaked urban district · Status: Unresolved</p>
+                        <p class="field-log-copy">TOP SECRET: A low plume of steam rises from the left curb beside Herko, separate from the rain and reflected neon. Each plume divides into branching shapes that resemble immature stalactites before dissolving. Herko’s bond-stone warms during the split, while nearby surfaces remain cold and wet. Stalactite Bloom practice has been suspended at the curb to preserve the pattern, not from concern that Herko cannot control it. Honor Warden observers classify the site as unresolved because the slow-grown forms repeat the creed’s final cadence without producing any lasting mineral trace.</p>
+                        <p class="field-log-footer">Cross-reference: CARD_LORE_v1 05:05 — Stalactite Bloom; slow-grown strength</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">05:05</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

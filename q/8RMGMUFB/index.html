@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Dyozen — LEGIONS</title>
 </head>
-<body class="side-earth2 has-blueprint">
+<body class="side-earth2">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Dyozen · Grim Corsair</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
-            <h1>Dyozen</h1>
-            <p class="subname">Erosion Steward</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Grim Corsair</span>
-                <span>Recruit</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <h1>Dyozen</h1>
+                <p class="archive-subname">Erosion Steward</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Grim Corsair · Recruit</span>
+                <span>Genezys 06:02</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/8RMGMUFB.webp" alt="Dyozen" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Dyozen manages decay the way a quartermaster manages supplies. The Rot Slash drains the flanks and cuts through the enemy in the middle. The Corsairs believe everything on Earth 1 will rot eventually. Dyozen just helps it along.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Rot Slash</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>190</b> Cosmara</span>
-                    <span><b>140</b> Animus</span>
-                    <span><b>200</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Dissolves fading order: Enemies on the edges lose 50 Cosmara. Also deals 50 pierce damage to the enemy in the middle.</p>
-        </section>
-        <p class="card-code">Genezys 06:02 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Dyozen archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/8RMGMUFB.webp" alt="Dyozen identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Dyozen manages decay the way a quartermaster manages supplies. The Rot Slash drains the flanks and cuts through the enemy in the middle. The Corsairs believe everything on Earth 1 will rot eventually. Dyozen just helps it along.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Rot Slash</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>190</b> Cosmara</span>
+                                    <span><b>140</b> Animus</span>
+                                    <span><b>200</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Dissolves fading order: Enemies on the edges lose 50 Cosmara. Also deals 50 pierce damage to the enemy in the middle.</p>
+                            <p class="card-code">Genezys 06:02 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/8RMGMUFB.webp"
+                            alt="Dyozen field capture at Abandoned mountain processing yard" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Abandoned mountain processing yard
+                                <span>Grim Corsair perimeter · recovered field record 06:02</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/8RMGMUFB.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/8RMGMUFB.webp" alt="Dyozen suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/8RMGMUFB.webp" alt="Orange beacon glowing atop the cylindrical industrial stack to Dyozen&#x27;s right."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 36.56%"></span>
+                        <figcaption>EVIDENCE 06:02-A · Active Stack Beacon</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 06:02-A</h2>
+                        <p class="field-log-meta">Abandoned mountain processing yard · Status: Containment Pending</p>
+                        <p class="field-log-copy">TOP SECRET: Dyozen was recorded crossing the flooded service track beneath an orange beacon still burning atop the eastern stack. No supporting machinery appeared active, yet the lamp and its reflection maintained identical intensity through the standing water. Rot Slash readings indicate controlled decay spreading along the track while leaving the beacon circuit untouched. The Corsair quartermaster has marked the illuminated cap as a trophy suitable for salvage rather than destruction. Because their code permits stripping whatever falls, containment teams must secure the stack before Dyozen completes the inventory.</p>
+                        <p class="field-log-footer">Cross-reference: 06:02 — Rot Slash; Grim Corsair salvage doctrine</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">06:02</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

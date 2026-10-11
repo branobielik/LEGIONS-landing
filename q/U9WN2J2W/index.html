@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Yvinor — LEGIONS</title>
 </head>
-<body class="side-earth1 has-blueprint">
+<body class="side-earth1">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Yvinor · Exalted Order</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
-            <h1>Yvinor</h1>
-            <p class="subname">Velocity Fang</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Exalted Order</span>
-                <span>Recruit</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <h1>Yvinor</h1>
+                <p class="archive-subname">Velocity Fang</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Exalted Order · Recruit</span>
+                <span>Genezys 03:03</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/U9WN2J2W.webp" alt="Yvinor" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Yvinor is the fastest knight the Exalted Order has ever trained, and the most restless. The Rush Thrust reaches every enemy before any of them can react, and leaves them weaker afterward. The elders keep reminding Yvinor that the Order is sworn to patience. Yvinor keeps reminding them that someone has to arrive on time.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Rush Thrust</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>190</b> Cosmara</span>
-                    <span><b>150</b> Animus</span>
-                    <span><b>200</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Accelerates strike beyond perception: Deals 40 damage to all. Hit enemies also lose 10 Cosmara for 2 rounds.</p>
-        </section>
-        <p class="card-code">Genezys 03:03 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Yvinor archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/U9WN2J2W.webp" alt="Yvinor identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Yvinor is the fastest knight the Exalted Order has ever trained, and the most restless. The Rush Thrust reaches every enemy before any of them can react, and leaves them weaker afterward. The elders keep reminding Yvinor that the Order is sworn to patience. Yvinor keeps reminding them that someone has to arrive on time.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Rush Thrust</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>190</b> Cosmara</span>
+                                    <span><b>150</b> Animus</span>
+                                    <span><b>200</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Accelerates strike beyond perception: Deals 40 damage to all. Hit enemies also lose 10 Cosmara for 2 rounds.</p>
+                            <p class="card-code">Genezys 03:03 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/U9WN2J2W.webp"
+                            alt="Yvinor field capture at Rain-polished Exalted Order courtyard" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Rain-polished Exalted Order courtyard
+                                <span>Exalted Order perimeter · recovered field record 03:03</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/U9WN2J2W.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/U9WN2J2W.webp" alt="Yvinor suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/U9WN2J2W.webp" alt="A circular amber window glowing in concentric bands directly above the courtyard steps behind Yvinor."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 21.61%"></span>
+                        <figcaption>EVIDENCE 03:03-A · Expanding Amber Window</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 03:03-A</h2>
+                        <p class="field-log-meta">Rain-polished Exalted Order courtyard · Status: Under Review</p>
+                        <p class="field-log-copy">TOP SECRET — The circular amber window centered above the courtyard steps brightens in bands that do not match the changing sunlight on the wet paving. Yvinor repeatedly crossed the terrace and returned to the same mark before each band completed its expansion. The timing is consistent with Rush Thrust discipline, yet the Order recorded no activation command and no visible mechanism in the frame. Elders suspect the window functions as a restraint exercise, forcing the fastest knight to arrive neither early nor late. The object remains Under Review because its final band has never been observed closing.</p>
+                        <p class="field-log-footer">Cross-reference: Card 03:03 · Rush Thrust · Order restraint exercise</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">03:03</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

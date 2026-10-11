@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Asharo — LEGIONS</title>
 </head>
-<body class="side-earth2 has-blueprint">
+<body class="side-earth2">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Asharo · Abyssal Accord</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
-            <h1>Asharo</h1>
-            <p class="subname">Warp Jumper</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Abyssal Accord</span>
-                <span>Elite</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <h1>Asharo</h1>
+                <p class="archive-subname">Warp Jumper</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Abyssal Accord · Elite</span>
+                <span>Genezys 02:05</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/UKSVDDXE.webp" alt="Asharo" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Asharo never stays where it lands. The Warp Jumper flickers across the battlefield and leaves a slow, draining shock in every enemy it passes. The Accord gives no orders, and Asharo has never needed any.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Displace Jolt</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>170</b> Cosmara</span>
-                    <span><b>230</b> Animus</span>
-                    <span><b>230</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Howls erratic mayhem: Deals 20 damage and reduces Cosmara by 20 for all enemies for 2 rounds.</p>
-        </section>
-        <p class="card-code">Genezys 02:05 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Asharo archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/UKSVDDXE.webp" alt="Asharo identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Asharo never stays where it lands. The Warp Jumper flickers across the battlefield and leaves a slow, draining shock in every enemy it passes. The Accord gives no orders, and Asharo has never needed any.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Displace Jolt</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>170</b> Cosmara</span>
+                                    <span><b>230</b> Animus</span>
+                                    <span><b>230</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Howls erratic mayhem: Deals 20 damage and reduces Cosmara by 20 for all enemies for 2 rounds.</p>
+                            <p class="card-code">Genezys 02:05 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/UKSVDDXE.webp"
+                            alt="Asharo field capture at Remote alpine plateau" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Remote alpine plateau
+                                <span>Abyssal Accord perimeter · recovered field record 02:05</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/UKSVDDXE.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/UKSVDDXE.webp" alt="Asharo suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/UKSVDDXE.webp" alt="A narrow blue-white spire glows on the far plateau beyond Asharo&#x27;s right shoulder."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 61.60%; --marker-y: 50.00%"></span>
+                        <figcaption>EVIDENCE 02:05-A · Distant Blue Spire</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 02:05-A</h2>
+                        <p class="field-log-meta">Remote alpine plateau · Status: Unresolved</p>
+                        <p class="field-log-copy">TOP SECRET: Recon imagery isolates a blue-white spire on the far plateau, visible beyond Asharo&#x27;s right shoulder. The structure remains sharply luminous despite severe distance haze, while no matching installation appears elsewhere in the basin. Asharo occupied the foreground only long enough for one frame, consistent with Warp Jumper displacement and the Accord&#x27;s refusal of predictable movement. Residual drain signatures form an incomplete path toward the spire, but their sequence cannot be reconstructed. Command assesses the distant light as either a lure or a witness marker; containment teams are forbidden to approach until its rhythm changes.</p>
+                        <p class="field-log-footer">Cross-reference: CARD 02:05 // Warp Jumper // Residual drain</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">02:05</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

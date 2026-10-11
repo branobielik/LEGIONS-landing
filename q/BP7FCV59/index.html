@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Drak — LEGIONS</title>
 </head>
-<body class="side-earth2 has-blueprint">
+<body class="side-earth2">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Drak · Grim Corsair</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
-            <h1>Drak</h1>
-            <p class="subname">Field Avenger</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Grim Corsair</span>
-                <span>Legion</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <h1>Drak</h1>
+                <p class="archive-subname">Field Avenger</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Grim Corsair · Legion</span>
+                <span>Genezys 06:07</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/BP7FCV59.webp" alt="Drak" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Drak never leaves a crewmate behind, which makes Drak a rare thing among the Grim Corsairs. Phase Out strikes two enemies from beyond perception and helps an ally return to the fight sooner. The Corsairs mock Drak for it, but every crew wants Drak aboard.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Phase Out</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>120</b> Cosmara</span>
-                    <span><b>370</b> Animus</span>
-                    <span><b>290</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Strikes beyond perception: Performs normal attack on 2 different enemies and reduces chosen ally&#x27;s CD by 1.</p>
-        </section>
-        <p class="card-code">Genezys 06:07 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Drak archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/BP7FCV59.webp" alt="Drak identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Drak never leaves a crewmate behind, which makes Drak a rare thing among the Grim Corsairs. Phase Out strikes two enemies from beyond perception and helps an ally return to the fight sooner. The Corsairs mock Drak for it, but every crew wants Drak aboard.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Phase Out</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>120</b> Cosmara</span>
+                                    <span><b>370</b> Animus</span>
+                                    <span><b>290</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Strikes beyond perception: Performs normal attack on 2 different enemies and reduces chosen ally&#x27;s CD by 1.</p>
+                            <p class="card-code">Genezys 06:07 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/BP7FCV59.webp"
+                            alt="Drak field capture at Overgrown memorial courtyard" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Overgrown memorial courtyard
+                                <span>Grim Corsair perimeter · recovered field record 06:07</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/BP7FCV59.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/BP7FCV59.webp" alt="Drak suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/BP7FCV59.webp" alt="Large ivy-covered stone arch framing a distant blue-lit tower behind Drak."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 53.31%; --marker-y: 28.00%"></span>
+                        <figcaption>EVIDENCE 06:07-A · Ivy-Bound Memorial Arch</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 06:07-A</h2>
+                        <p class="field-log-meta">Overgrown memorial courtyard · Status: Under Review</p>
+                        <p class="field-log-copy">TOP SECRET: Drak was documented before an ivy-bound stone arch framing a distant blue-lit tower. Wet paving beneath the arch shows two interrupted reflection paths, although only Drak was visible in the courtyard. Phase Out telemetry suggests a second Corsair shell briefly occupied the missing path before returning through Drak&#x27;s intervention. Instead of stripping the absent crewmate&#x27;s trace, Drak marked a fallen carved block beneath the ivy as the expedition&#x27;s trophy. That substitution challenges the crew code while preserving Drak&#x27;s record of leaving no crewmate behind, so the incident remains under review.</p>
+                        <p class="field-log-footer">Cross-reference: 06:07 — Phase Out; no-crewmate-left-behind exception</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">06:07</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

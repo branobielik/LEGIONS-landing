@@ -11,9 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
+    <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <script src="../archive-tabs-prototype.js" defer></script>
     <title>Lorna — LEGIONS</title>
 </head>
-<body class="side-earth2 has-blueprint">
+<body class="side-earth2">
     <div class="unlock-screen" aria-hidden="true">
         <div class="unlock-frame">
             <p>GENEZYS ARCHIVE</p>
@@ -21,49 +23,148 @@
             <span>Lorna · Grim Corsair</span>
         </div>
     </div>
-    <main class="card-page">
-        <a class="brand" href="../../" aria-label="LEGIONS home">
-            <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-            <sup>©</sup>
-        </a>
-        <header class="identity">
-            <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
-            <h1>Lorna</h1>
-            <p class="subname">Atrophy Visionary</p>
-            <div class="identity-meta" aria-label="Card identity">
-                <span>Grim Corsair</span>
-                <span>Recruit</span>
+
+    <main class="archive-shell">
+        <header class="archive-header">
+            <a class="archive-brand" href="../../" aria-label="LEGIONS home">
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
+                <sup>©</sup>
+            </a>
+
+            <div class="archive-identity">
+                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <h1>Lorna</h1>
+                <p class="archive-subname">Atrophy Visionary</p>
+            </div>
+
+            <div class="archive-meta" aria-label="Card identity">
+                <span>Grim Corsair · Recruit</span>
+                <span>Genezys 06:01</span>
             </div>
         </header>
-        <figure class="robot-art">
-            <img src="../assets/NSN5GK7W.webp" alt="Lorna" width="900" height="900">
-            <figcaption>Field capture</figcaption>
-        </figure>
-        <section class="lore dossier-panel" aria-labelledby="lore-heading">
-            <p class="section-label" id="lore-heading">Archive record</p>
-            <p>Lorna&#x27;s gaze is the first thing a Grim Corsair raid brings through the portal, and the last thing many enemies see. The Wither Glance withers the flanks and drains whoever stands in the middle. Like every Corsair, Lorna&#x27;s pilot has sworn to bring a trophy back from Earth 1.</p>
-        </section>
-        <section class="systems dossier-panel" aria-labelledby="systems-heading">
-            <div class="systems-heading">
-                <div>
-                    <p class="section-label" id="systems-heading">Combat signature</p>
-                    <h2>Wither Glance</h2>
-                </div>
-                <div class="energy-grid" aria-label="Card energy values">
-                    <span><b>210</b> Cosmara</span>
-                    <span><b>130</b> Animus</span>
-                    <span><b>170</b> Vitalis</span>
-                </div>
-            </div>
-            <p class="special-rules">Peers with gaze that crumbles flesh: Deals 30 pierce damage to enemies on the edges. The enemy in the middle loses 60 Cosmara.</p>
-        </section>
-        <p class="card-code">Genezys 06:01 ™&amp;©2026LEGIONS</p>
 
-        <figure class="blueprint-art">
+        <nav class="archive-tabs" role="tablist" aria-label="Lorna archive">
+            <button class="archive-tab" id="tab-profile" type="button" role="tab"
+                aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
+                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+        </nav>
+
+        <div class="archive-stage">
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
+                aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p>
+                <p class="panel-index">Archive node 01 / 05</p>
+                <div class="profile-layout">
+                    <figure class="identity-portrait">
+                        <img src="../assets/NSN5GK7W.webp" alt="Lorna identity portrait"
+                            width="900" height="900">
+                        <figcaption>Identity portrait</figcaption>
+                    </figure>
+
+                    <div class="profile-data">
+                        <section class="profile-section" aria-labelledby="archive-record-heading">
+                            <p class="section-label" id="archive-record-heading">Archive record</p>
+                            <p class="archive-copy">Lorna&#x27;s gaze is the first thing a Grim Corsair raid brings through the portal, and the last thing many enemies see. The Wither Glance withers the flanks and drains whoever stands in the middle. Like every Corsair, Lorna&#x27;s pilot has sworn to bring a trophy back from Earth 1.</p>
+                        </section>
+
+                        <section class="profile-section" aria-labelledby="combat-heading">
+                            <div class="combat-heading">
+                                <div>
+                                    <p class="section-label">Combat signature</p>
+                                    <h2 id="combat-heading">Wither Glance</h2>
+                                </div>
+                                <div class="energy-grid" aria-label="Card energy values">
+                                    <span><b>210</b> Cosmara</span>
+                                    <span><b>130</b> Animus</span>
+                                    <span><b>170</b> Vitalis</span>
+                                </div>
+                            </div>
+                            <p class="special-rules">Peers with gaze that crumbles flesh: Deals 30 pierce damage to enemies on the edges. The enemy in the middle loses 60 Cosmara.</p>
+                            <p class="card-code">Genezys 06:01 ™&amp;©2026LEGIONS</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
+                aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p>
+                <p class="panel-index">Archive node 02 / 05</p>
+                <div class="capture-layout">
+                    <div class="capture-frame">
+                        <img src="../scenes/NSN5GK7W.webp"
+                            alt="Lorna field capture at Alpine civic terrace" width="1672" height="941">
+                        <div class="capture-overlay">
+                            <p class="capture-location">
+                                Alpine civic terrace
+                                <span>Grim Corsair perimeter · recovered field record 06:01</span>
+                            </p>
+                            <a class="capture-expand" href="../scenes/NSN5GK7W.webp"
+                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
+                aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p>
+                <p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout">
+
+                    <figure class="blueprint-figure">
                 <img src="../blueprints/NSN5GK7W.webp" alt="Lorna suit blueprint">
-                <figcaption>Archive blueprint</figcaption>
-        </figure>
-        <a class="home-link" href="../../">Return to LEGIONS</a>
+                        <figcaption>Archive blueprint</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-field-log" role="tabpanel"
+                aria-labelledby="tab-field-log" hidden>
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img src="../evidence/NSN5GK7W.webp" alt="Gold-banded conduit tower behind Lorna, with its lower ring overlooking a reflective terrace."
+                            width="900" height="1125">
+                        <span class="top-secret-stamp">TOP SECRET</span>
+                        <span class="evidence-marker" aria-hidden="true"
+                            style="--marker-x: 50.00%; --marker-y: 19.45%"></span>
+                        <figcaption>EVIDENCE 06:01-A · Tarnished Conduit Ring</figcaption>
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 06:01-A</h2>
+                        <p class="field-log-meta">Alpine civic terrace · Status: Restricted</p>
+                        <p class="field-log-copy">TOP SECRET: Field observers isolated Lorna beside the gold-banded conduit tower rising behind the terrace. The polished paving below carries a broken reflection, as though surface residue weakened wherever the Synthbot held its gaze. Lorna remained motionless while Wither Glance sampled the terrace edges and drew energy toward the center seam. Corsair protocol identifies the tower&#x27;s tarnished lower ring as a candidate trophy, but no removal was observed. Under the crew code, whoever falls is stripped; until the ring&#x27;s changing condition is explained, access remains restricted.</p>
+                        <p class="field-log-footer">Cross-reference: 06:01 — Wither Glance; Grim Corsair trophy oath</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="archive-panel" id="panel-transmission" role="tabpanel"
+                aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p>
+                <p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout">
+                    <div class="pending-frame">
+                        <div class="pending-content">
+                            <span class="pending-sigil" aria-hidden="true">06:01</span>
+                            <strong>Transmission Pending</strong>
+                            <p>Motion record not yet recovered</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

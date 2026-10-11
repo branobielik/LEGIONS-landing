@@ -77,6 +77,17 @@
             </button>
             <button
                 class="archive-tab"
+                id="tab-field-log"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-field-log"
+                tabindex="-1"
+            >
+                Field Log
+            </button>
+            <button
+                class="archive-tab"
                 id="tab-transmission"
                 type="button"
                 role="tab"
@@ -96,7 +107,7 @@
                 aria-labelledby="tab-profile"
             >
                 <p class="panel-title">Identity &amp; combat record</p>
-                <p class="panel-index">Archive node 01 / 04</p>
+                <p class="panel-index">Archive node 01 / 05</p>
                 <div class="profile-layout">
                     <figure class="identity-portrait">
                         <img src="../assets/PSSU33P7.webp" alt="Ulinx identity portrait" width="900" height="900">
@@ -143,7 +154,7 @@
                 hidden
             >
                 <p class="panel-title">Recovered visual record</p>
-                <p class="panel-index">Archive node 02 / 04</p>
+                <p class="panel-index">Archive node 02 / 05</p>
                 <div class="capture-layout">
                     <div class="capture-frame">
                         <img
@@ -178,12 +189,54 @@
                 hidden
             >
                 <p class="panel-title">Technical archive</p>
-                <p class="panel-index">Archive node 03 / 04</p>
+                <p class="panel-index">Archive node 03 / 05</p>
                 <div class="blueprint-layout">
                     <figure class="blueprint-figure">
                         <img src="../blueprints/PSSU33P7.webp" alt="Ulinx suit blueprint">
                         <figcaption>Archive blueprint</figcaption>
                     </figure>
+                </div>
+            </section>
+
+            <section
+                class="archive-panel"
+                id="panel-field-log"
+                role="tabpanel"
+                aria-labelledby="tab-field-log"
+                hidden
+            >
+                <p class="panel-title">Classified field intelligence</p>
+                <p class="panel-index">Archive node 04 / 05</p>
+                <div class="field-log-layout">
+                    <figure class="classified-evidence">
+                        <img
+                            src="../scenes/PSSU33P7.webp"
+                            alt="Recovered image detail from the Desert Scrapyard"
+                            width="1919"
+                            height="1080"
+                        >
+                    </figure>
+
+                    <article class="classified-file">
+                        <p class="classification">Eyes only · Level Obsidian</p>
+                        <h2>Field Log 07:08-A</h2>
+                        <p class="field-log-meta">
+                            Desert Scrapyard · Custodian Perimeter · Status: Unresolved
+                        </p>
+                        <p class="field-log-copy">
+                            Custodian sensors registered a portal echo beneath the wreckage of an
+                            abandoned launch site. Ulinx entered the perimeter alone. No Synthbot
+                            crossed the Threshold, yet the ground carried an energy pattern identical
+                            to Chaos Twist, timestamped eleven minutes before Ulinx arrived. Beneath the
+                            fractured capsule, Ulinx recovered a strip of material that reflected no
+                            known spectrum and displayed the Custodian seal on both sides. The object
+                            was transferred to Archive Vault Seven. Three hours later, the original
+                            field record rewrote its own timestamp.
+                        </p>
+                        <p class="field-log-footer">
+                            Cross-reference: Threshold Incident · Vault Seven access required
+                        </p>
+                    </article>
                 </div>
             </section>
 
@@ -195,7 +248,7 @@
                 hidden
             >
                 <p class="panel-title">Motion archive</p>
-                <p class="panel-index">Archive node 04 / 04</p>
+                <p class="panel-index">Archive node 05 / 05</p>
                 <div class="transmission-layout">
                     <div class="pending-frame">
                         <div class="pending-content">

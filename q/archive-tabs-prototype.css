@@ -115,7 +115,7 @@ body {
 .archive-tabs {
     margin-inline: clamp(18px, 3vw, 44px);
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     border-block: 1px solid rgba(233, 173, 50, 0.24);
 }
 
@@ -317,12 +317,119 @@ body {
 
 .capture-layout,
 .blueprint-layout,
+.field-log-layout,
 .transmission-layout {
     width: min(100%, 1120px);
     height: 100%;
     margin: 0 auto;
     display: grid;
     place-items: center;
+}
+
+.field-log-layout {
+    grid-template-columns: minmax(280px, 0.85fr) minmax(380px, 1.15fr);
+    gap: clamp(22px, 4vw, 54px);
+}
+
+.classified-evidence {
+    position: relative;
+    width: 100%;
+    height: min(56vh, 520px);
+    overflow: hidden;
+    border: 1px solid rgba(207, 61, 42, 0.5);
+    background: #05090c;
+}
+
+.classified-evidence::after {
+    content: "EVIDENCE 07:08-A";
+    position: absolute;
+    inset: auto 14px 14px auto;
+    padding: 0.45rem 0.55rem;
+    border: 1px solid rgba(207, 61, 42, 0.65);
+    color: #ff725f;
+    background: rgba(4, 7, 10, 0.78);
+    font: 600 0.58rem/1 "Rajdhani", Arial, sans-serif;
+    letter-spacing: 0.13em;
+}
+
+.classified-evidence img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 7% 50%;
+    filter: saturate(0.72) contrast(1.08);
+}
+
+.classified-file {
+    position: relative;
+    width: 100%;
+    padding: clamp(24px, 4vw, 42px);
+    border: 1px solid rgba(207, 61, 42, 0.4);
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.018) 0,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        rgba(9, 10, 12, 0.88);
+}
+
+.classified-file::before {
+    content: "TOP SECRET";
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    padding: 0.5rem 0.65rem;
+    border: 2px solid rgba(207, 61, 42, 0.82);
+    color: #ff725f;
+    font: 700 0.72rem/1 "Rajdhani", Arial, sans-serif;
+    letter-spacing: 0.18em;
+    transform: rotate(-4deg);
+}
+
+.classification {
+    margin: 0 0 1rem;
+    color: #ff725f;
+    font: 700 0.62rem/1.3 "Rajdhani", Arial, sans-serif;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.classified-file h2 {
+    max-width: calc(100% - 120px);
+    margin: 0;
+    color: var(--gold-light);
+    font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.field-log-meta {
+    margin: 0.75rem 0 0;
+    color: var(--muted);
+    font: 600 0.68rem/1.45 "Rajdhani", Arial, sans-serif;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.field-log-copy {
+    margin: 1.35rem 0 0;
+    color: var(--paper);
+    font: 400 clamp(0.9rem, 1.45vw, 1.03rem)/1.58 Georgia, "Times New Roman", serif;
+}
+
+.field-log-footer {
+    margin: 1.15rem 0 0;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(207, 61, 42, 0.28);
+    color: #b77e76;
+    font: 600 0.62rem/1.4 "Rajdhani", Arial, sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .capture-frame {
@@ -554,7 +661,7 @@ body {
     .archive-tabs {
         margin-inline: 10px;
         overflow-x: auto;
-        grid-template-columns: repeat(4, minmax(92px, 1fr));
+        grid-template-columns: repeat(5, minmax(92px, 1fr));
         scrollbar-width: none;
     }
 
@@ -727,6 +834,62 @@ body {
 
     .pending-content p {
         font-size: 0.58rem;
+    }
+
+    .field-log-layout {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(150px, 0.72fr) minmax(0, 1.28fr);
+        gap: 10px;
+    }
+
+    .classified-evidence {
+        height: 100%;
+        min-height: 0;
+    }
+
+    .classified-evidence img {
+        object-position: 7% 52%;
+    }
+
+    .classified-file {
+        height: 100%;
+        overflow: hidden;
+        padding: 18px 16px;
+    }
+
+    .classified-file::before {
+        top: 14px;
+        right: 14px;
+        padding: 0.38rem 0.46rem;
+        font-size: 0.54rem;
+    }
+
+    .classification {
+        margin-bottom: 0.55rem;
+        font-size: 0.5rem;
+    }
+
+    .classified-file h2 {
+        max-width: calc(100% - 92px);
+        font-size: 1rem;
+    }
+
+    .field-log-meta {
+        margin-top: 0.4rem;
+        font-size: 0.52rem;
+    }
+
+    .field-log-copy {
+        margin-top: 0.7rem;
+        font-size: 0.72rem;
+        line-height: 1.35;
+    }
+
+    .field-log-footer {
+        margin-top: 0.65rem;
+        padding-top: 0.5rem;
+        font-size: 0.5rem;
     }
 }
 

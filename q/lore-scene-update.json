@@ -1,13 +1,8 @@
 {
   "source_directory": "D:\\GENEZYZ DTP\\script files\\ROBOTS\\upscale\\update to lore",
   "webp_quality": 88,
-  "updated": 89,
-  "missing": [
-    {
-      "hero": "Ercano",
-      "code": "GDCED3TM"
-    }
-  ],
+  "updated": 90,
+  "missing": [],
   "records": [
     {
       "source": "Arath.png",
@@ -76,6 +71,13 @@
       "source": "Dyozen.png",
       "hero": "Dyozen",
       "code": "8RMGMUFB",
+      "status": "ready-for-review",
+      "markers": []
+    },
+    {
+      "source": "Ercano.png",
+      "hero": "Ercano",
+      "code": "GDCED3TM",
       "status": "ready-for-review",
       "markers": []
     },

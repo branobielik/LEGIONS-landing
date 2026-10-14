@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <link rel="stylesheet" href="../top-secret-template.css">
     <script src="../archive-tabs-prototype.js" defer></script>
+    <script src="../top-secret-template.js" defer></script>
     <title>Iluma — LEGIONS</title>
 </head>
 <body class="side-earth1">
@@ -27,16 +29,13 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-                <sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
             </a>
-
             <div class="archive-identity">
-                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Legionnaire</p>
                 <h1>Iluma</h1>
                 <p class="archive-subname">Conflagration Vindicator</p>
             </div>
-
             <div class="archive-meta" aria-label="Card identity">
                 <span>Eternal Custodian · Legion</span>
                 <span>Genezys 07:09</span>
@@ -44,47 +43,27 @@
         </header>
 
         <nav class="archive-tabs" role="tablist" aria-label="Iluma archive">
-            <button class="archive-tab" id="tab-profile" type="button" role="tab"
-                aria-selected="true" aria-controls="panel-profile">Profile</button>
-            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
-            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
-            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
-            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+            <button class="archive-tab" id="tab-profile" type="button" role="tab" aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab" aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab" aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-top-secret" type="button" role="tab" aria-selected="false" aria-controls="panel-top-secret" tabindex="-1">Top Secret</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab" aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
         </nav>
 
         <div class="archive-stage">
-            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
-                aria-labelledby="tab-profile">
-                <p class="panel-title">Identity &amp; combat record</p>
-                <p class="panel-index">Archive node 01 / 05</p>
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p><p class="panel-index">Archive node 01 / 05</p>
                 <div class="profile-layout">
-                    <figure class="identity-portrait">
-                        <img src="../assets/5XMFRDV7.webp" alt="Iluma identity portrait"
-                            width="900" height="900">
-                        <figcaption>Identity portrait</figcaption>
-                    </figure>
-
+                    <figure class="identity-portrait"><img src="../assets/5XMFRDV7.webp" alt="Iluma identity portrait" width="900" height="900"><figcaption>Identity portrait</figcaption></figure>
                     <div class="profile-data">
                         <section class="profile-section" aria-labelledby="archive-record-heading">
                             <p class="section-label" id="archive-record-heading">Archive record</p>
                             <p class="archive-copy">Iluma burns with the memory of every door the Custodians failed to keep shut. The Paradox Flux rewrites the odds against every enemy, draining and wounding them all. Iluma has sworn that no door will fail again.</p>
                         </section>
-
                         <section class="profile-section" aria-labelledby="combat-heading">
                             <div class="combat-heading">
-                                <div>
-                                    <p class="section-label">Combat signature</p>
-                                    <h2 id="combat-heading">Paradox Flux</h2>
-                                </div>
-                                <div class="energy-grid" aria-label="Card energy values">
-                                    <span><b>110</b> Cosmara</span>
-                                    <span><b>370</b> Animus</span>
-                                    <span><b>290</b> Vitalis</span>
-                                </div>
+                                <div><p class="section-label">Combat signature</p><h2 id="combat-heading">Paradox Flux</h2></div>
+                                <div class="energy-grid" aria-label="Card energy values"><span><b>110</b> Cosmara</span><span><b>370</b> Animus</span><span><b>290</b> Vitalis</span></div>
                             </div>
                             <p class="special-rules">Rewrites probabilistic states: Reduces all enemies&#x27; Cosmara by 60 and damages them for 60.</p>
                             <p class="card-code">Genezys 07:09 ™&amp;©2026LEGIONS</p>
@@ -93,76 +72,108 @@
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
-                aria-labelledby="tab-field-capture" hidden>
-                <p class="panel-title">Recovered visual record</p>
-                <p class="panel-index">Archive node 02 / 05</p>
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel" aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p><p class="panel-index">Archive node 02 / 05</p>
                 <div class="capture-layout">
                     <div class="capture-frame">
-                        <img src="../scenes/5XMFRDV7.webp"
-                            alt="Iluma field capture at Custodian Memorial Hall" width="1672" height="941">
+                        <img src="../scenes/5XMFRDV7.webp" alt="Iluma field capture at Custodian Memorial Hall" width="1672" height="941">
+                        <div class="capture-hud" aria-hidden="true">
+                            <div class="capture-hud-id"><span class="rec-light"></span><strong>FIELD CAM // 07:09</strong><small>VISUAL CHANNEL · ARCHIVE FEED</small></div>
+                            <div class="capture-hud-camera"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="19"></circle><circle cx="32" cy="32" r="8"></circle><path d="M32 4v9M32 51v9M4 32h9M51 32h9"></path></svg><span>REC</span></div>
+                            <i class="hud-corner hud-corner-tl"></i><i class="hud-corner hud-corner-tr"></i><i class="hud-corner hud-corner-bl"></i><i class="hud-corner hud-corner-br"></i>
+                        </div>
                         <div class="capture-overlay">
-                            <p class="capture-location">
-                                Custodian Memorial Hall
-                                <span>Eternal Custodian perimeter · recovered field record 07:09</span>
-                            </p>
-                            <a class="capture-expand" href="../scenes/5XMFRDV7.webp"
-                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                            <p class="capture-location">Custodian Memorial Hall<span>Eternal Custodian perimeter · recovered field record 07:09</span></p>
+                            <button class="capture-expand capture-landscape" type="button" data-landscape-src="../scenes/5XMFRDV7.webp">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="1"></rect><path d="m4 8-2 2 2 2M20 12l2 2-2 2"></path></svg>
+                                <span>Full 16:9 view</span>
+                            </button>
                         </div>
+                        <p class="rotate-capture">Full frame available // rotate device to landscape</p>
                     </div>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
-                aria-labelledby="tab-blueprint" hidden>
-                <p class="panel-title">Technical archive</p>
-                <p class="panel-index">Archive node 03 / 05</p>
-                <div class="blueprint-layout">
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel" aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p><p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout"><figure class="blueprint-figure"><img src="../blueprints/5XMFRDV7.webp" alt="Iluma suit blueprint"><figcaption>Archive blueprint</figcaption></figure></div>
+            </section>
 
-                    <figure class="blueprint-figure">
-                <img src="../blueprints/5XMFRDV7.webp" alt="Iluma suit blueprint">
-                        <figcaption>Archive blueprint</figcaption>
-                    </figure>
+            <section class="archive-panel" id="panel-top-secret" role="tabpanel" aria-labelledby="tab-top-secret" hidden>
+                <p class="panel-title">Classified field intelligence</p><p class="panel-index">Archive node 04 / 05</p>
+                <div class="secret-dossier">
+                    <header class="report-header">
+                        <div><p class="report-eyebrow">FIELD REPORT // ENERGY ANOMALY</p><h2>Eternal Custodian Report 07:09-A</h2></div>
+                        <dl class="report-redactions">
+                            <div><dt>Date</dt><dd>Redacted</dd></div><div><dt>Timestamp</dt><dd>Sealed</dd></div>
+                            <div><dt>Coordinates</dt><dd>Classified</dd></div><div><dt>Sector</dt><dd>5X-Alpha</dd></div>
+                        </dl>
+                        <strong class="report-stamp">Top Secret</strong>
+                    </header>
+                    <nav class="report-pages" aria-label="Top Secret report pages">
+                        <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
+                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
+                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                    </nav>
+                    <section class="report-page report-evidence is-active" data-report-page="evidence">
+                        <figure class="report-capture">
+                            <img src="../scenes/5XMFRDV7.webp" alt="A vertical blue energy column rises beside the stairs left of Iluma." width="1672" height="941">
+                            <span class="report-object-box annotation-right" style="--poi-x:22.00%;--poi-y:34.00%;" aria-hidden="true">
+                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="2,88 54,24 172,24"></polyline><rect x="166" y="18" width="12" height="12"></rect></svg>
+                                <b><span>OBJ-07:09</span><small>blue energy column</small></b>
+                            </span>
+                            <figcaption><span>Primary visual record</span>Custodian Memorial Hall · Evidence frame 07:09-A</figcaption>
+                        </figure>
+                    </section>
+                    <section class="report-page report-observation" data-report-page="observation">
+                        <article class="report-card field-observation"><p class="report-label">Field Observation</p><p>A vertical blue energy column rises beside the stairs left of Iluma.</p></article>
+                        <article class="report-card environment-card">
+                            <p class="report-label">Environment</p>
+                            <dl class="report-data">
+                                <div><dt>Terrain</dt><dd>ornate metallic ceremonial hall</dd></div><div><dt>Weather</dt><dd>Clear / high cloud</dd></div>
+                                <div><dt>Visibility</dt><dd>High</dd></div><div><dt>Object status</dt><dd>Under observation</dd></div>
+                            </dl>
+                        </article>
+                    </section>
+                    <section class="report-page report-analysis" data-report-page="analysis">
+                        <article class="report-card object-analysis">
+                            <p class="report-label">Object Analysis</p>
+                            <dl class="report-data">
+                                <div><dt>Object</dt><dd>blue energy column</dd></div><div><dt>Origin</dt><dd>Unknown</dd></div>
+                                <div><dt>Signature</dt><dd>Energy-active</dd></div><div><dt>Threat level</dt><dd>Under review</dd></div>
+                            </dl>
+                        </article>
+                        <article class="report-card findings-card"><p class="report-label">Key Findings</p><ul><li>Earth 1 location</li><li>Anomaly is vertically oriented</li><li>Blue light illuminates the hall</li></ul></article>
+                        <figure class="report-map">
+                            <svg viewBox="0 0 360 170" role="img" aria-label="Classified abstract sector map">
+                                <defs>
+                                    <pattern id="sector-grid-5XMFRDV7" width="24" height="24" patternUnits="userSpaceOnUse">
+                                        <path d="M24 0H0V24" class="map-grid-line"></path>
+                                    </pattern>
+                                    <filter id="route-glow-5XMFRDV7" x="-40%" y="-40%" width="180%" height="180%">
+                                        <feGaussianBlur stdDeviation="2.6" result="blur"></feGaussianBlur>
+                                        <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+                                    </filter>
+                                </defs>
+                                <rect class="map-grid" style="fill:url(#sector-grid-5XMFRDV7)" x="0" y="0" width="360" height="170"></rect>
+                                <g class="map-contours"><path d="M-12 33 Q26 39 50 35 Q88 45 112 42 Q152 53 176 31 Q218 14 242 43 Q286 30 310 40 Q352 49 376 41"></path><path d="M-12 59 Q26 50 50 52 Q88 61 112 53 Q152 82 176 61 Q218 76 242 50 Q286 71 310 61 Q352 62 376 66"></path><path d="M-12 91 Q26 76 50 100 Q88 73 112 99 Q152 105 176 103 Q218 92 242 90 Q286 67 310 101 Q352 104 376 84"></path><path d="M-12 131 Q26 108 50 131 Q88 140 112 140 Q152 129 176 134 Q218 131 242 135 Q286 152 310 141 Q352 150 376 129"></path></g>
+                                <g class="map-roads"><polyline points="-10,13 45,146 100,133 155,18 210,2 265,31 320,67"></polyline><polyline points="-10,169 45,52 100,167 155,-9 210,103 265,10 320,117"></polyline><polyline points="-10,104 45,66 100,4 155,106 210,-7 265,105 320,68"></polyline></g>
+                                <polyline class="map-route" style="filter:url(#route-glow-5XMFRDV7)" points="58 119 90 100 148 107 192 81 251 87 313 106"></polyline>
+                                <rect class="map-origin" x="51" y="112" width="14" height="14"></rect>
+                                <rect class="map-target" x="304" y="97" width="18" height="18"></rect>
+                                <path class="map-cross" d="M313 88v36M295 106h36"></path>
+                                <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
+                                <text class="map-sector" x="17" y="25">SECTOR EXTRACT // 5XMFRDV7</text>
+</svg>
+                            <figcaption>Navigation extract // approximate access route<span>Coordinates intentionally suppressed</span></figcaption>
+                        </figure>
+                    </section>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-log" role="tabpanel"
-                aria-labelledby="tab-field-log" hidden>
-                <p class="panel-title">Classified field intelligence</p>
-                <p class="panel-index">Archive node 04 / 05</p>
-                <div class="field-log-layout">
-                    <figure class="classified-evidence">
-                        <img src="../evidence/5XMFRDV7.webp" alt="Concentric brass circuitry engraved into the reflective floor beneath Iluma"
-                            width="900" height="1125">
-                        <span class="top-secret-stamp">TOP SECRET</span>
-                        <span class="evidence-marker" aria-hidden="true"
-                            style="--marker-x: 50.00%; --marker-y: 86.00%"></span>
-                        <figcaption>EVIDENCE 07:09-A · Probability Floor Inlay</figcaption>
-                    </figure>
-
-                    <article class="classified-file">
-                        <p class="classification">Eyes only · Level Obsidian</p>
-                        <h2>Field Log 07:09-A</h2>
-                        <p class="field-log-meta">Custodian Memorial Hall · Status: PARADOX SIGNATURE CONFIRMED</p>
-                        <p class="field-log-copy">TOP SECRET — The concentric brass inlay beneath Iluma brightened one circuit at a time, despite the hall receiving no command. Each completed ring extinguished a matching lamp beside one of the silent Custodian statues. Iluma applied Paradox Flux and found the sequence favored doors previously recorded as failed, yet changed whenever the record was reread. The floor may be preserving probability rather than history, making the chamber itself a Threshold memorial. Every door has a keeper, and Iluma now stands upon the memory of those that did not remain shut.</p>
-                        <p class="field-log-footer">Cross-reference: CARD_LORE_v1 07:09; Paradox Flux; Failed-Door Memorial Record</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="archive-panel" id="panel-transmission" role="tabpanel"
-                aria-labelledby="tab-transmission" hidden>
-                <p class="panel-title">Motion archive</p>
-                <p class="panel-index">Archive node 05 / 05</p>
-                <div class="transmission-layout">
-                    <div class="pending-frame">
-                        <div class="pending-content">
-                            <span class="pending-sigil" aria-hidden="true">07:09</span>
-                            <strong>Transmission Pending</strong>
-                            <p>Motion record not yet recovered</p>
-                        </div>
-                    </div>
-                </div>
+            <section class="archive-panel" id="panel-transmission" role="tabpanel" aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p><p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout"><div class="pending-frame"><div class="pending-content"><span class="pending-sigil" aria-hidden="true">07:09</span><strong>Transmission Pending</strong><p>Motion record not yet recovered</p></div></div></div>
             </section>
         </div>
     </main>

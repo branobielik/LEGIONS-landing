@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <link rel="stylesheet" href="../top-secret-template.css">
     <script src="../archive-tabs-prototype.js" defer></script>
+    <script src="../top-secret-template.js" defer></script>
     <title>Vodary — LEGIONS</title>
 </head>
 <body class="side-earth1">
@@ -27,16 +29,13 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-                <sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
             </a>
-
             <div class="archive-identity">
-                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Legionnaire</p>
                 <h1>Vodary</h1>
                 <p class="archive-subname">Epoch Guard</p>
             </div>
-
             <div class="archive-meta" aria-label="Card identity">
                 <span>Exalted Order · Recruit</span>
                 <span>Genezys 03:02</span>
@@ -44,47 +43,27 @@
         </header>
 
         <nav class="archive-tabs" role="tablist" aria-label="Vodary archive">
-            <button class="archive-tab" id="tab-profile" type="button" role="tab"
-                aria-selected="true" aria-controls="panel-profile">Profile</button>
-            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
-            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
-            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
-            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+            <button class="archive-tab" id="tab-profile" type="button" role="tab" aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab" aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab" aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-top-secret" type="button" role="tab" aria-selected="false" aria-controls="panel-top-secret" tabindex="-1">Top Secret</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab" aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
         </nav>
 
         <div class="archive-stage">
-            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
-                aria-labelledby="tab-profile">
-                <p class="panel-title">Identity &amp; combat record</p>
-                <p class="panel-index">Archive node 01 / 05</p>
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p><p class="panel-index">Archive node 01 / 05</p>
                 <div class="profile-layout">
-                    <figure class="identity-portrait">
-                        <img src="../assets/E4KTY4TV.webp" alt="Vodary identity portrait"
-                            width="900" height="900">
-                        <figcaption>Identity portrait</figcaption>
-                    </figure>
-
+                    <figure class="identity-portrait"><img src="../assets/E4KTY4TV.webp" alt="Vodary identity portrait" width="900" height="900"><figcaption>Identity portrait</figcaption></figure>
                     <div class="profile-data">
                         <section class="profile-section" aria-labelledby="archive-record-heading">
                             <p class="section-label" id="archive-record-heading">Archive record</p>
                             <p class="archive-copy">Vodary trains inside a glacier, where an entire day can pass in a single breath. The Stasis Ward freezes an enemy&#x27;s energy in place before the strike follows. The Order says patience is a blade. Vodary has kept that blade sharp for years.</p>
                         </section>
-
                         <section class="profile-section" aria-labelledby="combat-heading">
                             <div class="combat-heading">
-                                <div>
-                                    <p class="section-label">Combat signature</p>
-                                    <h2 id="combat-heading">Stasis Ward</h2>
-                                </div>
-                                <div class="energy-grid" aria-label="Card energy values">
-                                    <span><b>180</b> Cosmara</span>
-                                    <span><b>120</b> Animus</span>
-                                    <span><b>200</b> Vitalis</span>
-                                </div>
+                                <div><p class="section-label">Combat signature</p><h2 id="combat-heading">Stasis Ward</h2></div>
+                                <div class="energy-grid" aria-label="Card energy values"><span><b>180</b> Cosmara</span><span><b>120</b> Animus</span><span><b>200</b> Vitalis</span></div>
                             </div>
                             <p class="special-rules">Builds a frozen barrier in continuum: Reduces the target&#x27;s Cosmara by 100 and deals 80 damage.</p>
                             <p class="card-code">Genezys 03:02 ™&amp;©2026LEGIONS</p>
@@ -93,76 +72,108 @@
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
-                aria-labelledby="tab-field-capture" hidden>
-                <p class="panel-title">Recovered visual record</p>
-                <p class="panel-index">Archive node 02 / 05</p>
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel" aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p><p class="panel-index">Archive node 02 / 05</p>
                 <div class="capture-layout">
                     <div class="capture-frame">
-                        <img src="../scenes/E4KTY4TV.webp"
-                            alt="Vodary field capture at Alpine ledge beneath cliffside habitation" width="1672" height="941">
+                        <img src="../scenes/E4KTY4TV.webp" alt="Vodary field capture at Alpine ledge beneath cliffside habitation" width="1672" height="941">
+                        <div class="capture-hud" aria-hidden="true">
+                            <div class="capture-hud-id"><span class="rec-light"></span><strong>FIELD CAM // 03:02</strong><small>VISUAL CHANNEL · ARCHIVE FEED</small></div>
+                            <div class="capture-hud-camera"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="19"></circle><circle cx="32" cy="32" r="8"></circle><path d="M32 4v9M32 51v9M4 32h9M51 32h9"></path></svg><span>REC</span></div>
+                            <i class="hud-corner hud-corner-tl"></i><i class="hud-corner hud-corner-tr"></i><i class="hud-corner hud-corner-bl"></i><i class="hud-corner hud-corner-br"></i>
+                        </div>
                         <div class="capture-overlay">
-                            <p class="capture-location">
-                                Alpine ledge beneath cliffside habitation
-                                <span>Exalted Order perimeter · recovered field record 03:02</span>
-                            </p>
-                            <a class="capture-expand" href="../scenes/E4KTY4TV.webp"
-                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                            <p class="capture-location">Alpine ledge beneath cliffside habitation<span>Exalted Order perimeter · recovered field record 03:02</span></p>
+                            <button class="capture-expand capture-landscape" type="button" data-landscape-src="../scenes/E4KTY4TV.webp">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="1"></rect><path d="m4 8-2 2 2 2M20 12l2 2-2 2"></path></svg>
+                                <span>Full 16:9 view</span>
+                            </button>
                         </div>
+                        <p class="rotate-capture">Full frame available // rotate device to landscape</p>
                     </div>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
-                aria-labelledby="tab-blueprint" hidden>
-                <p class="panel-title">Technical archive</p>
-                <p class="panel-index">Archive node 03 / 05</p>
-                <div class="blueprint-layout">
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel" aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p><p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout"><figure class="blueprint-figure"><img src="../blueprints/E4KTY4TV.webp" alt="Vodary suit blueprint"><figcaption>Archive blueprint</figcaption></figure></div>
+            </section>
 
-                    <figure class="blueprint-figure">
-                <img src="../blueprints/E4KTY4TV.webp" alt="Vodary suit blueprint">
-                        <figcaption>Archive blueprint</figcaption>
-                    </figure>
+            <section class="archive-panel" id="panel-top-secret" role="tabpanel" aria-labelledby="tab-top-secret" hidden>
+                <p class="panel-title">Classified field intelligence</p><p class="panel-index">Archive node 04 / 05</p>
+                <div class="secret-dossier">
+                    <header class="report-header">
+                        <div><p class="report-eyebrow">FIELD REPORT // ARTIFACT SIGHTING</p><h2>Exalted Order Report 03:02-A</h2></div>
+                        <dl class="report-redactions">
+                            <div><dt>Date</dt><dd>Redacted</dd></div><div><dt>Timestamp</dt><dd>Sealed</dd></div>
+                            <div><dt>Coordinates</dt><dd>Classified</dd></div><div><dt>Sector</dt><dd>E4-Alpha</dd></div>
+                        </dl>
+                        <strong class="report-stamp">Top Secret</strong>
+                    </header>
+                    <nav class="report-pages" aria-label="Top Secret report pages">
+                        <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
+                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
+                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                    </nav>
+                    <section class="report-page report-evidence is-active" data-report-page="evidence">
+                        <figure class="report-capture">
+                            <img src="../scenes/E4KTY4TV.webp" alt="A red crystal cluster glows among flowers in the left foreground." width="1672" height="941">
+                            <span class="report-object-box annotation-right" style="--poi-x:36.00%;--poi-y:85.00%;" aria-hidden="true">
+                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="2,88 54,24 172,24"></polyline><rect x="166" y="18" width="12" height="12"></rect></svg>
+                                <b><span>OBJ-03:02</span><small>red crystal cluster</small></b>
+                            </span>
+                            <figcaption><span>Primary visual record</span>Alpine ledge beneath cliffside habitation · Evidence frame 03:02-A</figcaption>
+                        </figure>
+                    </section>
+                    <section class="report-page report-observation" data-report-page="observation">
+                        <article class="report-card field-observation"><p class="report-label">Field Observation</p><p>A red crystal cluster glows among flowers in the left foreground.</p></article>
+                        <article class="report-card environment-card">
+                            <p class="report-label">Environment</p>
+                            <dl class="report-data">
+                                <div><dt>Terrain</dt><dd>sunlit mountain flower field</dd></div><div><dt>Weather</dt><dd>Clear / high cloud</dd></div>
+                                <div><dt>Visibility</dt><dd>High</dd></div><div><dt>Object status</dt><dd>Under observation</dd></div>
+                            </dl>
+                        </article>
+                    </section>
+                    <section class="report-page report-analysis" data-report-page="analysis">
+                        <article class="report-card object-analysis">
+                            <p class="report-label">Object Analysis</p>
+                            <dl class="report-data">
+                                <div><dt>Object</dt><dd>red crystal cluster</dd></div><div><dt>Origin</dt><dd>Unknown</dd></div>
+                                <div><dt>Signature</dt><dd>Energy-active</dd></div><div><dt>Threat level</dt><dd>Under review</dd></div>
+                            </dl>
+                        </article>
+                        <article class="report-card findings-card"><p class="report-label">Key Findings</p><ul><li>The cluster has multiple facets</li><li>It emits red light</li><li>Vegetation surrounds its base</li></ul></article>
+                        <figure class="report-map">
+                            <svg viewBox="0 0 360 170" role="img" aria-label="Classified abstract sector map">
+                                <defs>
+                                    <pattern id="sector-grid-E4KTY4TV" width="24" height="24" patternUnits="userSpaceOnUse">
+                                        <path d="M24 0H0V24" class="map-grid-line"></path>
+                                    </pattern>
+                                    <filter id="route-glow-E4KTY4TV" x="-40%" y="-40%" width="180%" height="180%">
+                                        <feGaussianBlur stdDeviation="2.6" result="blur"></feGaussianBlur>
+                                        <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+                                    </filter>
+                                </defs>
+                                <rect class="map-grid" style="fill:url(#sector-grid-E4KTY4TV)" x="0" y="0" width="360" height="170"></rect>
+                                <g class="map-contours"><path d="M-12 39 Q26 52 50 42 Q88 38 112 29 Q152 55 176 33 Q218 15 242 52 Q286 32 310 42 Q352 20 376 30"></path><path d="M-12 73 Q26 74 50 71 Q88 55 112 76 Q152 53 176 74 Q218 98 242 81 Q286 53 310 83 Q352 72 376 86"></path><path d="M-12 92 Q26 90 50 83 Q88 107 112 92 Q152 113 176 104 Q218 117 242 82 Q286 105 310 105 Q352 69 376 101"></path><path d="M-12 133 Q26 152 50 140 Q88 147 112 131 Q152 127 176 130 Q218 112 242 120 Q286 128 310 121 Q352 127 376 136"></path></g>
+                                <g class="map-roads"><polyline points="-10,101 45,-7 100,87 155,103 210,50 265,89 320,159"></polyline><polyline points="-10,58 45,119 100,72 155,76 210,166 265,-7 320,29"></polyline><polyline points="-10,36 45,165 100,166 155,61 210,111 265,53 320,169"></polyline></g>
+                                <polyline class="map-route" style="filter:url(#route-glow-E4KTY4TV)" points="53 145 86 133 154 128 210 98 255 112 300 106"></polyline>
+                                <rect class="map-origin" x="46" y="138" width="14" height="14"></rect>
+                                <rect class="map-target" x="291" y="97" width="18" height="18"></rect>
+                                <path class="map-cross" d="M300 88v36M282 106h36"></path>
+                                <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
+                                <text class="map-sector" x="17" y="25">SECTOR EXTRACT // E4KTY4TV</text>
+</svg>
+                            <figcaption>Navigation extract // approximate access route<span>Coordinates intentionally suppressed</span></figcaption>
+                        </figure>
+                    </section>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-log" role="tabpanel"
-                aria-labelledby="tab-field-log" hidden>
-                <p class="panel-title">Classified field intelligence</p>
-                <p class="panel-index">Archive node 04 / 05</p>
-                <div class="field-log-layout">
-                    <figure class="classified-evidence">
-                        <img src="../evidence/E4KTY4TV.webp" alt="A shallow alpine pool reflecting Vodary beside rocks and pink flowers below the cliffside structures."
-                            width="900" height="1125">
-                        <span class="top-secret-stamp">TOP SECRET</span>
-                        <span class="evidence-marker" aria-hidden="true"
-                            style="--marker-x: 50.00%; --marker-y: 74.27%"></span>
-                        <figcaption>EVIDENCE 03:02-A · Motionless Meltwater Reflection</figcaption>
-                    </figure>
-
-                    <article class="classified-file">
-                        <p class="classification">Eyes only · Level Obsidian</p>
-                        <h2>Field Log 03:02-A</h2>
-                        <p class="field-log-meta">Alpine ledge beneath cliffside habitation · Status: Restricted</p>
-                        <p class="field-log-copy">TOP SECRET — A shallow meltwater pool beside the cliffside habitation reflects Vodary with unusual clarity, although wind is visible in nearby alpine growth. Vodary remained at the pool&#x27;s edge until the reflected outline appeared motionless, then initiated Stasis Ward practice without disturbing the surface. Order observers consider the reflection a naturally occurring patience test, but the absence of ripples during movement has not been explained. The nearby stacked cylindrical chambers show no matching optical apparatus. Access remains Restricted until the Exalted Order determines whether the pool records stillness, imposes it, or merely rewards the knight willing to wait.</p>
-                        <p class="field-log-footer">Cross-reference: Card 03:02 · Stasis Ward · Still Hour observation</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="archive-panel" id="panel-transmission" role="tabpanel"
-                aria-labelledby="tab-transmission" hidden>
-                <p class="panel-title">Motion archive</p>
-                <p class="panel-index">Archive node 05 / 05</p>
-                <div class="transmission-layout">
-                    <div class="pending-frame">
-                        <div class="pending-content">
-                            <span class="pending-sigil" aria-hidden="true">03:02</span>
-                            <strong>Transmission Pending</strong>
-                            <p>Motion record not yet recovered</p>
-                        </div>
-                    </div>
-                </div>
+            <section class="archive-panel" id="panel-transmission" role="tabpanel" aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p><p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout"><div class="pending-frame"><div class="pending-content"><span class="pending-sigil" aria-hidden="true">03:02</span><strong>Transmission Pending</strong><p>Motion record not yet recovered</p></div></div></div>
             </section>
         </div>
     </main>

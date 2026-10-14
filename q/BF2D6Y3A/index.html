@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <link rel="stylesheet" href="../top-secret-template.css">
     <script src="../archive-tabs-prototype.js" defer></script>
+    <script src="../top-secret-template.js" defer></script>
     <title>Zok — LEGIONS</title>
 </head>
 <body class="side-earth2">
@@ -27,16 +29,13 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-                <sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
             </a>
-
             <div class="archive-identity">
-                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Synthbot</p>
                 <h1>Zok</h1>
                 <p class="archive-subname">Riot Courier</p>
             </div>
-
             <div class="archive-meta" aria-label="Card identity">
                 <span>Abyssal Accord · Recruit</span>
                 <span>Genezys 02:03</span>
@@ -44,47 +43,27 @@
         </header>
 
         <nav class="archive-tabs" role="tablist" aria-label="Zok archive">
-            <button class="archive-tab" id="tab-profile" type="button" role="tab"
-                aria-selected="true" aria-controls="panel-profile">Profile</button>
-            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
-            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
-            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
-            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+            <button class="archive-tab" id="tab-profile" type="button" role="tab" aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab" aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab" aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-top-secret" type="button" role="tab" aria-selected="false" aria-controls="panel-top-secret" tabindex="-1">Top Secret</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab" aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
         </nav>
 
         <div class="archive-stage">
-            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
-                aria-labelledby="tab-profile">
-                <p class="panel-title">Identity &amp; combat record</p>
-                <p class="panel-index">Archive node 01 / 05</p>
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p><p class="panel-index">Archive node 01 / 05</p>
                 <div class="profile-layout">
-                    <figure class="identity-portrait">
-                        <img src="../assets/BF2D6Y3A.webp" alt="Zok identity portrait"
-                            width="900" height="900">
-                        <figcaption>Identity portrait</figcaption>
-                    </figure>
-
+                    <figure class="identity-portrait"><img src="../assets/BF2D6Y3A.webp" alt="Zok identity portrait" width="900" height="900"><figcaption>Identity portrait</figcaption></figure>
                     <div class="profile-data">
                         <section class="profile-section" aria-labelledby="archive-record-heading">
                             <p class="section-label" id="archive-record-heading">Archive record</p>
                             <p class="archive-copy">Before the Accord, Zok carried messages through the portal. Now the messages are the attacks. The Havoc Dash tears through the edges of a battle line, and when only one enemy is left standing, the Riot Courier delivers twice.</p>
                         </section>
-
                         <section class="profile-section" aria-labelledby="combat-heading">
                             <div class="combat-heading">
-                                <div>
-                                    <p class="section-label">Combat signature</p>
-                                    <h2 id="combat-heading">Havoc Dash</h2>
-                                </div>
-                                <div class="energy-grid" aria-label="Card energy values">
-                                    <span><b>220</b> Cosmara</span>
-                                    <span><b>160</b> Animus</span>
-                                    <span><b>150</b> Vitalis</span>
-                                </div>
+                                <div><p class="section-label">Combat signature</p><h2 id="combat-heading">Havoc Dash</h2></div>
+                                <div class="energy-grid" aria-label="Card energy values"><span><b>220</b> Cosmara</span><span><b>160</b> Animus</span><span><b>150</b> Vitalis</span></div>
                             </div>
                             <p class="special-rules">Howls rampant mayhem without pattern: Deals 90 damage to the enemies on the edges. If only 1 enemy is alive, damage is doubled.</p>
                             <p class="card-code">Genezys 02:03 ™&amp;©2026LEGIONS</p>
@@ -93,76 +72,108 @@
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
-                aria-labelledby="tab-field-capture" hidden>
-                <p class="panel-title">Recovered visual record</p>
-                <p class="panel-index">Archive node 02 / 05</p>
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel" aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p><p class="panel-index">Archive node 02 / 05</p>
                 <div class="capture-layout">
                     <div class="capture-frame">
-                        <img src="../scenes/BF2D6Y3A.webp"
-                            alt="Zok field capture at Arid scrubland passage" width="1672" height="941">
+                        <img src="../scenes/BF2D6Y3A.webp" alt="Zok field capture at Arid scrubland passage" width="1672" height="941">
+                        <div class="capture-hud" aria-hidden="true">
+                            <div class="capture-hud-id"><span class="rec-light"></span><strong>FIELD CAM // 02:03</strong><small>VISUAL CHANNEL · ARCHIVE FEED</small></div>
+                            <div class="capture-hud-camera"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="19"></circle><circle cx="32" cy="32" r="8"></circle><path d="M32 4v9M32 51v9M4 32h9M51 32h9"></path></svg><span>REC</span></div>
+                            <i class="hud-corner hud-corner-tl"></i><i class="hud-corner hud-corner-tr"></i><i class="hud-corner hud-corner-bl"></i><i class="hud-corner hud-corner-br"></i>
+                        </div>
                         <div class="capture-overlay">
-                            <p class="capture-location">
-                                Arid scrubland passage
-                                <span>Abyssal Accord perimeter · recovered field record 02:03</span>
-                            </p>
-                            <a class="capture-expand" href="../scenes/BF2D6Y3A.webp"
-                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                            <p class="capture-location">Arid scrubland passage<span>Abyssal Accord perimeter · recovered field record 02:03</span></p>
+                            <button class="capture-expand capture-landscape" type="button" data-landscape-src="../scenes/BF2D6Y3A.webp">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="1"></rect><path d="m4 8-2 2 2 2M20 12l2 2-2 2"></path></svg>
+                                <span>Full 16:9 view</span>
+                            </button>
                         </div>
+                        <p class="rotate-capture">Full frame available // rotate device to landscape</p>
                     </div>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
-                aria-labelledby="tab-blueprint" hidden>
-                <p class="panel-title">Technical archive</p>
-                <p class="panel-index">Archive node 03 / 05</p>
-                <div class="blueprint-layout">
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel" aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p><p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout"><figure class="blueprint-figure"><img src="../blueprints/BF2D6Y3A.webp" alt="Zok suit blueprint"><figcaption>Archive blueprint</figcaption></figure></div>
+            </section>
 
-                    <figure class="blueprint-figure">
-                <img src="../blueprints/BF2D6Y3A.webp" alt="Zok suit blueprint">
-                        <figcaption>Archive blueprint</figcaption>
-                    </figure>
+            <section class="archive-panel" id="panel-top-secret" role="tabpanel" aria-labelledby="tab-top-secret" hidden>
+                <p class="panel-title">Classified field intelligence</p><p class="panel-index">Archive node 04 / 05</p>
+                <div class="secret-dossier">
+                    <header class="report-header">
+                        <div><p class="report-eyebrow">FIELD REPORT // ARTIFACT SIGHTING</p><h2>Abyssal Accord Report 02:03-A</h2></div>
+                        <dl class="report-redactions">
+                            <div><dt>Date</dt><dd>Redacted</dd></div><div><dt>Timestamp</dt><dd>Sealed</dd></div>
+                            <div><dt>Coordinates</dt><dd>Classified</dd></div><div><dt>Sector</dt><dd>BF-Alpha</dd></div>
+                        </dl>
+                        <strong class="report-stamp">Top Secret</strong>
+                    </header>
+                    <nav class="report-pages" aria-label="Top Secret report pages">
+                        <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
+                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
+                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                    </nav>
+                    <section class="report-page report-evidence is-active" data-report-page="evidence">
+                        <figure class="report-capture">
+                            <img src="../scenes/BF2D6Y3A.webp" alt="A reflective sphere with a luminous interior sits far right of the hero." width="1672" height="941">
+                            <span class="report-object-box annotation-left" style="--poi-x:86.00%;--poi-y:61.00%;" aria-hidden="true">
+                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="178,88 126,24 8,24"></polyline><rect x="2" y="18" width="12" height="12"></rect></svg>
+                                <b><span>OBJ-02:03</span><small>reflective energy sphere</small></b>
+                            </span>
+                            <figcaption><span>Primary visual record</span>Arid scrubland passage · Evidence frame 02:03-A</figcaption>
+                        </figure>
+                    </section>
+                    <section class="report-page report-observation" data-report-page="observation">
+                        <article class="report-card field-observation"><p class="report-label">Field Observation</p><p>A reflective sphere with a luminous interior sits far right of the hero.</p></article>
+                        <article class="report-card environment-card">
+                            <p class="report-label">Environment</p>
+                            <dl class="report-data">
+                                <div><dt>Terrain</dt><dd>rocky sunset plain</dd></div><div><dt>Weather</dt><dd>Late daylight</dd></div>
+                                <div><dt>Visibility</dt><dd>High</dd></div><div><dt>Object status</dt><dd>Under observation</dd></div>
+                            </dl>
+                        </article>
+                    </section>
+                    <section class="report-page report-analysis" data-report-page="analysis">
+                        <article class="report-card object-analysis">
+                            <p class="report-label">Object Analysis</p>
+                            <dl class="report-data">
+                                <div><dt>Object</dt><dd>reflective energy sphere</dd></div><div><dt>Origin</dt><dd>Unknown</dd></div>
+                                <div><dt>Signature</dt><dd>Energy-active</dd></div><div><dt>Threat level</dt><dd>Under review</dd></div>
+                            </dl>
+                        </article>
+                        <article class="report-card findings-card"><p class="report-label">Key Findings</p><ul><li>The shell is highly reflective</li><li>Colored light glows inside</li><li>The sphere rests on rocky ground</li></ul></article>
+                        <figure class="report-map">
+                            <svg viewBox="0 0 360 170" role="img" aria-label="Classified abstract sector map">
+                                <defs>
+                                    <pattern id="sector-grid-BF2D6Y3A" width="24" height="24" patternUnits="userSpaceOnUse">
+                                        <path d="M24 0H0V24" class="map-grid-line"></path>
+                                    </pattern>
+                                    <filter id="route-glow-BF2D6Y3A" x="-40%" y="-40%" width="180%" height="180%">
+                                        <feGaussianBlur stdDeviation="2.6" result="blur"></feGaussianBlur>
+                                        <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+                                    </filter>
+                                </defs>
+                                <rect class="map-grid" style="fill:url(#sector-grid-BF2D6Y3A)" x="0" y="0" width="360" height="170"></rect>
+                                <g class="map-contours"><path d="M-12 27 Q26 25 50 14 Q88 37 112 34 Q152 46 176 35 Q218 26 242 23 Q286 6 310 30 Q352 11 376 33"></path><path d="M-12 65 Q26 70 50 60 Q88 69 112 73 Q152 54 176 59 Q218 80 242 55 Q286 84 310 58 Q352 90 376 61"></path><path d="M-12 104 Q26 104 50 91 Q88 107 112 110 Q152 108 176 113 Q218 106 242 97 Q286 80 310 98 Q352 112 376 91"></path><path d="M-12 129 Q26 146 50 133 Q88 140 112 130 Q152 154 176 123 Q218 105 242 134 Q286 149 310 122 Q352 119 376 141"></path></g>
+                                <g class="map-roads"><polyline points="-10,64 45,128 100,4 155,79 210,148 265,171 320,49"></polyline><polyline points="-10,128 45,134 100,48 155,110 210,142 265,83 320,30"></polyline><polyline points="-10,102 45,121 100,136 155,37 210,154 265,22 320,125"></polyline></g>
+                                <polyline class="map-route" style="filter:url(#route-glow-BF2D6Y3A)" points="32 121 86 97 155 76 196 73 256 53 309 46"></polyline>
+                                <rect class="map-origin" x="25" y="114" width="14" height="14"></rect>
+                                <rect class="map-target" x="300" y="37" width="18" height="18"></rect>
+                                <path class="map-cross" d="M309 28v36M291 46h36"></path>
+                                <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
+                                <text class="map-sector" x="17" y="25">SECTOR EXTRACT // BF2D6Y3A</text>
+</svg>
+                            <figcaption>Navigation extract // approximate access route<span>Coordinates intentionally suppressed</span></figcaption>
+                        </figure>
+                    </section>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-log" role="tabpanel"
-                aria-labelledby="tab-field-log" hidden>
-                <p class="panel-title">Classified field intelligence</p>
-                <p class="panel-index">Archive node 04 / 05</p>
-                <div class="field-log-layout">
-                    <figure class="classified-evidence">
-                        <img src="../evidence/BF2D6Y3A.webp" alt="The glass sphere at lower right contains dark beads and miniature orange-lit structures."
-                            width="900" height="1125">
-                        <span class="top-secret-stamp">TOP SECRET</span>
-                        <span class="evidence-marker" aria-hidden="true"
-                            style="--marker-x: 63.60%; --marker-y: 67.22%"></span>
-                        <figcaption>EVIDENCE 02:03-A · Sealed Glass Sphere</figcaption>
-                    </figure>
-
-                    <article class="classified-file">
-                        <p class="classification">Eyes only · Level Obsidian</p>
-                        <h2>Field Log 02:03-A</h2>
-                        <p class="field-log-meta">Arid scrubland passage · Status: Restricted</p>
-                        <p class="field-log-copy">TOP SECRET: The glass sphere at frame right contains clustered dark beads and several tiny orange-lit structures, all intact despite the exposed terrain. Zok stands precisely between this sphere and a matching container at frame left, creating a corridor no field team arranged. The configuration resembles a message held in physical fragments, consistent with the Riot Courier role and Havoc Dash behavior at a formation&#x27;s edges. No repeated pattern has been recovered from the bead positions, and touching either container may erase the only surviving sequence. Archive both spheres as unread correspondence and deny transfer until Zok&#x27;s next passage is observed.</p>
-                        <p class="field-log-footer">Cross-reference: CARD 02:03 // Havoc Dash // Riot Courier</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="archive-panel" id="panel-transmission" role="tabpanel"
-                aria-labelledby="tab-transmission" hidden>
-                <p class="panel-title">Motion archive</p>
-                <p class="panel-index">Archive node 05 / 05</p>
-                <div class="transmission-layout">
-                    <div class="pending-frame">
-                        <div class="pending-content">
-                            <span class="pending-sigil" aria-hidden="true">02:03</span>
-                            <strong>Transmission Pending</strong>
-                            <p>Motion record not yet recovered</p>
-                        </div>
-                    </div>
-                </div>
+            <section class="archive-panel" id="panel-transmission" role="tabpanel" aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p><p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout"><div class="pending-frame"><div class="pending-content"><span class="pending-sigil" aria-hidden="true">02:03</span><strong>Transmission Pending</strong><p>Motion record not yet recovered</p></div></div></div>
             </section>
         </div>
     </main>

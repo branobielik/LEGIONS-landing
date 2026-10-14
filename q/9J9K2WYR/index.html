@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <link rel="stylesheet" href="../top-secret-template.css">
     <script src="../archive-tabs-prototype.js" defer></script>
+    <script src="../top-secret-template.js" defer></script>
     <title>Daxio — LEGIONS</title>
 </head>
 <body class="side-earth2">
@@ -27,16 +29,13 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-                <sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
             </a>
-
             <div class="archive-identity">
-                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 2 · Synthbot</p>
+                <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Synthbot</p>
                 <h1>Daxio</h1>
                 <p class="archive-subname">Hex Scholar</p>
             </div>
-
             <div class="archive-meta" aria-label="Card identity">
                 <span>Astral Nexus · Recruit</span>
                 <span>Genezys 08:03</span>
@@ -44,47 +43,27 @@
         </header>
 
         <nav class="archive-tabs" role="tablist" aria-label="Daxio archive">
-            <button class="archive-tab" id="tab-profile" type="button" role="tab"
-                aria-selected="true" aria-controls="panel-profile">Profile</button>
-            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
-            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
-            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
-            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+            <button class="archive-tab" id="tab-profile" type="button" role="tab" aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab" aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab" aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-top-secret" type="button" role="tab" aria-selected="false" aria-controls="panel-top-secret" tabindex="-1">Top Secret</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab" aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
         </nav>
 
         <div class="archive-stage">
-            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
-                aria-labelledby="tab-profile">
-                <p class="panel-title">Identity &amp; combat record</p>
-                <p class="panel-index">Archive node 01 / 05</p>
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p><p class="panel-index">Archive node 01 / 05</p>
                 <div class="profile-layout">
-                    <figure class="identity-portrait">
-                        <img src="../assets/9J9K2WYR.webp" alt="Daxio identity portrait"
-                            width="900" height="900">
-                        <figcaption>Identity portrait</figcaption>
-                    </figure>
-
+                    <figure class="identity-portrait"><img src="../assets/9J9K2WYR.webp" alt="Daxio identity portrait" width="900" height="900"><figcaption>Identity portrait</figcaption></figure>
                     <div class="profile-data">
                         <section class="profile-section" aria-labelledby="archive-record-heading">
                             <p class="section-label" id="archive-record-heading">Archive record</p>
                             <p class="archive-copy">Daxio studies curses the way Earth 1 studies science. The Bane Bolt strikes every enemy, and hits harder against those who dare to use their energy. Within the Nexus, Daxio&#x27;s pilot is said to know a curse for every Legionnaire by name.</p>
                         </section>
-
                         <section class="profile-section" aria-labelledby="combat-heading">
                             <div class="combat-heading">
-                                <div>
-                                    <p class="section-label">Combat signature</p>
-                                    <h2 id="combat-heading">Bane Bolt</h2>
-                                </div>
-                                <div class="energy-grid" aria-label="Card energy values">
-                                    <span><b>190</b> Cosmara</span>
-                                    <span><b>130</b> Animus</span>
-                                    <span><b>190</b> Vitalis</span>
-                                </div>
+                                <div><p class="section-label">Combat signature</p><h2 id="combat-heading">Bane Bolt</h2></div>
+                                <div class="energy-grid" aria-label="Card energy values"><span><b>190</b> Cosmara</span><span><b>130</b> Animus</span><span><b>190</b> Vitalis</span></div>
                             </div>
                             <p class="special-rules">Hurls curse-infused projectile: Deals 30 damage to all. If attacked enemy has Cosmara activated, the damage is 50.</p>
                             <p class="card-code">Genezys 08:03 ™&amp;©2026LEGIONS</p>
@@ -93,76 +72,108 @@
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
-                aria-labelledby="tab-field-capture" hidden>
-                <p class="panel-title">Recovered visual record</p>
-                <p class="panel-index">Archive node 02 / 05</p>
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel" aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p><p class="panel-index">Archive node 02 / 05</p>
                 <div class="capture-layout">
                     <div class="capture-frame">
-                        <img src="../scenes/9J9K2WYR.webp"
-                            alt="Daxio field capture at Forested stream corridor" width="1672" height="941">
+                        <img src="../scenes/9J9K2WYR.webp" alt="Daxio field capture at Forested stream corridor" width="1672" height="941">
+                        <div class="capture-hud" aria-hidden="true">
+                            <div class="capture-hud-id"><span class="rec-light"></span><strong>FIELD CAM // 08:03</strong><small>VISUAL CHANNEL · ARCHIVE FEED</small></div>
+                            <div class="capture-hud-camera"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="19"></circle><circle cx="32" cy="32" r="8"></circle><path d="M32 4v9M32 51v9M4 32h9M51 32h9"></path></svg><span>REC</span></div>
+                            <i class="hud-corner hud-corner-tl"></i><i class="hud-corner hud-corner-tr"></i><i class="hud-corner hud-corner-bl"></i><i class="hud-corner hud-corner-br"></i>
+                        </div>
                         <div class="capture-overlay">
-                            <p class="capture-location">
-                                Forested stream corridor
-                                <span>Astral Nexus perimeter · recovered field record 08:03</span>
-                            </p>
-                            <a class="capture-expand" href="../scenes/9J9K2WYR.webp"
-                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                            <p class="capture-location">Forested stream corridor<span>Astral Nexus perimeter · recovered field record 08:03</span></p>
+                            <button class="capture-expand capture-landscape" type="button" data-landscape-src="../scenes/9J9K2WYR.webp">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="1"></rect><path d="m4 8-2 2 2 2M20 12l2 2-2 2"></path></svg>
+                                <span>Full 16:9 view</span>
+                            </button>
                         </div>
+                        <p class="rotate-capture">Full frame available // rotate device to landscape</p>
                     </div>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
-                aria-labelledby="tab-blueprint" hidden>
-                <p class="panel-title">Technical archive</p>
-                <p class="panel-index">Archive node 03 / 05</p>
-                <div class="blueprint-layout">
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel" aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p><p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout"><figure class="blueprint-figure"><img src="../blueprints/9J9K2WYR.webp" alt="Daxio suit blueprint"><figcaption>Archive blueprint</figcaption></figure></div>
+            </section>
 
-                    <figure class="blueprint-figure">
-                <img src="../blueprints/9J9K2WYR.webp" alt="Daxio suit blueprint">
-                        <figcaption>Archive blueprint</figcaption>
-                    </figure>
+            <section class="archive-panel" id="panel-top-secret" role="tabpanel" aria-labelledby="tab-top-secret" hidden>
+                <p class="panel-title">Classified field intelligence</p><p class="panel-index">Archive node 04 / 05</p>
+                <div class="secret-dossier">
+                    <header class="report-header">
+                        <div><p class="report-eyebrow">FIELD REPORT // BEACON SIGHTING</p><h2>Astral Nexus Report 08:03-A</h2></div>
+                        <dl class="report-redactions">
+                            <div><dt>Date</dt><dd>Redacted</dd></div><div><dt>Timestamp</dt><dd>Sealed</dd></div>
+                            <div><dt>Coordinates</dt><dd>Classified</dd></div><div><dt>Sector</dt><dd>9J-Alpha</dd></div>
+                        </dl>
+                        <strong class="report-stamp">Top Secret</strong>
+                    </header>
+                    <nav class="report-pages" aria-label="Top Secret report pages">
+                        <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
+                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
+                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                    </nav>
+                    <section class="report-page report-evidence is-active" data-report-page="evidence">
+                        <figure class="report-capture">
+                            <img src="../scenes/9J9K2WYR.webp" alt="A vertical red beacon shines among the trees behind and left of Dexio." width="1672" height="941">
+                            <span class="report-object-box annotation-right" style="--poi-x:33.00%;--poi-y:31.00%;" aria-hidden="true">
+                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="2,88 54,24 172,24"></polyline><rect x="166" y="18" width="12" height="12"></rect></svg>
+                                <b><span>OBJ-08:03</span><small>red forest beacon</small></b>
+                            </span>
+                            <figcaption><span>Primary visual record</span>Forested stream corridor · Evidence frame 08:03-A</figcaption>
+                        </figure>
+                    </section>
+                    <section class="report-page report-observation" data-report-page="observation">
+                        <article class="report-card field-observation"><p class="report-label">Field Observation</p><p>A vertical red beacon shines among the trees behind and left of Dexio.</p></article>
+                        <article class="report-card environment-card">
+                            <p class="report-label">Environment</p>
+                            <dl class="report-data">
+                                <div><dt>Terrain</dt><dd>snowy mountain forest</dd></div><div><dt>Weather</dt><dd>Snowfall</dd></div>
+                                <div><dt>Visibility</dt><dd>Reduced</dd></div><div><dt>Object status</dt><dd>Under observation</dd></div>
+                            </dl>
+                        </article>
+                    </section>
+                    <section class="report-page report-analysis" data-report-page="analysis">
+                        <article class="report-card object-analysis">
+                            <p class="report-label">Object Analysis</p>
+                            <dl class="report-data">
+                                <div><dt>Object</dt><dd>red forest beacon</dd></div><div><dt>Origin</dt><dd>Unknown</dd></div>
+                                <div><dt>Signature</dt><dd>Directed signal</dd></div><div><dt>Threat level</dt><dd>Under review</dd></div>
+                            </dl>
+                        </article>
+                        <article class="report-card findings-card"><p class="report-label">Key Findings</p><ul><li>The beacon emits red light</li><li>It rises between trees</li><li>It is behind the hero</li></ul></article>
+                        <figure class="report-map">
+                            <svg viewBox="0 0 360 170" role="img" aria-label="Classified abstract sector map">
+                                <defs>
+                                    <pattern id="sector-grid-9J9K2WYR" width="24" height="24" patternUnits="userSpaceOnUse">
+                                        <path d="M24 0H0V24" class="map-grid-line"></path>
+                                    </pattern>
+                                    <filter id="route-glow-9J9K2WYR" x="-40%" y="-40%" width="180%" height="180%">
+                                        <feGaussianBlur stdDeviation="2.6" result="blur"></feGaussianBlur>
+                                        <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+                                    </filter>
+                                </defs>
+                                <rect class="map-grid" style="fill:url(#sector-grid-9J9K2WYR)" x="0" y="0" width="360" height="170"></rect>
+                                <g class="map-contours"><path d="M-12 33 Q26 58 50 39 Q88 40 112 27 Q152 20 176 24 Q218 56 242 39 Q286 16 310 33 Q352 21 376 23"></path><path d="M-12 61 Q26 86 50 55 Q88 73 112 50 Q152 52 176 50 Q218 40 242 70 Q286 79 310 69 Q352 85 376 71"></path><path d="M-12 93 Q26 109 50 92 Q88 75 112 93 Q152 112 176 102 Q218 105 242 86 Q286 69 310 86 Q352 98 376 94"></path><path d="M-12 126 Q26 101 50 126 Q88 126 112 121 Q152 144 176 135 Q218 117 242 121 Q286 130 310 128 Q352 146 376 121"></path></g>
+                                <g class="map-roads"><polyline points="-10,3 45,57 100,79 155,115 210,89 265,96 320,172"></polyline><polyline points="-10,91 45,22 100,163 155,170 210,-9 265,99 320,-9"></polyline><polyline points="-10,138 45,76 100,119 155,134 210,156 265,180 320,94"></polyline></g>
+                                <polyline class="map-route" style="filter:url(#route-glow-9J9K2WYR)" points="50 120 87 127 155 133 210 124 263 110 309 83"></polyline>
+                                <rect class="map-origin" x="43" y="113" width="14" height="14"></rect>
+                                <rect class="map-target" x="300" y="74" width="18" height="18"></rect>
+                                <path class="map-cross" d="M309 65v36M291 83h36"></path>
+                                <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
+                                <text class="map-sector" x="17" y="25">SECTOR EXTRACT // 9J9K2WYR</text>
+</svg>
+                            <figcaption>Navigation extract // approximate access route<span>Coordinates intentionally suppressed</span></figcaption>
+                        </figure>
+                    </section>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-log" role="tabpanel"
-                aria-labelledby="tab-field-log" hidden>
-                <p class="panel-title">Classified field intelligence</p>
-                <p class="panel-index">Archive node 04 / 05</p>
-                <div class="field-log-layout">
-                    <figure class="classified-evidence">
-                        <img src="../evidence/9J9K2WYR.webp" alt="Red-lit cylinder embedded in a mossy slope beside the stream."
-                            width="900" height="1125">
-                        <span class="top-secret-stamp">TOP SECRET</span>
-                        <span class="evidence-marker" aria-hidden="true"
-                            style="--marker-x: 43.40%; --marker-y: 26.52%"></span>
-                        <figcaption>EVIDENCE 08:03-A · Red Forest Cylinder</figcaption>
-                    </figure>
-
-                    <article class="classified-file">
-                        <p class="classification">Eyes only · Level Obsidian</p>
-                        <h2>Field Log 08:03-A</h2>
-                        <p class="field-log-meta">Forested stream corridor · Status: Under Review</p>
-                        <p class="field-log-copy">TOP SECRET: A red-lit cylinder embedded in the mossy slope remained warm after the forest entered eclipse shadow. Daxio crossed the stream without disturbing it, yet the cylinder pulsed once for every linked pilot who reported hearing the same unfamiliar whisper. The green knot of energy on the nearby rock brightened immediately afterward, consistent with residual Bane Bolt activity but not with any known power transfer. Samples from the moss carry no thermal damage and no traceable contaminant. The cylinder and surrounding growth remain under review as a possible Nexus relay.</p>
-                        <p class="field-log-footer">Cross-reference: CARD_LORE_v1 08:03 Daxio; LORE_BIBLE_v1 §4 Astral Nexus</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="archive-panel" id="panel-transmission" role="tabpanel"
-                aria-labelledby="tab-transmission" hidden>
-                <p class="panel-title">Motion archive</p>
-                <p class="panel-index">Archive node 05 / 05</p>
-                <div class="transmission-layout">
-                    <div class="pending-frame">
-                        <div class="pending-content">
-                            <span class="pending-sigil" aria-hidden="true">08:03</span>
-                            <strong>Transmission Pending</strong>
-                            <p>Motion record not yet recovered</p>
-                        </div>
-                    </div>
-                </div>
+            <section class="archive-panel" id="panel-transmission" role="tabpanel" aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p><p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout"><div class="pending-frame"><div class="pending-content"><span class="pending-sigil" aria-hidden="true">08:03</span><strong>Transmission Pending</strong><p>Motion record not yet recovered</p></div></div></div>
             </section>
         </div>
     </main>

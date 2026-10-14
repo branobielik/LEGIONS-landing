@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
+    <link rel="stylesheet" href="../top-secret-template.css">
     <script src="../archive-tabs-prototype.js" defer></script>
+    <script src="../top-secret-template.js" defer></script>
     <title>Moreno — LEGIONS</title>
 </head>
 <body class="side-earth1">
@@ -27,16 +29,13 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
-                <sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
             </a>
-
             <div class="archive-identity">
-                <p class="archive-kicker">GENEZYS ARCHIVE · Earth 1 · Legionnaire</p>
+                <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Legionnaire</p>
                 <h1>Moreno</h1>
                 <p class="archive-subname">Anomaly Shifter</p>
             </div>
-
             <div class="archive-meta" aria-label="Card identity">
                 <span>Eternal Custodian · Elite</span>
                 <span>Genezys 07:06</span>
@@ -44,47 +43,27 @@
         </header>
 
         <nav class="archive-tabs" role="tablist" aria-label="Moreno archive">
-            <button class="archive-tab" id="tab-profile" type="button" role="tab"
-                aria-selected="true" aria-controls="panel-profile">Profile</button>
-            <button class="archive-tab" id="tab-field-capture" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
-            <button class="archive-tab" id="tab-blueprint" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
-            <button class="archive-tab" id="tab-field-log" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-field-log" tabindex="-1">Field Log</button>
-            <button class="archive-tab" id="tab-transmission" type="button" role="tab"
-                aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
+            <button class="archive-tab" id="tab-profile" type="button" role="tab" aria-selected="true" aria-controls="panel-profile">Profile</button>
+            <button class="archive-tab" id="tab-field-capture" type="button" role="tab" aria-selected="false" aria-controls="panel-field-capture" tabindex="-1">Field Capture</button>
+            <button class="archive-tab" id="tab-blueprint" type="button" role="tab" aria-selected="false" aria-controls="panel-blueprint" tabindex="-1">Blueprint</button>
+            <button class="archive-tab" id="tab-top-secret" type="button" role="tab" aria-selected="false" aria-controls="panel-top-secret" tabindex="-1">Top Secret</button>
+            <button class="archive-tab" id="tab-transmission" type="button" role="tab" aria-selected="false" aria-controls="panel-transmission" tabindex="-1">Transmission</button>
         </nav>
 
         <div class="archive-stage">
-            <section class="archive-panel is-active" id="panel-profile" role="tabpanel"
-                aria-labelledby="tab-profile">
-                <p class="panel-title">Identity &amp; combat record</p>
-                <p class="panel-index">Archive node 01 / 05</p>
+            <section class="archive-panel is-active" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile">
+                <p class="panel-title">Identity &amp; combat record</p><p class="panel-index">Archive node 01 / 05</p>
                 <div class="profile-layout">
-                    <figure class="identity-portrait">
-                        <img src="../assets/WB3N8FS9.webp" alt="Moreno identity portrait"
-                            width="900" height="900">
-                        <figcaption>Identity portrait</figcaption>
-                    </figure>
-
+                    <figure class="identity-portrait"><img src="../assets/WB3N8FS9.webp" alt="Moreno identity portrait" width="900" height="900"><figcaption>Identity portrait</figcaption></figure>
                     <div class="profile-data">
                         <section class="profile-section" aria-labelledby="archive-record-heading">
                             <p class="section-label" id="archive-record-heading">Archive record</p>
                             <p class="archive-copy">Moreno sets traps in causality itself. The Feedback Spiral waits for the next enemy who uses a special against Moreno, and sends the consequence straight back. Every door has a keeper, the Custodians say, and Moreno is the lock.</p>
                         </section>
-
                         <section class="profile-section" aria-labelledby="combat-heading">
                             <div class="combat-heading">
-                                <div>
-                                    <p class="section-label">Combat signature</p>
-                                    <h2 id="combat-heading">Feedback Spiral</h2>
-                                </div>
-                                <div class="energy-grid" aria-label="Card energy values">
-                                    <span><b>140</b> Cosmara</span>
-                                    <span><b>260</b> Animus</span>
-                                    <span><b>280</b> Vitalis</span>
-                                </div>
+                                <div><p class="section-label">Combat signature</p><h2 id="combat-heading">Feedback Spiral</h2></div>
+                                <div class="energy-grid" aria-label="Card energy values"><span><b>140</b> Cosmara</span><span><b>260</b> Animus</span><span><b>280</b> Vitalis</span></div>
                             </div>
                             <p class="special-rules">Creates recursive causality trap: The next time enemy uses special skill against this card, that enemy suffers 150 pierce damage.</p>
                             <p class="card-code">Genezys 07:06 ™&amp;©2026LEGIONS</p>
@@ -93,76 +72,108 @@
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-capture" role="tabpanel"
-                aria-labelledby="tab-field-capture" hidden>
-                <p class="panel-title">Recovered visual record</p>
-                <p class="panel-index">Archive node 02 / 05</p>
+            <section class="archive-panel" id="panel-field-capture" role="tabpanel" aria-labelledby="tab-field-capture" hidden>
+                <p class="panel-title">Recovered visual record</p><p class="panel-index">Archive node 02 / 05</p>
                 <div class="capture-layout">
                     <div class="capture-frame">
-                        <img src="../scenes/WB3N8FS9.webp"
-                            alt="Moreno field capture at Causal Lock Flats" width="1672" height="941">
+                        <img src="../scenes/WB3N8FS9.webp" alt="Moreno field capture at Causal Lock Flats" width="1672" height="941">
+                        <div class="capture-hud" aria-hidden="true">
+                            <div class="capture-hud-id"><span class="rec-light"></span><strong>FIELD CAM // 07:06</strong><small>VISUAL CHANNEL · ARCHIVE FEED</small></div>
+                            <div class="capture-hud-camera"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="19"></circle><circle cx="32" cy="32" r="8"></circle><path d="M32 4v9M32 51v9M4 32h9M51 32h9"></path></svg><span>REC</span></div>
+                            <i class="hud-corner hud-corner-tl"></i><i class="hud-corner hud-corner-tr"></i><i class="hud-corner hud-corner-bl"></i><i class="hud-corner hud-corner-br"></i>
+                        </div>
                         <div class="capture-overlay">
-                            <p class="capture-location">
-                                Causal Lock Flats
-                                <span>Eternal Custodian perimeter · recovered field record 07:06</span>
-                            </p>
-                            <a class="capture-expand" href="../scenes/WB3N8FS9.webp"
-                                target="_blank" rel="noopener">Expand 16:9 frame</a>
+                            <p class="capture-location">Causal Lock Flats<span>Eternal Custodian perimeter · recovered field record 07:06</span></p>
+                            <button class="capture-expand capture-landscape" type="button" data-landscape-src="../scenes/WB3N8FS9.webp">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="1"></rect><path d="m4 8-2 2 2 2M20 12l2 2-2 2"></path></svg>
+                                <span>Full 16:9 view</span>
+                            </button>
                         </div>
+                        <p class="rotate-capture">Full frame available // rotate device to landscape</p>
                     </div>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-blueprint" role="tabpanel"
-                aria-labelledby="tab-blueprint" hidden>
-                <p class="panel-title">Technical archive</p>
-                <p class="panel-index">Archive node 03 / 05</p>
-                <div class="blueprint-layout">
+            <section class="archive-panel" id="panel-blueprint" role="tabpanel" aria-labelledby="tab-blueprint" hidden>
+                <p class="panel-title">Technical archive</p><p class="panel-index">Archive node 03 / 05</p>
+                <div class="blueprint-layout"><figure class="blueprint-figure"><img src="../blueprints/WB3N8FS9.webp" alt="Moreno suit blueprint"><figcaption>Archive blueprint</figcaption></figure></div>
+            </section>
 
-                    <figure class="blueprint-figure">
-                <img src="../blueprints/WB3N8FS9.webp" alt="Moreno suit blueprint">
-                        <figcaption>Archive blueprint</figcaption>
-                    </figure>
+            <section class="archive-panel" id="panel-top-secret" role="tabpanel" aria-labelledby="tab-top-secret" hidden>
+                <p class="panel-title">Classified field intelligence</p><p class="panel-index">Archive node 04 / 05</p>
+                <div class="secret-dossier">
+                    <header class="report-header">
+                        <div><p class="report-eyebrow">FIELD REPORT // SURFACE ANOMALY</p><h2>Eternal Custodian Report 07:06-A</h2></div>
+                        <dl class="report-redactions">
+                            <div><dt>Date</dt><dd>Redacted</dd></div><div><dt>Timestamp</dt><dd>Sealed</dd></div>
+                            <div><dt>Coordinates</dt><dd>Classified</dd></div><div><dt>Sector</dt><dd>WB-Alpha</dd></div>
+                        </dl>
+                        <strong class="report-stamp">Top Secret</strong>
+                    </header>
+                    <nav class="report-pages" aria-label="Top Secret report pages">
+                        <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
+                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
+                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                    </nav>
+                    <section class="report-page report-evidence is-active" data-report-page="evidence">
+                        <figure class="report-capture">
+                            <img src="../scenes/WB3N8FS9.webp" alt="A violet-blue glow spreads across the fractured ground to the hero&#x27;s right." width="1672" height="941">
+                            <span class="report-object-box annotation-left" style="--poi-x:66.00%;--poi-y:78.00%;" aria-hidden="true">
+                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="178,88 126,24 8,24"></polyline><rect x="2" y="18" width="12" height="12"></rect></svg>
+                                <b><span>OBJ-07:06</span><small>violet ground anomaly</small></b>
+                            </span>
+                            <figcaption><span>Primary visual record</span>Causal Lock Flats · Evidence frame 07:06-A</figcaption>
+                        </figure>
+                    </section>
+                    <section class="report-page report-observation" data-report-page="observation">
+                        <article class="report-card field-observation"><p class="report-label">Field Observation</p><p>A violet-blue glow spreads across the fractured ground to the hero&#x27;s right.</p></article>
+                        <article class="report-card environment-card">
+                            <p class="report-label">Environment</p>
+                            <dl class="report-data">
+                                <div><dt>Terrain</dt><dd>volcanic storm wasteland</dd></div><div><dt>Weather</dt><dd>Electrical storm</dd></div>
+                                <div><dt>Visibility</dt><dd>Reduced</dd></div><div><dt>Object status</dt><dd>Under observation</dd></div>
+                            </dl>
+                        </article>
+                    </section>
+                    <section class="report-page report-analysis" data-report-page="analysis">
+                        <article class="report-card object-analysis">
+                            <p class="report-label">Object Analysis</p>
+                            <dl class="report-data">
+                                <div><dt>Object</dt><dd>violet ground anomaly</dd></div><div><dt>Origin</dt><dd>Unknown</dd></div>
+                                <div><dt>Signature</dt><dd>Unstable emission</dd></div><div><dt>Threat level</dt><dd>Under review</dd></div>
+                            </dl>
+                        </article>
+                        <article class="report-card findings-card"><p class="report-label">Key Findings</p><ul><li>The anomaly lies at ground level</li><li>It contrasts with the orange lava</li><li>It occupies a cracked rocky area</li></ul></article>
+                        <figure class="report-map">
+                            <svg viewBox="0 0 360 170" role="img" aria-label="Classified abstract sector map">
+                                <defs>
+                                    <pattern id="sector-grid-WB3N8FS9" width="24" height="24" patternUnits="userSpaceOnUse">
+                                        <path d="M24 0H0V24" class="map-grid-line"></path>
+                                    </pattern>
+                                    <filter id="route-glow-WB3N8FS9" x="-40%" y="-40%" width="180%" height="180%">
+                                        <feGaussianBlur stdDeviation="2.6" result="blur"></feGaussianBlur>
+                                        <feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+                                    </filter>
+                                </defs>
+                                <rect class="map-grid" style="fill:url(#sector-grid-WB3N8FS9)" x="0" y="0" width="360" height="170"></rect>
+                                <g class="map-contours"><path d="M-12 38 Q26 58 50 27 Q88 25 112 49 Q152 49 176 33 Q218 42 242 30 Q286 48 310 36 Q352 43 376 33"></path><path d="M-12 72 Q26 93 50 80 Q88 68 112 83 Q152 87 176 59 Q218 77 242 66 Q286 53 310 82 Q352 58 376 63"></path><path d="M-12 95 Q26 83 50 101 Q88 104 112 91 Q152 92 176 96 Q218 72 242 105 Q286 118 310 106 Q352 100 376 94"></path><path d="M-12 124 Q26 118 50 122 Q88 126 112 133 Q152 111 176 135 Q218 135 242 119 Q286 146 310 111 Q352 110 376 123"></path></g>
+                                <g class="map-roads"><polyline points="-10,23 45,26 100,87 155,-9 210,148 265,121 320,145"></polyline><polyline points="-10,26 45,51 100,179 155,21 210,-6 265,68 320,168"></polyline><polyline points="-10,14 45,142 100,55 155,174 210,61 265,161 320,142"></polyline></g>
+                                <polyline class="map-route" style="filter:url(#route-glow-WB3N8FS9)" points="37 135 97 112 141 124 196 115 253 98 315 72"></polyline>
+                                <rect class="map-origin" x="30" y="128" width="14" height="14"></rect>
+                                <rect class="map-target" x="306" y="63" width="18" height="18"></rect>
+                                <path class="map-cross" d="M315 54v36M297 72h36"></path>
+                                <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
+                                <text class="map-sector" x="17" y="25">SECTOR EXTRACT // WB3N8FS9</text>
+</svg>
+                            <figcaption>Navigation extract // approximate access route<span>Coordinates intentionally suppressed</span></figcaption>
+                        </figure>
+                    </section>
                 </div>
             </section>
 
-            <section class="archive-panel" id="panel-field-log" role="tabpanel"
-                aria-labelledby="tab-field-log" hidden>
-                <p class="panel-title">Classified field intelligence</p>
-                <p class="panel-index">Archive node 04 / 05</p>
-                <div class="field-log-layout">
-                    <figure class="classified-evidence">
-                        <img src="../evidence/WB3N8FS9.webp" alt="Distant circular structure and violet lightning reflected in flooded desert flats"
-                            width="900" height="1125">
-                        <span class="top-secret-stamp">TOP SECRET</span>
-                        <span class="evidence-marker" aria-hidden="true"
-                            style="--marker-x: 50.00%; --marker-y: 50.00%"></span>
-                        <figcaption>EVIDENCE 07:06-A · Premature Ring Reflection</figcaption>
-                    </figure>
-
-                    <article class="classified-file">
-                        <p class="classification">Eyes only · Level Obsidian</p>
-                        <h2>Field Log 07:06-A</h2>
-                        <p class="field-log-meta">Causal Lock Flats · Status: FEEDBACK CONTAINED</p>
-                        <p class="field-log-copy">TOP SECRET — Moreno fixed the watch on the distant circular structure reflected in the flooded flats to the right. Lightning struck behind it twice, yet the reflection flashed before the clouds did and left violet traces around Moreno’s boots. Feedback Spiral returned the discrepancy toward the structure, where one segment of the ring darkened instead of answering. The Custodian assessment identifies a causal lock forming across the Threshold, with the water acting as its first readable dial. Every door has a keeper; Moreno will hold the consequence until its cause reveals itself.</p>
-                        <p class="field-log-footer">Cross-reference: CARD_LORE_v1 07:06; Feedback Spiral; Causal Lock Register</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="archive-panel" id="panel-transmission" role="tabpanel"
-                aria-labelledby="tab-transmission" hidden>
-                <p class="panel-title">Motion archive</p>
-                <p class="panel-index">Archive node 05 / 05</p>
-                <div class="transmission-layout">
-                    <div class="pending-frame">
-                        <div class="pending-content">
-                            <span class="pending-sigil" aria-hidden="true">07:06</span>
-                            <strong>Transmission Pending</strong>
-                            <p>Motion record not yet recovered</p>
-                        </div>
-                    </div>
-                </div>
+            <section class="archive-panel" id="panel-transmission" role="tabpanel" aria-labelledby="tab-transmission" hidden>
+                <p class="panel-title">Motion archive</p><p class="panel-index">Archive node 05 / 05</p>
+                <div class="transmission-layout"><div class="pending-frame"><div class="pending-content"><span class="pending-sigil" aria-hidden="true">07:06</span><strong>Transmission Pending</strong><p>Motion record not yet recovered</p></div></div></div>
             </section>
         </div>
     </main>

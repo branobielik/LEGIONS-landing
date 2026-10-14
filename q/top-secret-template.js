@@ -22,7 +22,10 @@
     }
 
     buttons.forEach((button, index) => {
-        button.setAttribute("aria-pressed", String(button.classList.contains("is-active")));
+        button.setAttribute(
+            "aria-pressed",
+            String(button.classList.contains("is-active"))
+        );
 
         button.addEventListener("click", () => {
             activateReportPage(button.dataset.reportTarget);
@@ -37,6 +40,29 @@
             const direction = event.key === "ArrowRight" ? 1 : -1;
             const target = (index + direction + buttons.length) % buttons.length;
             activateReportPage(buttons[target].dataset.reportTarget, true);
+        });
+    });
+
+    document.querySelectorAll("[data-landscape-src]").forEach((button) => {
+        button.addEventListener("click", async () => {
+            const frame = button.closest(".capture-frame");
+            const imageUrl = button.dataset.landscapeSrc;
+
+            try {
+                if (frame?.requestFullscreen) {
+                    await frame.requestFullscreen();
+                    if (screen.orientation?.lock) {
+                        await screen.orientation.lock("landscape");
+                    }
+                    return;
+                }
+            } catch {
+                // Orientation locking is not supported by every mobile browser.
+            }
+
+            if (imageUrl) {
+                window.open(imageUrl, "_blank", "noopener");
+            }
         });
     });
 })();

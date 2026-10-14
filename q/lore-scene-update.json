@@ -1,659 +1,637 @@
 {
-  "source_directory": "D:\\GENEZYZ DTP\\script files\\ROBOTS\\upscale\\update to lore",
-  "webp_quality": 88,
+  "source_directory": "D:\\GENEZYZ DTP\\script files\\ROBOTS\\upscale\\update to lore\\upscaled",
+  "webp_quality": 82,
   "updated": 90,
   "missing": [],
   "records": [
     {
-      "source": "Arath.png",
+      "source": "CARDArath-art-scale-2_00x.jpeg",
       "hero": "Arath",
       "code": "95JXGBGE",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Arelian.png",
+      "source": "CARDArelian-art-scale-2_00x.jpeg",
       "hero": "Arelian",
       "code": "P33NZKZN",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Asharo.png",
+      "source": "CARDAsharo-art-scale-2_00x.jpeg",
       "hero": "Asharo",
       "code": "UKSVDDXE",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Avela.png",
+      "source": "CARDAvela-art-scale-2_00x.jpeg",
       "hero": "Avela",
       "code": "K5WBWUFC",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Belek.png",
+      "source": "CARDBelek-art-scale-2_00x.jpeg",
       "hero": "Belek",
       "code": "Q453RHG3",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Carn.png",
-      "hero": "Carn",
-      "code": "E6K464DS",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Daxio.png",
-      "hero": "Daxio",
-      "code": "9J9K2WYR",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Delitz.png",
-      "hero": "Delitz",
-      "code": "6D6ZCUHA",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Drak.png",
-      "hero": "Drak",
-      "code": "BP7FCV59",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Dyozen.png",
-      "hero": "Dyozen",
-      "code": "8RMGMUFB",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Ercano.png",
-      "hero": "Ercano",
-      "code": "GDCED3TM",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Erylon.png",
-      "hero": "Erylon",
-      "code": "CUT4AANE",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Evalio.png",
-      "hero": "Evalio",
-      "code": "KZPM8FBY",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Exalen.png",
-      "hero": "Exalen",
-      "code": "8VQRUKS7",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Fenek.png",
-      "hero": "Fenek",
-      "code": "9KJAZ3J8",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Finira.png",
-      "hero": "Finira",
-      "code": "268N2PUQ",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Galvorn.png",
-      "hero": "Galvorn",
-      "code": "FNEAZHYP",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Geris.png",
-      "hero": "Geris",
-      "code": "FTXTHD2U",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Glavue.png",
-      "hero": "Glavue",
-      "code": "XFBEG2YJ",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Glona qm.png",
-      "hero": "Glona",
-      "code": "RGUTTQUD",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
-    },
-    {
-      "source": "Gontra.png",
-      "hero": "Gontra",
-      "code": "V3XBV6W7",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Gorivan.png",
-      "hero": "Gorivan",
-      "code": "Y4NERY6X",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Grapi.png",
-      "hero": "Grapi",
-      "code": "NCJFFJHU",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Griv.png",
-      "hero": "Griv",
-      "code": "V8DK7PMS",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Gudial.png",
-      "hero": "Gudial",
-      "code": "W3QDNHSG",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Hanarix.png",
-      "hero": "Hanarix",
-      "code": "47V2HR9W",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Herko.png",
-      "hero": "Herko",
-      "code": "QYWEQPG4",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Iluma.png",
-      "hero": "Iluma",
-      "code": "5XMFRDV7",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Imorix.png",
-      "hero": "Imorix",
-      "code": "WDKT6Q3R",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Irikor.png",
-      "hero": "Irikor",
-      "code": "J6C6EGH8",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Iska.png",
-      "hero": "Iska",
-      "code": "H6DTWWBP",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Iterio.png",
-      "hero": "Iterio",
-      "code": "FETHQGT6",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Ithon.png",
-      "hero": "Ithon",
-      "code": "QYD6TVUZ",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Jexiron.png",
-      "hero": "Jexiron",
-      "code": "3GDD6QB3",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Joril.png",
-      "hero": "Joril",
-      "code": "92EBPW5J",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Jyntrak.png",
-      "hero": "Jyntrak",
-      "code": "EMTCT9QX",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Kerek.png",
-      "hero": "Kerek",
-      "code": "H57A59KA",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Korla.png",
-      "hero": "Korla",
-      "code": "43TFXE7F",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Krizar.png",
-      "hero": "Krizar",
-      "code": "4M9Z992R",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Krythao.png",
-      "hero": "Krythao",
-      "code": "JRG3XD96",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Kseka.png",
-      "hero": "Kseka",
-      "code": "EQKUCNYS",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Lorna qm.png",
-      "hero": "Lorna",
-      "code": "NSN5GK7W",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
-    },
-    {
-      "source": "Mir.png",
-      "hero": "Mir",
-      "code": "U38VHNQ5",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "MISSING Xev.png",
-      "hero": "Xev",
-      "code": "Y9W64UDN",
-      "status": "temporary",
-      "markers": [
-        "marked-missing"
-      ]
-    },
-    {
-      "source": "Moreno.png",
-      "hero": "Moreno",
-      "code": "WB3N8FS9",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Myzar.png",
-      "hero": "Myzar",
-      "code": "SHWWZBQF",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Myzroth.png",
-      "hero": "Myzroth",
-      "code": "JV33EEZK",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Ner qm.png",
-      "hero": "Ner",
-      "code": "DFSMM75T",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
-    },
-    {
-      "source": "Nexo.png",
-      "hero": "Nexo",
-      "code": "W9QB47Z7",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Noxik.png",
-      "hero": "Noxik",
-      "code": "WP5SHQRJ",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Omirae.png",
-      "hero": "Omirae",
-      "code": "MX4VDVEA",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Omorivo.png",
-      "hero": "Omorivo",
-      "code": "NW3BA6BM",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Orida.png",
-      "hero": "Orida",
-      "code": "78375CKC",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Orvak.png",
-      "hero": "Orvak",
-      "code": "FN5N4DS5",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Osen.png",
-      "hero": "Osen",
-      "code": "SWVKFNHA",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Otheon qm.png",
-      "hero": "Otheon",
-      "code": "DFY7KY7Q",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
-    },
-    {
-      "source": "Ovian.png",
-      "hero": "Ovian",
-      "code": "TVCY9A49",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Patro.png",
-      "hero": "Patro",
-      "code": "JNBXAP9W",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Qor.png",
-      "hero": "Qor",
-      "code": "RYJ9A3YK",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Quenith.png",
-      "hero": "Quenith",
-      "code": "J2Z3Z3VS",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Quenz.png",
-      "hero": "Quenz",
-      "code": "T2VZENTS",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Quora.png",
-      "hero": "Quora",
-      "code": "RHUJWMRB",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Qyn.png",
-      "hero": "Qyn",
-      "code": "4RHFUF8S",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Sorano.png",
-      "hero": "Sorano",
-      "code": "8A6Z7H6C",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Syktron qm.png",
-      "hero": "Syktron",
-      "code": "QMXPH7S4",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
-    },
-    {
-      "source": "Tharven.png",
-      "hero": "Tharven",
-      "code": "S2SSSTXM",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Thryne.png",
-      "hero": "Thryne",
-      "code": "EDMC5QZF",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Thyo.png",
-      "hero": "Thyo",
-      "code": "8FMJJFPR",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Troth.png",
-      "hero": "Troth",
-      "code": "HF55ZUW6",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Trygon.png",
-      "hero": "Trygon",
-      "code": "93T8XU2K",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Ukon qm.png",
-      "hero": "Ukon",
-      "code": "RCS2RV2W",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
-    },
-    {
-      "source": "Ulinx.png",
-      "hero": "Ulinx",
-      "code": "PSSU33P7",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Unuro.png",
-      "hero": "Unuro",
-      "code": "8EJTY673",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Urikan.png",
-      "hero": "Urikan",
-      "code": "3CKFR3FA",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Uxanor.png",
-      "hero": "Uxanor",
-      "code": "4RKXDUK6",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Vexta.png",
-      "hero": "Vexta",
-      "code": "H2ZR8FBD",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Vodary.png",
-      "hero": "Vodary",
-      "code": "E4KTY4TV",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Vortz.png",
-      "hero": "Vortz",
-      "code": "GTFQTYPQ",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "Vorzek qm.png",
-      "hero": "Vorzek",
-      "code": "HU7A26XS",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
-    },
-    {
-      "source": "Wyphor.png",
-      "hero": "Wyphor",
-      "code": "JHJV8W6Q",
-      "status": "ready-for-review",
-      "markers": []
-    },
-    {
-      "source": "x Bryg.png",
+      "source": "CARDBryg-art-scale-2_00x.jpeg",
       "hero": "Bryg",
       "code": "N6VPJ366",
-      "status": "temporary",
-      "markers": [
-        "not-remade"
-      ]
+      "status": "final",
+      "markers": []
     },
     {
-      "source": "Xentao.png",
+      "source": "CARDCarn-art-scale-2_00x.jpeg",
+      "hero": "Carn",
+      "code": "E6K464DS",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDDaxio-art-scale-2_00x.jpeg",
+      "hero": "Daxio",
+      "code": "9J9K2WYR",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDDelitz-art-scale-2_00x.jpeg",
+      "hero": "Delitz",
+      "code": "6D6ZCUHA",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDDrak-art-scale-2_00x.jpeg",
+      "hero": "Drak",
+      "code": "BP7FCV59",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDDyozen-art-scale-2_00x.jpeg",
+      "hero": "Dyozen",
+      "code": "8RMGMUFB",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDErcano-art-scale-2_00x.jpeg",
+      "hero": "Ercano",
+      "code": "GDCED3TM",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDErylon-art-scale-2_00x.jpeg",
+      "hero": "Erylon",
+      "code": "CUT4AANE",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDEvalio-art-scale-2_00x.jpeg",
+      "hero": "Evalio",
+      "code": "KZPM8FBY",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDExalen-art-scale-2_00x.jpeg",
+      "hero": "Exalen",
+      "code": "8VQRUKS7",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDFenek-art-scale-2_00x.jpeg",
+      "hero": "Fenek",
+      "code": "9KJAZ3J8",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDFinira-art-scale-2_00x.jpeg",
+      "hero": "Finira",
+      "code": "268N2PUQ",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGalvorn-art-scale-2_00x.jpeg",
+      "hero": "Galvorn",
+      "code": "FNEAZHYP",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGeris-art-scale-2_00x.jpeg",
+      "hero": "Geris",
+      "code": "FTXTHD2U",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGlavue-art-scale-2_00x.jpeg",
+      "hero": "Glavue",
+      "code": "XFBEG2YJ",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGlona-art-scale-2_00x.jpeg",
+      "hero": "Glona",
+      "code": "RGUTTQUD",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGontra-art-scale-2_00x.jpeg",
+      "hero": "Gontra",
+      "code": "V3XBV6W7",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGorivan-art-scale-2_00x.jpeg",
+      "hero": "Gorivan",
+      "code": "Y4NERY6X",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGrapi-art-scale-2_00x.jpeg",
+      "hero": "Grapi",
+      "code": "NCJFFJHU",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGriv-art-scale-2_00x.jpeg",
+      "hero": "Griv",
+      "code": "V8DK7PMS",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDGudial-art-scale-2_00x.jpeg",
+      "hero": "Gudial",
+      "code": "W3QDNHSG",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDHanarix-art-scale-2_00x.jpeg",
+      "hero": "Hanarix",
+      "code": "47V2HR9W",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDHerko-art-scale-2_00x.jpeg",
+      "hero": "Herko",
+      "code": "QYWEQPG4",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDIluma-art-scale-2_00x.jpeg",
+      "hero": "Iluma",
+      "code": "5XMFRDV7",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDImorix-art-scale-2_00x.jpeg",
+      "hero": "Imorix",
+      "code": "WDKT6Q3R",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDIrikor-art-scale-2_00x.jpeg",
+      "hero": "Irikor",
+      "code": "J6C6EGH8",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDIska-art-scale-2_00x.jpeg",
+      "hero": "Iska",
+      "code": "H6DTWWBP",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDIterio-art-scale-2_00x.jpeg",
+      "hero": "Iterio",
+      "code": "FETHQGT6",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDIthon-art-scale-2_00x.jpeg",
+      "hero": "Ithon",
+      "code": "QYD6TVUZ",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDJexiron-art-scale-2_00x.jpeg",
+      "hero": "Jexiron",
+      "code": "3GDD6QB3",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDJoril-art-scale-2_00x.jpeg",
+      "hero": "Joril",
+      "code": "92EBPW5J",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDJyntrak-art-scale-2_00x.jpeg",
+      "hero": "Jyntrak",
+      "code": "EMTCT9QX",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDKerek-art-scale-2_00x.jpeg",
+      "hero": "Kerek",
+      "code": "H57A59KA",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDKorla-art-scale-2_00x.jpeg",
+      "hero": "Korla",
+      "code": "43TFXE7F",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDKrizar-art-scale-2_00x.jpeg",
+      "hero": "Krizar",
+      "code": "4M9Z992R",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDKrythao-art-scale-2_00x.jpeg",
+      "hero": "Krythao",
+      "code": "JRG3XD96",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDKseka-art-scale-2_00x.jpeg",
+      "hero": "Kseka",
+      "code": "EQKUCNYS",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDLorna-art-scale-2_00x.jpeg",
+      "hero": "Lorna",
+      "code": "NSN5GK7W",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDMir-art-scale-2_00x.jpeg",
+      "hero": "Mir",
+      "code": "U38VHNQ5",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDMoreno-art-scale-2_00x.jpeg",
+      "hero": "Moreno",
+      "code": "WB3N8FS9",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDMyzar-art-scale-2_00x.jpeg",
+      "hero": "Myzar",
+      "code": "SHWWZBQF",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDMyzroth-art-scale-2_00x.jpeg",
+      "hero": "Myzroth",
+      "code": "JV33EEZK",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDNer-art-scale-2_00x.jpeg",
+      "hero": "Ner",
+      "code": "DFSMM75T",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDNexo-art-scale-2_00x.jpeg",
+      "hero": "Nexo",
+      "code": "W9QB47Z7",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDNoxik-art-scale-2_00x.jpeg",
+      "hero": "Noxik",
+      "code": "WP5SHQRJ",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDOmirae-art-scale-2_00x.jpeg",
+      "hero": "Omirae",
+      "code": "MX4VDVEA",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDOmorivo-art-scale-2_00x.jpeg",
+      "hero": "Omorivo",
+      "code": "NW3BA6BM",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDOrida-art-scale-2_00x.jpeg",
+      "hero": "Orida",
+      "code": "78375CKC",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDOrvak-art-scale-2_00x.jpeg",
+      "hero": "Orvak",
+      "code": "FN5N4DS5",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDOsen-art-scale-2_00x.jpeg",
+      "hero": "Osen",
+      "code": "SWVKFNHA",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDOtheon-art-scale-2_00x.jpeg",
+      "hero": "Otheon",
+      "code": "DFY7KY7Q",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDOvian-art-scale-2_00x.jpeg",
+      "hero": "Ovian",
+      "code": "TVCY9A49",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDPatro-art-scale-2_00x.jpeg",
+      "hero": "Patro",
+      "code": "JNBXAP9W",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDQor-art-scale-2_00x.jpeg",
+      "hero": "Qor",
+      "code": "RYJ9A3YK",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDQuenith-art-scale-2_00x.jpeg",
+      "hero": "Quenith",
+      "code": "J2Z3Z3VS",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDQuenz-art-scale-2_00x.jpeg",
+      "hero": "Quenz",
+      "code": "T2VZENTS",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDQuora-art-scale-2_00x.jpeg",
+      "hero": "Quora",
+      "code": "RHUJWMRB",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDQyn-art-scale-2_00x.jpeg",
+      "hero": "Qyn",
+      "code": "4RHFUF8S",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDSorano-art-scale-2_00x.jpeg",
+      "hero": "Sorano",
+      "code": "8A6Z7H6C",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDSyktron-art-scale-2_00x.jpeg",
+      "hero": "Syktron",
+      "code": "QMXPH7S4",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDTharven-art-scale-2_00x.jpeg",
+      "hero": "Tharven",
+      "code": "S2SSSTXM",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDThryne-art-scale-2_00x.jpeg",
+      "hero": "Thryne",
+      "code": "EDMC5QZF",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDThyo-art-scale-2_00x.jpeg",
+      "hero": "Thyo",
+      "code": "8FMJJFPR",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDTroth-art-scale-2_00x.jpeg",
+      "hero": "Troth",
+      "code": "HF55ZUW6",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDTrygon-art-scale-2_00x.jpeg",
+      "hero": "Trygon",
+      "code": "93T8XU2K",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDUkon-art-scale-2_00x.jpeg",
+      "hero": "Ukon",
+      "code": "RCS2RV2W",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDUlinx-art-scale-2_00x.jpeg",
+      "hero": "Ulinx",
+      "code": "PSSU33P7",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDUnuro-art-scale-2_00x.jpeg",
+      "hero": "Unuro",
+      "code": "8EJTY673",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDUrikan-art-scale-2_00x.jpeg",
+      "hero": "Urikan",
+      "code": "3CKFR3FA",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDUxanor-art-scale-2_00x.jpeg",
+      "hero": "Uxanor",
+      "code": "4RKXDUK6",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDVexta-art-scale-2_00x.jpeg",
+      "hero": "Vexta",
+      "code": "H2ZR8FBD",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDVodary-art-scale-2_00x.jpeg",
+      "hero": "Vodary",
+      "code": "E4KTY4TV",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDVortz-art-scale-2_00x.jpeg",
+      "hero": "Vortz",
+      "code": "GTFQTYPQ",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDVorzek-art-scale-2_00x.jpeg",
+      "hero": "Vorzek",
+      "code": "HU7A26XS",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDWyphor-art-scale-2_00x.jpeg",
+      "hero": "Wyphor",
+      "code": "JHJV8W6Q",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDXentao-art-scale-2_00x.jpeg",
       "hero": "Xentao",
       "code": "YPT72JT8",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Xylox.png",
+      "source": "CARDXev-art-scale-2_00x.jpeg",
+      "hero": "Xev",
+      "code": "Y9W64UDN",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDXylox-art-scale-2_00x.jpeg",
       "hero": "Xylox",
       "code": "RP8RTQYS",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Yex.png",
+      "source": "CARDYex-art-scale-2_00x.jpeg",
       "hero": "Yex",
       "code": "8D4Z45GW",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Yvinor.png",
+      "source": "CARDYvinor-art-scale-2_00x.jpeg",
       "hero": "Yvinor",
       "code": "U9WN2J2W",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Zok.png",
+      "source": "CARDZok-art-scale-2_00x.jpeg",
       "hero": "Zok",
       "code": "BF2D6Y3A",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Zwet qm.png",
+      "source": "CARDZwet-art-scale-2_00x.jpeg",
       "hero": "Zwet",
       "code": "CHWRVAU5",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
-    },
-    {
-      "source": "Zychron.png",
-      "hero": "Zychron",
-      "code": "6BT3FESY",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     },
     {
-      "source": "Zypha qm.png",
-      "hero": "Zypha",
-      "code": "KTKXB7FJ",
-      "status": "temporary",
-      "markers": [
-        "question-mark"
-      ]
+      "source": "CARDZychron-art-scale-2_00x.jpeg",
+      "hero": "Zychron",
+      "code": "6BT3FESY",
+      "status": "final",
+      "markers": []
     },
     {
-      "source": "Zyth.png",
+      "source": "CARDZypha-art-scale-2_00x.jpeg",
+      "hero": "Zypha",
+      "code": "KTKXB7FJ",
+      "status": "final",
+      "markers": []
+    },
+    {
+      "source": "CARDZyth-art-scale-2_00x.jpeg",
       "hero": "Zyth",
       "code": "Q2ZXZJEY",
-      "status": "ready-for-review",
+      "status": "final",
       "markers": []
     }
   ]

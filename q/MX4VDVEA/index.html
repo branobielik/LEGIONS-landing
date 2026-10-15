@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
-    <link rel="stylesheet" href="../top-secret-template.css">
+    <link rel="stylesheet" href="../top-secret-template.css?v=20261015-scan7">
     <script src="../archive-tabs-prototype.js" defer></script>
-    <script src="../top-secret-template.js" defer></script>
+    <script src="../top-secret-template.js?v=20261015-scan7" defer></script>
     <title>Omirae — LEGIONS</title>
 </head>
 <body class="side-earth1">
@@ -29,7 +29,7 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             </a>
             <div class="archive-identity">
                 <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Legionnaire</p>
@@ -90,6 +90,9 @@
                             </button>
                         </div>
                         <p class="rotate-capture">Full frame available // rotate device to landscape</p>
+                        <button class="capture-exit-fullscreen" type="button" aria-label="Exit fullscreen">
+                            <span aria-hidden="true">×</span> Exit fullscreen
+                        </button>
                     </div>
                 </div>
             </section>
@@ -112,16 +115,16 @@
                     </header>
                     <nav class="report-pages" aria-label="Top Secret report pages">
                         <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
-                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
-                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="observation" data-unlocked-label="02 Report" disabled>02 Locked</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="analysis" data-unlocked-label="03 Analysis" disabled>03 Locked</button>
                     </nav>
                     <section class="report-page report-evidence is-active" data-report-page="evidence">
-                        <figure class="report-capture">
+                        <figure class="report-capture report-scan scan-tone-red" data-scan-hitboxes="[{&quot;x&quot;:72.13,&quot;y&quot;:46.54,&quot;width&quot;:27.87,&quot;height&quot;:40.78}]" data-scan-label="green energy device" data-scan-id="OBJ-09:03" tabindex="0" aria-label="Interactive classified evidence scan">
                             <img src="../scenes/MX4VDVEA.webp" alt="Omirae investigates a green energy device glowing at the right edge of the clearing." width="1672" height="941">
-                            <span class="report-object-box annotation-left" style="--poi-x:82.00%;--poi-y:79.00%;" aria-hidden="true">
-                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="178,88 126,24 8,24"></polyline><rect x="2" y="18" width="12" height="12"></rect></svg>
-                                <b><span>OBJ-09:03</span><small>green energy device</small></b>
-                            </span>
+                            <p class="scan-instruction"><span>Classified search directive</span>Find the inconsistency hidden in this record</p>
+                            <p class="scan-feedback" aria-live="polite"></p>
+                            <button class="scan-fullscreen" type="button"><span>Precision scanner</span>Open fullscreen · rotate device</button>
+                            <button class="scan-reset" type="button" hidden>Reset view</button>
                             <figcaption><span>Primary visual record</span>Twilight forest corridor · Evidence frame 09:03-A</figcaption>
                         </figure>
                     </section>
@@ -158,10 +161,11 @@
                                 <rect class="map-grid" style="fill:url(#sector-grid-MX4VDVEA)" x="0" y="0" width="360" height="170"></rect>
                                 <g class="map-contours"><path d="M-12 43 Q26 51 50 46 Q88 66 112 49 Q152 33 176 48 Q218 68 242 47 Q286 20 310 40 Q352 66 376 48"></path><path d="M-12 59 Q26 67 50 66 Q88 46 112 61 Q152 69 176 57 Q218 40 242 68 Q286 78 310 46 Q352 47 376 46"></path><path d="M-12 93 Q26 99 50 93 Q88 77 112 90 Q152 107 176 90 Q218 103 242 87 Q286 73 310 87 Q352 110 376 84"></path><path d="M-12 139 Q26 139 50 133 Q88 118 112 149 Q152 114 176 133 Q218 149 242 135 Q286 163 310 152 Q352 121 376 129"></path></g>
                                 <g class="map-roads"><polyline points="-10,105 45,72 100,128 155,44 210,158 265,137 320,-2"></polyline><polyline points="-10,124 45,148 100,125 155,162 210,66 265,174 320,126"></polyline><polyline points="-10,153 45,69 100,30 155,148 210,161 265,29 320,106"></polyline></g>
-                                <polyline class="map-route" style="filter:url(#route-glow-MX4VDVEA)" points="52 118 100 134 149 126 193 96 261 116 306 90"></polyline>
+                                <polyline class="map-route" style="filter:url(#route-glow-MX4VDVEA)" points="52 118 100 76 149 106 193 87 261 111 303 92"></polyline>
+                                <g class="map-waypoints"><circle cx="100" cy="76" r="3"></circle><circle cx="149" cy="106" r="3"></circle><circle cx="193" cy="87" r="3"></circle><circle cx="261" cy="111" r="3"></circle></g>
                                 <rect class="map-origin" x="45" y="111" width="14" height="14"></rect>
-                                <rect class="map-target" x="297" y="81" width="18" height="18"></rect>
-                                <path class="map-cross" d="M306 72v36M288 90h36"></path>
+                                <rect class="map-target" x="294" y="83" width="18" height="18"></rect>
+                                <path class="map-cross" d="M303 74v36M285 92h36"></path>
                                 <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
                                 <text class="map-sector" x="17" y="25">SECTOR EXTRACT // MX4VDVEA</text>
 </svg>

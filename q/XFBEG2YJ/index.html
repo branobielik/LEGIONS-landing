@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
-    <link rel="stylesheet" href="../top-secret-template.css">
+    <link rel="stylesheet" href="../top-secret-template.css?v=20261015-scan7">
     <script src="../archive-tabs-prototype.js" defer></script>
-    <script src="../top-secret-template.js" defer></script>
+    <script src="../top-secret-template.js?v=20261015-scan7" defer></script>
     <title>Glavue — LEGIONS</title>
 </head>
 <body class="side-earth2">
@@ -29,7 +29,7 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             </a>
             <div class="archive-identity">
                 <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Synthbot</p>
@@ -90,6 +90,9 @@
                             </button>
                         </div>
                         <p class="rotate-capture">Full frame available // rotate device to landscape</p>
+                        <button class="capture-exit-fullscreen" type="button" aria-label="Exit fullscreen">
+                            <span aria-hidden="true">×</span> Exit fullscreen
+                        </button>
                     </div>
                 </div>
             </section>
@@ -112,16 +115,16 @@
                     </header>
                     <nav class="report-pages" aria-label="Top Secret report pages">
                         <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
-                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
-                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="observation" data-unlocked-label="02 Report" disabled>02 Locked</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="analysis" data-unlocked-label="03 Analysis" disabled>03 Locked</button>
                     </nav>
                     <section class="report-page report-evidence is-active" data-report-page="evidence">
-                        <figure class="report-capture">
+                        <figure class="report-capture report-scan scan-tone-blue" data-scan-hitboxes="[{&quot;x&quot;:86.97,&quot;y&quot;:59.66,&quot;width&quot;:9.43,&quot;height&quot;:18.2}]" data-scan-label="red crystalline node" data-scan-id="OBJ-04:03" tabindex="0" aria-label="Interactive classified evidence scan">
                             <img src="../scenes/XFBEG2YJ.webp" alt="Glavue concealed a red alien crystalline node in the rocks at the far right on Earth 1." width="1672" height="941">
-                            <span class="report-object-box annotation-left" style="--poi-x:93.00%;--poi-y:73.50%;" aria-hidden="true">
-                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="178,88 126,24 8,24"></polyline><rect x="2" y="18" width="12" height="12"></rect></svg>
-                                <b><span>OBJ-04:03</span><small>red crystalline node</small></b>
-                            </span>
+                            <p class="scan-instruction"><span>Classified search directive</span>Find the inconsistency hidden in this record</p>
+                            <p class="scan-feedback" aria-live="polite"></p>
+                            <button class="scan-fullscreen" type="button"><span>Precision scanner</span>Open fullscreen · rotate device</button>
+                            <button class="scan-reset" type="button" hidden>Reset view</button>
                             <figcaption><span>Primary visual record</span>Alpine calculation basin · Evidence frame 04:03-A</figcaption>
                         </figure>
                     </section>
@@ -158,10 +161,11 @@
                                 <rect class="map-grid" style="fill:url(#sector-grid-XFBEG2YJ)" x="0" y="0" width="360" height="170"></rect>
                                 <g class="map-contours"><path d="M-12 28 Q26 40 50 23 Q88 28 112 34 Q152 37 176 16 Q218 13 242 39 Q286 21 310 27 Q352 16 376 30"></path><path d="M-12 64 Q26 88 50 70 Q88 77 112 57 Q152 78 176 61 Q218 44 242 70 Q286 67 310 64 Q352 67 376 55"></path><path d="M-12 103 Q26 86 50 106 Q88 127 112 102 Q152 128 176 116 Q218 113 242 104 Q286 114 310 111 Q352 127 376 106"></path><path d="M-12 128 Q26 108 50 135 Q88 140 112 132 Q152 143 176 128 Q218 133 242 117 Q286 151 310 135 Q352 129 376 115"></path></g>
                                 <g class="map-roads"><polyline points="-10,178 45,127 100,91 155,17 210,99 265,53 320,76"></polyline><polyline points="-10,169 45,17 100,126 155,115 210,63 265,53 320,139"></polyline><polyline points="-10,91 45,23 100,32 155,19 210,21 265,44 320,4"></polyline></g>
-                                <polyline class="map-route" style="filter:url(#route-glow-XFBEG2YJ)" points="30 120 80 88 135 72 207 71 257 61 312 52"></polyline>
+                                <polyline class="map-route" style="filter:url(#route-glow-XFBEG2YJ)" points="30 120 80 102 135 128 207 95 257 124 312 95"></polyline>
+                                <g class="map-waypoints"><circle cx="80" cy="102" r="3"></circle><circle cx="135" cy="128" r="3"></circle><circle cx="207" cy="95" r="3"></circle><circle cx="257" cy="124" r="3"></circle></g>
                                 <rect class="map-origin" x="23" y="113" width="14" height="14"></rect>
-                                <rect class="map-target" x="303" y="43" width="18" height="18"></rect>
-                                <path class="map-cross" d="M312 34v36M294 52h36"></path>
+                                <rect class="map-target" x="303" y="86" width="18" height="18"></rect>
+                                <path class="map-cross" d="M312 77v36M294 95h36"></path>
                                 <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
                                 <text class="map-sector" x="17" y="25">SECTOR EXTRACT // XFBEG2YJ</text>
 </svg>

@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
-    <link rel="stylesheet" href="../top-secret-template.css">
+    <link rel="stylesheet" href="../top-secret-template.css?v=20261015-scan7">
     <script src="../archive-tabs-prototype.js" defer></script>
-    <script src="../top-secret-template.js" defer></script>
+    <script src="../top-secret-template.js?v=20261015-scan7" defer></script>
     <title>Geris — LEGIONS</title>
 </head>
 <body class="side-earth1">
@@ -29,7 +29,7 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             </a>
             <div class="archive-identity">
                 <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Legionnaire</p>
@@ -90,6 +90,9 @@
                             </button>
                         </div>
                         <p class="rotate-capture">Full frame available // rotate device to landscape</p>
+                        <button class="capture-exit-fullscreen" type="button" aria-label="Exit fullscreen">
+                            <span aria-hidden="true">×</span> Exit fullscreen
+                        </button>
                     </div>
                 </div>
             </section>
@@ -112,16 +115,16 @@
                     </header>
                     <nav class="report-pages" aria-label="Top Secret report pages">
                         <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
-                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
-                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="observation" data-unlocked-label="02 Report" disabled>02 Locked</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="analysis" data-unlocked-label="03 Analysis" disabled>03 Locked</button>
                     </nav>
                     <section class="report-page report-evidence is-active" data-report-page="evidence">
-                        <figure class="report-capture">
+                        <figure class="report-capture report-scan scan-tone-red" data-scan-hitboxes="[{&quot;x&quot;:0.65,&quot;y&quot;:66.83,&quot;width&quot;:21.49,&quot;height&quot;:32.19}]" data-scan-label="red alien node" data-scan-id="OBJ-05:02" tabindex="0" aria-label="Interactive classified evidence scan">
                             <img src="../scenes/FTXTHD2U.webp" alt="Geris investigates a compact alien node glowing red near the plaza floor." width="1672" height="941">
-                            <span class="report-object-box annotation-right" style="--poi-x:17.00%;--poi-y:86.00%;" aria-hidden="true">
-                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="2,88 54,24 172,24"></polyline><rect x="166" y="18" width="12" height="12"></rect></svg>
-                                <b><span>OBJ-05:02</span><small>red alien node</small></b>
-                            </span>
+                            <p class="scan-instruction"><span>Classified search directive</span>Find the inconsistency hidden in this record</p>
+                            <p class="scan-feedback" aria-live="polite"></p>
+                            <button class="scan-fullscreen" type="button"><span>Precision scanner</span>Open fullscreen · rotate device</button>
+                            <button class="scan-reset" type="button" hidden>Reset view</button>
                             <figcaption><span>Primary visual record</span>Elevated metropolitan avenue · Evidence frame 05:02-A</figcaption>
                         </figure>
                     </section>
@@ -158,10 +161,11 @@
                                 <rect class="map-grid" style="fill:url(#sector-grid-FTXTHD2U)" x="0" y="0" width="360" height="170"></rect>
                                 <g class="map-contours"><path d="M-12 42 Q26 21 50 38 Q88 18 112 36 Q152 65 176 45 Q218 31 242 51 Q286 54 310 32 Q352 55 376 36"></path><path d="M-12 62 Q26 58 50 60 Q88 84 112 58 Q152 44 176 65 Q218 73 242 67 Q286 48 310 69 Q352 77 376 55"></path><path d="M-12 99 Q26 116 50 95 Q88 97 112 107 Q152 118 176 90 Q218 107 242 103 Q286 103 310 93 Q352 91 376 98"></path><path d="M-12 131 Q26 139 50 143 Q88 106 112 143 Q152 136 176 121 Q218 118 242 130 Q286 115 310 140 Q352 119 376 122"></path></g>
                                 <g class="map-roads"><polyline points="-10,111 45,55 100,98 155,91 210,163 265,20 320,98"></polyline><polyline points="-10,163 45,13 100,-5 155,19 210,58 265,154 320,71"></polyline><polyline points="-10,120 45,57 100,124 155,30 210,178 265,122 320,148"></polyline></g>
-                                <polyline class="map-route" style="filter:url(#route-glow-FTXTHD2U)" points="40 143 99 147 139 150 209 150 251 136 307 135"></polyline>
+                                <polyline class="map-route" style="filter:url(#route-glow-FTXTHD2U)" points="40 143 99 107 139 148 209 114 251 141 307 108"></polyline>
+                                <g class="map-waypoints"><circle cx="99" cy="107" r="3"></circle><circle cx="139" cy="148" r="3"></circle><circle cx="209" cy="114" r="3"></circle><circle cx="251" cy="141" r="3"></circle></g>
                                 <rect class="map-origin" x="33" y="136" width="14" height="14"></rect>
-                                <rect class="map-target" x="298" y="126" width="18" height="18"></rect>
-                                <path class="map-cross" d="M307 117v36M289 135h36"></path>
+                                <rect class="map-target" x="298" y="99" width="18" height="18"></rect>
+                                <path class="map-cross" d="M307 90v36M289 108h36"></path>
                                 <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
                                 <text class="map-sector" x="17" y="25">SECTOR EXTRACT // FTXTHD2U</text>
 </svg>

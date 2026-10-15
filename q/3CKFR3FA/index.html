@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
-    <link rel="stylesheet" href="../top-secret-template.css">
+    <link rel="stylesheet" href="../top-secret-template.css?v=20261015-scan7">
     <script src="../archive-tabs-prototype.js" defer></script>
-    <script src="../top-secret-template.js" defer></script>
+    <script src="../top-secret-template.js?v=20261015-scan7" defer></script>
     <title>Urikan — LEGIONS</title>
 </head>
 <body class="side-earth1">
@@ -29,7 +29,7 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             </a>
             <div class="archive-identity">
                 <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Legionnaire</p>
@@ -90,6 +90,9 @@
                             </button>
                         </div>
                         <p class="rotate-capture">Full frame available // rotate device to landscape</p>
+                        <button class="capture-exit-fullscreen" type="button" aria-label="Exit fullscreen">
+                            <span aria-hidden="true">×</span> Exit fullscreen
+                        </button>
                     </div>
                 </div>
             </section>
@@ -112,16 +115,16 @@
                     </header>
                     <nav class="report-pages" aria-label="Top Secret report pages">
                         <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
-                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
-                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="observation" data-unlocked-label="02 Report" disabled>02 Locked</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="analysis" data-unlocked-label="03 Analysis" disabled>03 Locked</button>
                     </nav>
                     <section class="report-page report-evidence is-active" data-report-page="evidence">
-                        <figure class="report-capture">
+                        <figure class="report-capture report-scan scan-tone-red" data-scan-hitboxes="[{&quot;x&quot;:29.14,&quot;y&quot;:5.64,&quot;width&quot;:8.35,&quot;height&quot;:13.23}]" data-scan-label="blue hovering orb" data-scan-id="OBJ-05:07" tabindex="0" aria-label="Interactive classified evidence scan">
                             <img src="../scenes/3CKFR3FA.webp" alt="Urikan investigates a blue alien orb hovering above the avenue." width="1672" height="941">
-                            <span class="report-object-box annotation-right" style="--poi-x:34.00%;--poi-y:24.00%;" aria-hidden="true">
-                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="2,88 54,24 172,24"></polyline><rect x="166" y="18" width="12" height="12"></rect></svg>
-                                <b><span>OBJ-05:07</span><small>blue hovering orb</small></b>
-                            </span>
+                            <p class="scan-instruction"><span>Classified search directive</span>Find the inconsistency hidden in this record</p>
+                            <p class="scan-feedback" aria-live="polite"></p>
+                            <button class="scan-fullscreen" type="button"><span>Precision scanner</span>Open fullscreen · rotate device</button>
+                            <button class="scan-reset" type="button" hidden>Reset view</button>
                             <figcaption><span>Primary visual record</span>Flooded tower avenue · Evidence frame 05:07-A</figcaption>
                         </figure>
                     </section>
@@ -158,10 +161,11 @@
                                 <rect class="map-grid" style="fill:url(#sector-grid-3CKFR3FA)" x="0" y="0" width="360" height="170"></rect>
                                 <g class="map-contours"><path d="M-12 36 Q26 30 50 40 Q88 19 112 38 Q152 38 176 31 Q218 47 242 49 Q286 28 310 23 Q352 21 376 24"></path><path d="M-12 68 Q26 51 50 78 Q88 43 112 75 Q152 47 176 60 Q218 63 242 77 Q286 62 310 71 Q352 90 376 69"></path><path d="M-12 96 Q26 76 50 105 Q88 104 112 109 Q152 93 176 92 Q218 121 242 95 Q286 97 310 102 Q352 107 376 89"></path><path d="M-12 130 Q26 152 50 128 Q88 110 112 135 Q152 114 176 126 Q218 117 242 126 Q286 135 310 139 Q352 123 376 128"></path></g>
                                 <g class="map-roads"><polyline points="-10,168 45,1 100,11 155,130 210,64 265,67 320,151"></polyline><polyline points="-10,16 45,46 100,-3 155,107 210,91 265,47 320,68"></polyline><polyline points="-10,47 45,80 100,140 155,33 210,34 265,49 320,76"></polyline></g>
-                                <polyline class="map-route" style="filter:url(#route-glow-3CKFR3FA)" points="44 147 87 133 148 120 210 114 247 100 301 78"></polyline>
+                                <polyline class="map-route" style="filter:url(#route-glow-3CKFR3FA)" points="44 147 87 120 148 147 210 116 247 143 301 120"></polyline>
+                                <g class="map-waypoints"><circle cx="87" cy="120" r="3"></circle><circle cx="148" cy="147" r="3"></circle><circle cx="210" cy="116" r="3"></circle><circle cx="247" cy="143" r="3"></circle></g>
                                 <rect class="map-origin" x="37" y="140" width="14" height="14"></rect>
-                                <rect class="map-target" x="292" y="69" width="18" height="18"></rect>
-                                <path class="map-cross" d="M301 60v36M283 78h36"></path>
+                                <rect class="map-target" x="292" y="111" width="18" height="18"></rect>
+                                <path class="map-cross" d="M301 102v36M283 120h36"></path>
                                 <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
                                 <text class="map-sector" x="17" y="25">SECTOR EXTRACT // 3CKFR3FA</text>
 </svg>

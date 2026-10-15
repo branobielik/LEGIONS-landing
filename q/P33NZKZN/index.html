@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
-    <link rel="stylesheet" href="../top-secret-template.css">
+    <link rel="stylesheet" href="../top-secret-template.css?v=20261015-scan7">
     <script src="../archive-tabs-prototype.js" defer></script>
-    <script src="../top-secret-template.js" defer></script>
+    <script src="../top-secret-template.js?v=20261015-scan7" defer></script>
     <title>Arelian — LEGIONS</title>
 </head>
 <body class="side-earth1">
@@ -29,7 +29,7 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             </a>
             <div class="archive-identity">
                 <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Legionnaire</p>
@@ -90,6 +90,9 @@
                             </button>
                         </div>
                         <p class="rotate-capture">Full frame available // rotate device to landscape</p>
+                        <button class="capture-exit-fullscreen" type="button" aria-label="Exit fullscreen">
+                            <span aria-hidden="true">×</span> Exit fullscreen
+                        </button>
                     </div>
                 </div>
             </section>
@@ -112,16 +115,16 @@
                     </header>
                     <nav class="report-pages" aria-label="Top Secret report pages">
                         <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
-                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
-                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="observation" data-unlocked-label="02 Report" disabled>02 Locked</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="analysis" data-unlocked-label="03 Analysis" disabled>03 Locked</button>
                     </nav>
                     <section class="report-page report-evidence is-active" data-report-page="evidence">
-                        <figure class="report-capture">
+                        <figure class="report-capture report-scan scan-tone-red" data-scan-hitboxes="[{&quot;x&quot;:81.51,&quot;y&quot;:20.42,&quot;width&quot;:18.49,&quot;height&quot;:34.34}]" data-scan-label="green alien lantern" data-scan-id="OBJ-05:03" tabindex="0" aria-label="Interactive classified evidence scan">
                             <img src="../scenes/P33NZKZN.webp" alt="Arelian investigates a green alien lantern fixed beside the street&#x27;s upper-right edge." width="1672" height="941">
-                            <span class="report-object-box annotation-left" style="--poi-x:93.00%;--poi-y:48.00%;" aria-hidden="true">
-                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="178,88 126,24 8,24"></polyline><rect x="2" y="18" width="12" height="12"></rect></svg>
-                                <b><span>OBJ-05:03</span><small>green alien lantern</small></b>
-                            </span>
+                            <p class="scan-instruction"><span>Classified search directive</span>Find the inconsistency hidden in this record</p>
+                            <p class="scan-feedback" aria-live="polite"></p>
+                            <button class="scan-fullscreen" type="button"><span>Precision scanner</span>Open fullscreen · rotate device</button>
+                            <button class="scan-reset" type="button" hidden>Reset view</button>
                             <figcaption><span>Primary visual record</span>Rain-washed temple quarter · Evidence frame 05:03-A</figcaption>
                         </figure>
                     </section>
@@ -158,10 +161,11 @@
                                 <rect class="map-grid" style="fill:url(#sector-grid-P33NZKZN)" x="0" y="0" width="360" height="170"></rect>
                                 <g class="map-contours"><path d="M-12 31 Q26 39 50 29 Q88 32 112 22 Q152 34 176 33 Q218 48 242 38 Q286 9 310 23 Q352 32 376 28"></path><path d="M-12 72 Q26 81 50 77 Q88 56 112 76 Q152 47 176 63 Q218 79 242 66 Q286 93 310 76 Q352 48 376 71"></path><path d="M-12 92 Q26 103 50 81 Q88 85 112 97 Q152 112 176 99 Q218 96 242 86 Q286 113 310 86 Q352 108 376 92"></path><path d="M-12 128 Q26 144 50 123 Q88 110 112 115 Q152 108 176 135 Q218 138 242 125 Q286 108 310 139 Q352 137 376 139"></path></g>
                                 <g class="map-roads"><polyline points="-10,78 45,124 100,34 155,74 210,24 265,146 320,119"></polyline><polyline points="-10,101 45,167 100,111 155,-2 210,111 265,67 320,177"></polyline><polyline points="-10,170 45,167 100,4 155,152 210,121 265,117 320,43"></polyline></g>
-                                <polyline class="map-route" style="filter:url(#route-glow-P33NZKZN)" points="30 126 86 114 146 121 192 123 249 100 309 114"></polyline>
+                                <polyline class="map-route" style="filter:url(#route-glow-P33NZKZN)" points="30 126 86 98 146 135 192 100 249 122 309 81"></polyline>
+                                <g class="map-waypoints"><circle cx="86" cy="98" r="3"></circle><circle cx="146" cy="135" r="3"></circle><circle cx="192" cy="100" r="3"></circle><circle cx="249" cy="122" r="3"></circle></g>
                                 <rect class="map-origin" x="23" y="119" width="14" height="14"></rect>
-                                <rect class="map-target" x="300" y="105" width="18" height="18"></rect>
-                                <path class="map-cross" d="M309 96v36M291 114h36"></path>
+                                <rect class="map-target" x="300" y="72" width="18" height="18"></rect>
+                                <path class="map-cross" d="M309 63v36M291 81h36"></path>
                                 <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
                                 <text class="map-sector" x="17" y="25">SECTOR EXTRACT // P33NZKZN</text>
 </svg>

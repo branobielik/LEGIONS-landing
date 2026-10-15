@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
     <link rel="stylesheet" href="../archive-tabs-prototype.css">
-    <link rel="stylesheet" href="../top-secret-template.css">
+    <link rel="stylesheet" href="../top-secret-template.css?v=20261015-scan7">
     <script src="../archive-tabs-prototype.js" defer></script>
-    <script src="../top-secret-template.js" defer></script>
+    <script src="../top-secret-template.js?v=20261015-scan7" defer></script>
     <title>Tharven — LEGIONS</title>
 </head>
 <body class="side-earth1">
@@ -29,7 +29,7 @@
     <main class="archive-shell">
         <header class="archive-header">
             <a class="archive-brand" href="../../" aria-label="LEGIONS home">
-                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS"><sup>©</sup>
+                <img src="../../images/v4-assets/legions-wordmark.png" alt="LEGIONS">
             </a>
             <div class="archive-identity">
                 <p class="archive-kicker">GENEZYS ARCHIVE · EARTH 1 · Legionnaire</p>
@@ -90,6 +90,9 @@
                             </button>
                         </div>
                         <p class="rotate-capture">Full frame available // rotate device to landscape</p>
+                        <button class="capture-exit-fullscreen" type="button" aria-label="Exit fullscreen">
+                            <span aria-hidden="true">×</span> Exit fullscreen
+                        </button>
                     </div>
                 </div>
             </section>
@@ -112,16 +115,16 @@
                     </header>
                     <nav class="report-pages" aria-label="Top Secret report pages">
                         <button type="button" class="report-page-button is-active" data-report-target="evidence">01 Evidence</button>
-                        <button type="button" class="report-page-button" data-report-target="observation">02 Report</button>
-                        <button type="button" class="report-page-button" data-report-target="analysis">03 Analysis</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="observation" data-unlocked-label="02 Report" disabled>02 Locked</button>
+                        <button type="button" class="report-page-button is-locked" data-report-target="analysis" data-unlocked-label="03 Analysis" disabled>03 Locked</button>
                     </nav>
                     <section class="report-page report-evidence is-active" data-report-page="evidence">
-                        <figure class="report-capture">
+                        <figure class="report-capture report-scan scan-tone-red" data-scan-hitboxes="[{&quot;x&quot;:0.09,&quot;y&quot;:35.93,&quot;width&quot;:8.26,&quot;height&quot;:19.64}]" data-scan-label="red wireframe cube" data-scan-id="OBJ-07:05" tabindex="0" aria-label="Interactive classified evidence scan">
                             <img src="../scenes/S2SSSTXM.webp" alt="Tharven discovers a red wireframe cube glowing at the far-left edge of the desert." width="1672" height="941">
-                            <span class="report-object-box annotation-right" style="--poi-x:7.00%;--poi-y:43.80%;" aria-hidden="true">
-                                <svg class="report-object-leader" viewBox="0 0 180 96" preserveAspectRatio="none"><polyline points="2,88 54,24 172,24"></polyline><rect x="166" y="18" width="12" height="12"></rect></svg>
-                                <b><span>OBJ-07:05</span><small>red wireframe cube</small></b>
-                            </span>
+                            <p class="scan-instruction"><span>Classified search directive</span>Find the inconsistency hidden in this record</p>
+                            <p class="scan-feedback" aria-live="polite"></p>
+                            <button class="scan-fullscreen" type="button"><span>Precision scanner</span>Open fullscreen · rotate device</button>
+                            <button class="scan-reset" type="button" hidden>Reset view</button>
                             <figcaption><span>Primary visual record</span>Threshold Desert Watch · Evidence frame 07:05-A</figcaption>
                         </figure>
                     </section>
@@ -158,10 +161,11 @@
                                 <rect class="map-grid" style="fill:url(#sector-grid-S2SSSTXM)" x="0" y="0" width="360" height="170"></rect>
                                 <g class="map-contours"><path d="M-12 36 Q26 15 50 42 Q88 38 112 28 Q152 43 176 48 Q218 59 242 27 Q286 43 310 35 Q352 51 376 35"></path><path d="M-12 61 Q26 81 50 69 Q88 78 112 55 Q152 86 176 66 Q218 44 242 65 Q286 70 310 65 Q352 71 376 60"></path><path d="M-12 96 Q26 120 50 86 Q88 113 112 86 Q152 83 176 94 Q218 101 242 99 Q286 112 310 84 Q352 117 376 84"></path><path d="M-12 134 Q26 131 50 128 Q88 145 112 146 Q152 127 176 138 Q218 115 242 142 Q286 125 310 141 Q352 145 376 126"></path></g>
                                 <g class="map-roads"><polyline points="-10,140 45,46 100,140 155,138 210,24 265,12 320,141"></polyline><polyline points="-10,39 45,114 100,-2 155,107 210,6 265,154 320,105"></polyline><polyline points="-10,24 45,67 100,140 155,101 210,8 265,153 320,163"></polyline></g>
-                                <polyline class="map-route" style="filter:url(#route-glow-S2SSSTXM)" points="39 144 80 131 155 131 203 144 253 150 302 146"></polyline>
+                                <polyline class="map-route" style="filter:url(#route-glow-S2SSSTXM)" points="39 144 80 117 155 86 198 123 247 91 313 133"></polyline>
+                                <g class="map-waypoints"><circle cx="80" cy="117" r="3"></circle><circle cx="155" cy="86" r="3"></circle><circle cx="198" cy="123" r="3"></circle><circle cx="247" cy="91" r="3"></circle></g>
                                 <rect class="map-origin" x="32" y="137" width="14" height="14"></rect>
-                                <rect class="map-target" x="293" y="137" width="18" height="18"></rect>
-                                <path class="map-cross" d="M302 128v36M284 146h36"></path>
+                                <rect class="map-target" x="304" y="124" width="18" height="18"></rect>
+                                <path class="map-cross" d="M313 115v36M295 133h36"></path>
                                 <g class="map-compass" transform="translate(333 20)"><path d="M0 16 7 0l7 16-7-4z"></path><text x="7" y="-4">N</text></g>
                                 <text class="map-sector" x="17" y="25">SECTOR EXTRACT // S2SSSTXM</text>
 </svg>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#05070a">
+    <meta name="description" content="LEGIONS interactive story prototype">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>LEGIONS — Interactive Story Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./story.css">
+    <script src="./story.js" defer></script>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <a class="brand" href="../index-v4.html" aria-label="LEGIONS home">
+                <span>LEGIONS</span><sup>©</sup>
+            </a>
+            <div class="chapter-status">
+                <span>AKI // SCIENCE MYSTERY</span>
+                <strong>Decision 01 of 10</strong>
+            </div>
+            <button class="utility-button" type="button" data-open-save>
+                <span class="status-dot"></span>
+                Saved locally
+            </button>
+        </header>
+
+        <main>
+            <section class="scene-panel" aria-labelledby="scene-title">
+                <div class="scene-visual">
+                    <img src="../q/scenes-clean/DFSMM75T.webp" alt="A remote mountain anomaly under observation">
+                    <div class="scene-scanlines"></div>
+                    <div class="visual-meta">
+                        <span>FIELD ARCHIVE // EARTH</span>
+                        <span>COORDINATES // CLASSIFIED</span>
+                    </div>
+                    <div class="chapter-mark" aria-hidden="true">
+                        <small>CHAPTER</small>
+                        <strong>01</strong>
+                    </div>
+                </div>
+
+                <article class="story-card">
+                    <div class="story-heading">
+                        <div>
+                            <p class="eyebrow">THE GAIA DISTURBANCE</p>
+                            <h1 id="scene-title">Something beneath the mountain is listening.</h1>
+                        </div>
+                        <span class="reading-time">3 min read</span>
+                    </div>
+
+                    <div class="story-copy">
+                        <p>The holographic display flickered with data from Earth’s core. The disturbance had returned—stronger, more precise, and centered on the same remote coordinates as the first incident.</p>
+                        <p>DOOP ordered Aki to investigate with an armed security detail. Their equipment shifted loudly behind her. Across the chamber, Dr. Chen avoided her eyes.</p>
+                        <p class="story-prompt">The mission leaves at dawn. Who should Aki trust?</p>
+                    </div>
+
+                    <div class="choice-list" aria-label="Story choices">
+                        <button class="choice" type="button" data-choice="security">
+                            <span class="choice-index">A</span>
+                            <span><strong>Accept the security detail</strong><small>Follow DOOP protocol and leave immediately.</small></span>
+                        </button>
+                        <button class="choice" type="button" data-choice="scientists">
+                            <span class="choice-index">B</span>
+                            <span><strong>Choose a scientific team</strong><small>Trust expertise, discretion and silence.</small></span>
+                        </button>
+                        <button class="choice choice-locked" type="button" data-open-intel>
+                            <span class="choice-index">?</span>
+                            <span><strong>Review classified intel</strong><small>Physical LEGIONS cards may reveal what the text does not.</small></span>
+                        </button>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="intel-panel" aria-labelledby="intel-title">
+                <div class="intel-header">
+                    <div>
+                        <p class="eyebrow">CARD-LINKED EVIDENCE</p>
+                        <h2 id="intel-title">Intel Matrix</h2>
+                    </div>
+                    <div class="intel-count"><strong data-unlocked-count>0</strong><span>/ 3</span></div>
+                </div>
+
+                <p class="intel-intro">Scan associated cards to reveal evidence. Intel guides your decision—it never chooses for you.</p>
+
+                <div class="intel-grid">
+                    <article class="intel-item" data-intel="0">
+                        <div class="intel-image intel-image-one"></div>
+                        <div class="intel-lock">
+                            <span>01</span>
+                            <strong>ENVIRONMENT</strong>
+                            <small>Evidence encrypted</small>
+                        </div>
+                        <div class="intel-reveal">
+                            <span>01 // ENVIRONMENT</span>
+                            <strong>Resonant dust patterns</strong>
+                            <p>The soil reacts to vibration before anything becomes visible.</p>
+                        </div>
+                    </article>
+                    <article class="intel-item" data-intel="1">
+                        <div class="intel-image intel-image-two"></div>
+                        <div class="intel-lock">
+                            <span>02</span>
+                            <strong>HOSTILE SYSTEM</strong>
+                            <small>Evidence encrypted</small>
+                        </div>
+                        <div class="intel-reveal">
+                            <span>02 // HOSTILE SYSTEM</span>
+                            <strong>Acoustic detection array</strong>
+                            <p>An unknown device maps movement through reflected sound.</p>
+                        </div>
+                    </article>
+                    <article class="intel-item" data-intel="2">
+                        <div class="intel-image intel-image-three"></div>
+                        <div class="intel-lock">
+                            <span>03</span>
+                            <strong>ARCHIVE CONTEXT</strong>
+                            <small>Evidence encrypted</small>
+                        </div>
+                        <div class="intel-reveal">
+                            <span>03 // ARCHIVE CONTEXT</span>
+                            <strong>The missing witness</strong>
+                            <p>His warning was recorded moments before every microphone failed.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="scan-button" type="button" data-scan>
+                    <span class="scan-icon" aria-hidden="true"></span>
+                    <span><strong>Simulate card scan</strong><small>Prototype: unlock the next visual clue</small></span>
+                </button>
+
+                <div class="analysis-meter">
+                    <div class="analysis-label"><span>Decision confidence</span><strong data-confidence>Unverified</strong></div>
+                    <div class="meter-track"><span data-meter></span></div>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="app-footer">
+            <span>Interactive story prototype // Local progress only</span>
+            <button type="button" data-reset>Reset prototype</button>
+        </footer>
+    </div>
+
+    <dialog class="result-dialog" data-result>
+        <div class="result-visual"></div>
+        <div class="result-content">
+            <p class="eyebrow" data-result-code>OUTCOME // RECORDED</p>
+            <h2 data-result-title>Your decision changed the mission.</h2>
+            <p data-result-copy></p>
+            <div class="result-stats">
+                <span><small>PATH</small><strong data-result-path>Unknown</strong></span>
+                <span><small>INTEL USED</small><strong data-result-intel>0 / 3</strong></span>
+                <span><small>NEXT</small><strong>Chapter 02</strong></span>
+            </div>
+            <button type="button" data-close-result>Return to prototype</button>
+        </div>
+    </dialog>
+
+    <dialog class="save-dialog" data-save-dialog>
+        <p class="eyebrow">LOCAL-FIRST SAVE</p>
+        <h2>No account required.</h2>
+        <p>The final application would save choices, unlocked cards and story progress directly on this device. A recovery code would let the player move the save without a LEGIONS cloud account.</p>
+        <div class="recovery-code">LGSN–AKI–01–7F3A</div>
+        <button type="button" data-close-save>Close</button>
+    </dialog>
+</body>
+</html>

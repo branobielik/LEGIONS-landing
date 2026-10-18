@@ -134,6 +134,7 @@
         const image = figure.querySelector("img");
         const instruction = figure.querySelector(".scan-instruction");
         const feedback = figure.querySelector(".scan-feedback");
+        const success = figure.querySelector(".scan-success");
         const reset = figure.querySelector(".scan-reset");
         const fullscreen = figure.querySelector(".scan-fullscreen");
         let hitboxes;
@@ -158,16 +159,33 @@
             originY: 50,
             target: null,
             targetElement: null,
+            clickMarker: null,
             lastTap: null,
             token: 0,
             armed: false,
+            successful: false,
             zoomed: false
         };
         scanStates.push(state);
 
-        function armScan() {
+        function freshSource(source) {
+            const separator = source.includes("?") ? "&" : "?";
+            return `${source}${separator}view=${Date.now()}`;
+        }
+
+        async function armScan() {
             if (state.armed) return;
             state.armed = true;
+            if (figure.dataset.scanSrc) {
+                const scannerImage = new Image();
+                scannerImage.src = freshSource(figure.dataset.scanSrc);
+                try {
+                    await scannerImage.decode();
+                } catch {
+                    // Assigning the URL still lets the browser retry normally.
+                }
+                image.src = scannerImage.src;
+            }
             figure.classList.add("is-scan-armed");
             figure.closest(".secret-dossier")?.classList.add("is-scan-active");
             figure.focus({ preventScroll: true });
@@ -175,9 +193,13 @@
 
         function disarmScan() {
             resetScan();
+            removeClickMarker();
             state.armed = false;
             figure.classList.remove("is-scan-armed");
             figure.closest(".secret-dossier")?.classList.remove("is-scan-active");
+            if (!state.successful && figure.dataset.captureSrc) {
+                image.src = freshSource(figure.dataset.captureSrc);
+            }
         }
 
         function originalPoint(clientX, clientY) {
@@ -211,6 +233,22 @@
             state.target = null;
         }
 
+        function removeClickMarker() {
+            state.clickMarker?.remove();
+            state.clickMarker = null;
+        }
+
+        function markClick(point) {
+            removeClickMarker();
+            const marker = document.createElement("span");
+            marker.className = "scan-click-marker";
+            marker.setAttribute("aria-hidden", "true");
+            marker.style.left = `${point.x}%`;
+            marker.style.top = `${point.y}%`;
+            figure.appendChild(marker);
+            state.clickMarker = marker;
+        }
+
         function positionTarget() {
             if (!state.target || !state.targetElement) return;
             const width = figure.clientWidth;
@@ -230,8 +268,15 @@
                 44,
                 Math.min(measuredSize, Math.min(width, height) * 0.38)
             );
-            const left = transformedX - size / 2;
-            const top = transformedY - size / 2;
+            const margin = 8;
+            const left = Math.max(
+                margin,
+                Math.min(transformedX - size / 2, width - size - margin)
+            );
+            const top = Math.max(
+                margin,
+                Math.min(transformedY - size / 2, height - size - margin)
+            );
 
             state.targetElement.style.left = `${left}px`;
             state.targetElement.style.top = `${top}px`;
@@ -265,6 +310,7 @@
             state.token += 1;
             const token = state.token;
             removeTarget();
+            markClick(point);
 
             state.originX = point.x;
             state.originY = point.y;
@@ -282,16 +328,36 @@
                 if (target) {
                     figure.classList.add("scan-hit");
                     feedback.innerHTML =
-                        `<span>Classified signature detected</span>${figure.dataset.scanLabel}`;
+                        `<span>Mission successful</span>Additional intelligence available`;
+                    removeClickMarker();
                     revealTarget(target);
+                    state.targetElement?.classList.add("is-confirmed");
+                    state.successful = true;
+                    success?.classList.add("is-visible");
                     const dossier = figure.closest(".secret-dossier");
-                    dossier?.classList.remove("is-scan-active");
                     dossier?.classList.add("is-intel-unlocked");
                     dossier?.querySelectorAll(".report-page-button[disabled]").forEach((button) => {
                         button.disabled = false;
                         button.classList.remove("is-locked");
                         button.textContent = button.dataset.unlockedLabel;
                     });
+                    window.setTimeout(async () => {
+                        if (token !== state.token) return;
+                        state.zoomed = false;
+                        figure.classList.remove("is-scan-zoomed", "is-scanning");
+                        success?.classList.remove("is-visible");
+                        feedback.textContent = "";
+                        reset.hidden = true;
+                        removeTarget();
+                        dossier?.classList.remove("is-scan-active");
+                        try {
+                            if (document.fullscreenElement === figure && document.exitFullscreen) {
+                                await document.exitFullscreen();
+                            }
+                        } catch {
+                            // The archive still returns to its normal layout.
+                        }
+                    }, 1650);
                 } else {
                     figure.classList.add("scan-miss");
                     feedback.innerHTML =
@@ -313,6 +379,7 @@
                 "scan-miss"
             );
             feedback.textContent = "";
+            success?.classList.remove("is-visible");
             reset.hidden = true;
         }
 

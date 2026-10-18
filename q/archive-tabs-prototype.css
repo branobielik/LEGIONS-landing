@@ -23,6 +23,15 @@ body.side-earth2 {
         linear-gradient(145deg, #020712, #020406 58%, #020a1c);
 }
 
+.archive-kicker,
+.panel-title,
+.panel-index,
+.section-label,
+.archive-tab,
+.classified-option span {
+    text-shadow: 0 0 8px var(--side-glow);
+}
+
 .archive-shell {
     position: relative;
     width: min(100%, 1440px);

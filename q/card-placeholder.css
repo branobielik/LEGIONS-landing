@@ -12,19 +12,19 @@
 }
 
 .side-earth1 {
-    --side: #8f201b;
-    --side-bright: #8f201b;
+    --side: #b2362d;
+    --side-bright: #b2362d;
     --side-deep: #240306;
-    --side-glow: rgba(148, 25, 20, 0.34);
-    --side-gradient: linear-gradient(115deg, rgba(64, 4, 8, 0.94), rgba(137, 23, 19, 0.48), rgba(34, 3, 7, 0.08) 78%);
+    --side-glow: rgba(190, 42, 33, 0.52);
+    --side-gradient: linear-gradient(115deg, rgba(64, 4, 8, 0.96), rgba(172, 43, 34, 0.56), rgba(34, 3, 7, 0.08) 78%);
 }
 
 .side-earth2 {
-    --side: #173f78;
-    --side-bright: #173f78;
+    --side: #285b98;
+    --side-bright: #285b98;
     --side-deep: #020b20;
-    --side-glow: rgba(18, 58, 119, 0.4);
-    --side-gradient: linear-gradient(115deg, rgba(2, 11, 32, 0.96), rgba(16, 55, 111, 0.56), rgba(2, 9, 25, 0.08) 78%);
+    --side-glow: rgba(39, 91, 161, 0.54);
+    --side-gradient: linear-gradient(115deg, rgba(2, 11, 32, 0.96), rgba(35, 82, 150, 0.62), rgba(2, 9, 25, 0.08) 78%);
 }
 
 * {

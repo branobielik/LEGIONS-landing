@@ -7,6 +7,10 @@
     }
 
     const panelIds = new Set(panels.map((panel) => panel.id));
+    const legacyPanels = {
+        "panel-field-capture": "panel-top-secret",
+        "panel-blueprint": "panel-classified"
+    };
 
     function activate(panelId, updateHash = true) {
         if (!panelIds.has(panelId)) {
@@ -57,9 +61,53 @@
     });
 
     window.addEventListener("hashchange", () => {
-        activate(`panel-${location.hash.slice(1)}`, false);
+        const requested = `panel-${location.hash.slice(1)}`;
+        activate(legacyPanels[requested] || requested, false);
     });
 
     const requestedPanel = `panel-${location.hash.slice(1)}`;
-    activate(panelIds.has(requestedPanel) ? requestedPanel : "panel-profile");
+    const initialPanel = legacyPanels[requestedPanel] || requestedPanel;
+    activate(panelIds.has(initialPanel) ? initialPanel : "panel-profile");
+
+    document.querySelectorAll("[data-classified-gallery]").forEach((gallery) => {
+        const buttons = Array.from(gallery.querySelectorAll("[data-classified-target]"));
+        const records = Array.from(gallery.querySelectorAll("[data-classified-record]"));
+
+        function showRecord(recordId) {
+            buttons.forEach((button) => {
+                const active = button.dataset.classifiedTarget === recordId;
+                button.classList.toggle("is-active", active);
+                button.setAttribute("aria-pressed", String(active));
+            });
+            records.forEach((record) => {
+                const active = record.dataset.classifiedRecord === recordId;
+                record.hidden = !active;
+                record.classList.toggle("is-active", active);
+                if (active) {
+                    const image = record.querySelector("img");
+                    if (image) {
+                        const source = image.dataset.classifiedSrc || image.getAttribute("src");
+                        image.dataset.classifiedSrc = source;
+                        requestAnimationFrame(() => {
+                            const separator = source.includes("?") ? "&" : "?";
+                            image.src = `${source}${separator}view=${Date.now()}`;
+                        });
+                    }
+                }
+            });
+        }
+
+        function showNextRecord() {
+            const activeIndex = records.findIndex((record) => record.classList.contains("is-active"));
+            const next = records[(activeIndex + 1) % records.length];
+            if (next) showRecord(next.dataset.classifiedRecord);
+        }
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => showRecord(button.dataset.classifiedTarget));
+        });
+        records.forEach((record) => {
+            record.querySelector("img")?.addEventListener("dblclick", showNextRecord);
+        });
+    });
 })();

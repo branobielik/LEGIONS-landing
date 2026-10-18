@@ -160,9 +160,25 @@
             targetElement: null,
             lastTap: null,
             token: 0,
+            armed: false,
             zoomed: false
         };
         scanStates.push(state);
+
+        function armScan() {
+            if (state.armed) return;
+            state.armed = true;
+            figure.classList.add("is-scan-armed");
+            figure.closest(".secret-dossier")?.classList.add("is-scan-active");
+            figure.focus({ preventScroll: true });
+        }
+
+        function disarmScan() {
+            resetScan();
+            state.armed = false;
+            figure.classList.remove("is-scan-armed");
+            figure.closest(".secret-dossier")?.classList.remove("is-scan-active");
+        }
 
         function originalPoint(clientX, clientY) {
             const bounds = figure.getBoundingClientRect();
@@ -269,6 +285,7 @@
                         `<span>Classified signature detected</span>${figure.dataset.scanLabel}`;
                     revealTarget(target);
                     const dossier = figure.closest(".secret-dossier");
+                    dossier?.classList.remove("is-scan-active");
                     dossier?.classList.add("is-intel-unlocked");
                     dossier?.querySelectorAll(".report-page-button[disabled]").forEach((button) => {
                         button.disabled = false;
@@ -302,6 +319,10 @@
         figure.addEventListener("dblclick", (event) => {
             if (event.target.closest("button")) return;
             event.preventDefault();
+            if (!state.armed) {
+                armScan();
+                return;
+            }
             if (state.zoomed) {
                 resetScan();
                 return;
@@ -323,6 +344,10 @@
             ) {
                 event.preventDefault();
                 state.lastTap = null;
+                if (!state.armed) {
+                    armScan();
+                    return;
+                }
                 if (state.zoomed) {
                     resetScan();
                 } else {
@@ -335,12 +360,21 @@
 
         figure.addEventListener("keydown", (event) => {
             if (event.key === "Escape") {
-                resetScan();
+                disarmScan();
             } else if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
+                if (!state.armed) {
+                    armScan();
+                    return;
+                }
                 const bounds = figure.getBoundingClientRect();
                 inspect(bounds.left + bounds.width / 2, bounds.top + bounds.height / 2);
             }
+        });
+
+        instruction?.addEventListener("click", (event) => {
+            event.stopPropagation();
+            armScan();
         });
 
         reset.addEventListener("click", (event) => {
@@ -350,6 +384,7 @@
 
         fullscreen?.addEventListener("click", async (event) => {
             event.stopPropagation();
+            armScan();
             try {
                 if (figure.requestFullscreen) {
                     await figure.requestFullscreen();

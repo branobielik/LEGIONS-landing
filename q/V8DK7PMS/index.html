@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../card-placeholder.css">
-    <link rel="stylesheet" href="../archive-tabs-prototype.css?v=20261104-classified9">
-    <link rel="stylesheet" href="../top-secret-template.css?v=20261104-classified9">
-    <script src="../archive-tabs-prototype.js?v=20261104-classified9" defer></script>
-    <script src="../top-secret-template.js?v=20261104-classified9" defer></script>
+    <link rel="stylesheet" href="../archive-tabs-prototype.css?v=20261105-transmission1">
+    <link rel="stylesheet" href="../top-secret-template.css?v=20261105-transmission1">
+    <script src="../archive-tabs-prototype.js?v=20261105-transmission1" defer></script>
+    <script src="../top-secret-template.js?v=20261105-transmission1" defer></script>
     <title>Griv — LEGIONS</title>
 </head>
 <body class="side-earth2">
@@ -164,7 +164,27 @@
 
             <section class="archive-panel" id="panel-transmission" role="tabpanel" aria-labelledby="tab-transmission" hidden>
                 <p class="panel-title">Motion archive</p><p class="panel-index">Archive node 04 / 04</p>
-                <div class="transmission-layout"><div class="pending-frame"><div class="pending-content"><span class="pending-sigil" aria-hidden="true">06:05</span><strong>Transmission Pending</strong><p>Motion record not yet recovered</p></div></div></div>
+                
+                <div class="transmission-layout transmission-available" data-transmission>
+                    <div class="transmission-player">
+                        <video playsinline preload="metadata" controls poster="../transmissions/posters/V8DK7PMS.webp?v=20261105-transmission1" aria-label="Griv combat motion record">
+                            <source src="../transmissions/V8DK7PMS.mp4?v=20261105-transmission1" type="video/mp4">
+                        </video>
+                    </div>
+                    <aside class="transmission-data">
+                        <p class="transmission-status"><span></span>Motion record recovered</p>
+                        <p class="transmission-code">Transmission // 06:05</p>
+                        <h2>Degrade Zone</h2>
+                        <p class="transmission-copy">Recovered combat movement associated with this Legionnaire's special signature.</p>
+                        <dl>
+                            <div><dt>Duration</dt><dd>00:05</dd></div>
+                            <div><dt>Visual channel</dt><dd>Verified</dd></div>
+                            <div><dt>Audio channel</dt><dd>Unavailable</dd></div>
+                        </dl>
+                        <button class="transmission-replay" type="button">Play transmission</button>
+                    </aside>
+                </div>
+        
             </section>
         </div>
     </main>

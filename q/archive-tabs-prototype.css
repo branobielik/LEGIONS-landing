@@ -711,6 +711,164 @@ body.side-earth2 {
     text-transform: uppercase;
 }
 
+.transmission-layout.transmission-available {
+    grid-template-columns: minmax(230px, 360px) minmax(230px, 340px);
+    place-items: center stretch;
+    justify-content: center;
+    gap: clamp(24px, 5vw, 68px);
+}
+
+.transmission-player {
+    position: relative;
+    width: auto;
+    height: min(68vh, 640px);
+    max-width: 100%;
+    aspect-ratio: 9 / 16;
+    justify-self: center;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--side) 58%, transparent);
+    background: #010204;
+    box-shadow:
+        0 26px 70px rgba(0, 0, 0, 0.72),
+        0 0 36px var(--side-glow);
+}
+
+.transmission-player::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    pointer-events: none;
+    border: 1px solid color-mix(in srgb, var(--side) 30%, transparent);
+}
+
+.transmission-player video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #010204;
+}
+
+.transmission-data {
+    padding: 24px 0 24px clamp(20px, 3vw, 34px);
+    border-left: 1px solid var(--side);
+    font-family: "Rajdhani", Arial, sans-serif;
+}
+
+.transmission-status,
+.transmission-code,
+.transmission-copy {
+    margin: 0;
+}
+
+.transmission-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--side-bright);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.transmission-status span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--side-bright);
+    box-shadow: 0 0 12px var(--side-bright);
+    animation: transmission-signal 1.4s ease-in-out infinite;
+}
+
+.transmission-code {
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.transmission-data h2 {
+    margin: 8px 0 0;
+    color: var(--gold-light);
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.transmission-copy {
+    margin-top: 14px;
+    color: var(--paper);
+    font: 400 0.9rem/1.45 Georgia, "Times New Roman", serif;
+}
+
+.transmission-data dl {
+    margin: 20px 0 0;
+    border-top: 1px solid color-mix(in srgb, var(--side) 42%, transparent);
+}
+
+.transmission-data dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 8px 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--side) 24%, transparent);
+}
+
+.transmission-data dt,
+.transmission-data dd {
+    margin: 0;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.transmission-data dt {
+    color: var(--muted);
+}
+
+.transmission-data dd {
+    color: var(--paper);
+    text-align: right;
+}
+
+.transmission-replay {
+    width: 100%;
+    margin-top: 20px;
+    padding: 11px 14px;
+    border: 1px solid var(--side);
+    color: var(--side-bright);
+    background: var(--side-gradient);
+    box-shadow: 0 0 18px var(--side-glow), inset 0 0 18px var(--side-glow);
+    cursor: pointer;
+    font: 600 0.62rem/1 "Rajdhani", Arial, sans-serif;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.transmission-replay:hover,
+.transmission-replay:focus-visible {
+    color: #fff;
+    border-color: var(--side-bright);
+    outline: none;
+}
+
+@keyframes transmission-signal {
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(0.82);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .pending-frame {
     position: relative;
     width: 100%;
@@ -1045,6 +1203,55 @@ body.side-earth2 {
     .transmission-layout {
         width: calc(100% + 32px);
         margin-left: -16px;
+    }
+
+    .transmission-layout.transmission-available {
+        width: 100%;
+        margin-left: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 1fr) auto;
+        gap: 8px;
+    }
+
+    .transmission-player {
+        width: auto;
+        height: min(55svh, 560px);
+    }
+
+    .transmission-data {
+        width: min(100%, 420px);
+        justify-self: center;
+        padding: 8px 10px 0;
+        border-top: 1px solid var(--side);
+        border-left: 0;
+        text-align: center;
+    }
+
+    .transmission-status {
+        justify-content: center;
+        font-size: 0.5rem;
+    }
+
+    .transmission-code {
+        margin-top: 5px;
+        font-size: 0.46rem;
+    }
+
+    .transmission-data h2 {
+        margin-top: 3px;
+        font-size: 1rem;
+    }
+
+    .transmission-copy,
+    .transmission-data dl {
+        display: none;
+    }
+
+    .transmission-replay {
+        width: auto;
+        margin-top: 6px;
+        padding: 8px 18px;
+        font-size: 0.52rem;
     }
 
     .pending-frame {

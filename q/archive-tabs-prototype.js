@@ -27,6 +27,9 @@
             const active = panel.id === panelId;
             panel.hidden = !active;
             panel.classList.toggle("is-active", active);
+            if (!active) {
+                panel.querySelectorAll("video").forEach((video) => video.pause());
+            }
         });
 
         if (updateHash) {
@@ -108,6 +111,28 @@
         });
         records.forEach((record) => {
             record.querySelector("img")?.addEventListener("dblclick", showNextRecord);
+        });
+    });
+
+    document.querySelectorAll("[data-transmission]").forEach((transmission) => {
+        const video = transmission.querySelector("video");
+        const replay = transmission.querySelector(".transmission-replay");
+        if (!video || !replay) return;
+
+        replay.addEventListener("click", () => {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+        });
+        video.addEventListener("play", () => {
+            replay.textContent = "Transmission active";
+        });
+        video.addEventListener("pause", () => {
+            if (!video.ended && video.currentTime > 0) {
+                replay.textContent = "Resume transmission";
+            }
+        });
+        video.addEventListener("ended", () => {
+            replay.textContent = "Replay transmission";
         });
     });
 })();

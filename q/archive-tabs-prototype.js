@@ -29,6 +29,10 @@
             panel.classList.toggle("is-active", active);
             if (!active) {
                 panel.querySelectorAll("video").forEach((video) => video.pause());
+            } else {
+                panel.querySelectorAll("[data-transmission] video").forEach((video) => {
+                    if (!video.ended) video.play().catch(() => {});
+                });
             }
         });
 
@@ -122,17 +126,6 @@
         replay.addEventListener("click", () => {
             video.currentTime = 0;
             video.play().catch(() => {});
-        });
-        video.addEventListener("play", () => {
-            replay.textContent = "Transmission active";
-        });
-        video.addEventListener("pause", () => {
-            if (!video.ended && video.currentTime > 0) {
-                replay.textContent = "Resume transmission";
-            }
-        });
-        video.addEventListener("ended", () => {
-            replay.textContent = "Replay transmission";
         });
     });
 })();

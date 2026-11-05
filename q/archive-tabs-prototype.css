@@ -733,14 +733,6 @@ body.side-earth2 {
         0 0 36px var(--side-glow);
 }
 
-.transmission-player::after {
-    content: "";
-    position: absolute;
-    inset: 10px;
-    pointer-events: none;
-    border: 1px solid color-mix(in srgb, var(--side) 30%, transparent);
-}
-
 .transmission-player video {
     display: block;
     width: 100%;
@@ -757,6 +749,7 @@ body.side-earth2 {
 
 .transmission-status,
 .transmission-code,
+.transmission-form,
 .transmission-copy {
     margin: 0;
 }
@@ -799,6 +792,23 @@ body.side-earth2 {
     text-transform: uppercase;
 }
 
+.transmission-form {
+    margin-top: 16px;
+    color: var(--paper);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.transmission-form span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--muted);
+    font-size: 0.55rem;
+    letter-spacing: 0.16em;
+}
+
 .transmission-copy {
     margin-top: 14px;
     color: var(--paper);
@@ -806,7 +816,7 @@ body.side-earth2 {
 }
 
 .transmission-data dl {
-    margin: 20px 0 0;
+    margin: 14px 0 0;
     border-top: 1px solid color-mix(in srgb, var(--side) 42%, transparent);
 }
 
@@ -1242,9 +1252,25 @@ body.side-earth2 {
         font-size: 1rem;
     }
 
-    .transmission-copy,
+    .transmission-form {
+        margin-top: 5px;
+        font-size: 0.6rem;
+    }
+
+    .transmission-form span {
+        display: inline;
+        margin: 0 6px 0 0;
+        font-size: 0.45rem;
+    }
+
     .transmission-data dl {
         display: none;
+    }
+
+    .transmission-copy {
+        margin-top: 5px;
+        font-size: 0.62rem;
+        line-height: 1.25;
     }
 
     .transmission-replay {
